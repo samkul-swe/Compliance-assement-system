@@ -1,9 +1,25 @@
 # Prompts
 
-Put here the prompts you use for any LLM-based compliance checks or situation classifiers.
+This directory contains prompts used for LLM-based components.
 
-Suggested names:
-- `compliance_check.txt` or `compliance_check.md` — prompt for classifying or scoring conversations for compliance.
-- `situation_classifier.txt` — prompt for detecting product loss vs substandard service vs other.
+## Files
 
-Include a short note in `docs/` on how you designed these prompts (e.g. few-shot examples, output format, guardrails).
+- **conversation_generation.md** - Generates realistic synthetic conversations
+  - Used by: `generate_conversations.py`
+  - Model: GPT-4o-mini
+  - Purpose: Create training/test data with compliant, non-compliant, and vague cases
+
+- **compliance_validation.md** - Validates compliance in ambiguous cases
+  - Used by: `src/layer2_validator.py`
+  - Models: GPT-4o-mini (Judge 1 & Judge 2)
+  - Purpose: Expert judgment on borderline conversations
+
+## Prompt Structure
+
+All prompts follow the same structure:
+- **__ASK__** - What we want the LLM to do
+- **__CONTEXT__** - Background and why it matters
+- **__CONSTRAINTS__** - Rules and requirements
+- **__EXAMPLE__** - Concrete examples of expected output
+
+This structure ensures consistent, high-quality responses.
