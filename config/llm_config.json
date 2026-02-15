@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-02-15",
+  
+  "judge1": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "temperature": 0.0,
+    "max_tokens": 2000,
+    "system_prompt": "You are a strict compliance analyst. Your only concern is whether the agent followed the rules exactly. Focus solely on identifying rule violations - ignore tone, empathy, or customer satisfaction. If a rule was broken, flag it regardless of context."
+  },
+  
+  "judge2": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "temperature": 0.0,
+    "max_tokens": 2000,
+    "system_prompt": "You are an empathetic compliance analyst. You care deeply about both rule compliance AND whether the agent was understanding and respectful of the customer's situation. Consider context, tone, and whether the agent showed empathy while maintaining compliance. A technically compliant agent who lacks empathy may still be problematic."
+  },
+  
+  "agreement_threshold": 0.75
+}

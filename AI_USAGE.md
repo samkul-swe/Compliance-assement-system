@@ -41,3 +41,9 @@ Example topics:
 - Model choice (smaller/cheaper model for simple rules, larger only when needed).
 - Batching and async processing.
 - Guardrails and fallbacks (e.g. rule-based first, LLM only for edge cases).
+
+
+
+Estimated cost for 200 conversations:
+   ~160,000 tokens
+   ~$0.0528 USD
