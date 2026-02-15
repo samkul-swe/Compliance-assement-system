@@ -21,7 +21,7 @@ cp .env.example .env
 
 ```bash
 # Step 1: Generate test data (optional - sample data included)
-python src/generate_conversations.py
+python generate_conversations.py
 
 # Step 2: Layer 1 - Fast semantic analysis (free)
 python src/layer1_checker.py
@@ -58,7 +58,7 @@ python src/layer2_validator.py
 - `data/layer2_output/validated_decisions.json` - LLM-validated results
 
 **For Human Review:**
-- `data/layer1_output/layer1_results.xlsx` - All Layer 1 results
+- `data/layer1_output/compliance_results.xlsx` - All Layer 1 results
 - `data/layer2_output/human_review_needed.xlsx` - Cases where judges disagreed
 - `data/layer2_output/layer2_all_results.xlsx` - Complete Layer 2 results
 
@@ -82,9 +82,10 @@ python src/layer2_validator.py
 
 ## ⚙️ Configuration
 
-**Adjust Layer 1 thresholds:** Edit `config/confidence_thresholds.json`
+**Adjust Layer 1 thresholds:** Edit `config/severity_confidence.json`
 ```json
 {
+  "semantic_threshold": 0.60,
   "confidence_thresholds": {
     "compliant": 0.70,
     "medium": 0.75,
@@ -94,11 +95,19 @@ python src/layer2_validator.py
 }
 ```
 
-**Change LLM models:** Edit `config/layer2_llm_config.json`
+**Change LLM models:** Edit `config/llm_config.json`
 ```json
 {
-  "judge1": {"model": "gpt-4o-mini", ...},
-  "judge2": {"model": "claude-3-haiku-20240307", ...}
+  "judge1": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "system_prompt": "You are a strict compliance analyst..."
+  },
+  "judge2": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "system_prompt": "You are an empathetic compliance analyst..."
+  }
 }
 ```
 
@@ -106,7 +115,7 @@ python src/layer2_validator.py
 
 ## 📖 Documentation
 
-- **[APPROACH.md](docs/APPROACH.md)** - Design decisions and tradeoffs
+- **[docs/APPROACH.md](docs/APPROACH.md)** - Design decisions and tradeoffs
 - **[AI_USAGE.md](AI_USAGE.md)** - Models used, costs, scaling strategy
 - **[docs/api/](docs/api/)** - Data contract schemas
 
