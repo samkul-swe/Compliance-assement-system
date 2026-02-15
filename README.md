@@ -1,61 +1,132 @@
 # MLE Assessment: Compliance for Customer Communication
 
-A self-contained take-home assessment for Machine Learning Engineer candidates at a consumer finance startup. This repo contains the problem brief, mock data, data contracts, and expected deliverables.
+A two-layer compliance checker for collections conversations: semantic analysis (free) + dual LLM validation (for ambiguous cases).
 
-## Quick start
+---
 
-1. **Read the brief**: [ASSESSMENT.md](ASSESSMENT.md) — problem statement, tasks, and deliverables.
-2. **Explore data**: `data/` — sample conversations and compliance rules (see `docs/api/` for contracts).
-3. **Implement**: Use `src/` (or `notebooks/`) for code, `prompts/` for any LLM prompts, `docs/` for presentation/notes.
-4. **Track AI usage**: Fill [AI_USAGE.md](AI_USAGE.md) with models, token counts, cost, and scaling commentary.
+## 🚀 Quick Start
 
-### Run the reference implementation (optional)
-
-The repo includes a minimal reference script so you can run and see results without building backends.
+### Setup
 
 ```bash
-# Create a virtual environment (recommended)
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-
 # Install dependencies
 pip install -r requirements.txt
 
-# Run compliance check + situation classifier on sample data
-python src/run_assessment.py
+# Add your API key
+cp .env.example .env
+# Edit .env and add OPENAI_API_KEY=sk-...
 ```
 
-**Environment variables** (optional):
+### Run the System
 
-- `OPENAI_API_KEY` or similar — only if you choose to use an LLM API in your solution; the reference script works without it.
+```bash
+# Step 1: Generate test data (optional - sample data included)
+python src/generate_conversations.py
 
-## Repo structure
+# Step 2: Layer 1 - Fast semantic analysis (free)
+python src/layer1_checker.py
 
-| Path | Purpose |
-|------|---------|
-| `ASSESSMENT.md` | Problem statement, deliverables, AI usage expectations |
-| `README.md` | This file — how to run and navigate the repo |
-| `AI_USAGE.md` | Template for models, tools, token/cost, scaling notes (you fill this) |
-| `data/` | Sample conversations (JSON/JSONL), compliance rules, schemas |
-| `docs/` | Your presentation, notes, summary, thinking process |
-| `docs/api/` | Data contracts and mock API descriptions |
-| `prompts/` | Prompts used for LLM-based checks or classifiers (you add) |
-| `src/` | Code — reference implementation + your code |
-| `RUBRIC.md` | Evaluator rubric (for hiring team; do not share with candidates) |
+# Step 3: Layer 2 - LLM validation for uncertain cases
+python src/layer2_validator.py
+```
 
-## Data contracts
+---
 
-- **Conversations**: See `data/conversations.json` and `docs/api/conversation_schema.json`. Each conversation has `conversation_id`, `messages` (role, text, timestamp), and optional metadata.
-- **Compliance rules**: See `data/compliance_rules.json` and `docs/api/compliance_rules_schema.json`. Rules have id, category, description, severity, and optional keyword/regex hints.
-- **Customer situation** (optional): Document your input/output contract in `docs/` if you implement a situation classifier (e.g. product loss vs substandard service).
+## 📊 What It Does
 
-APIs can be mocked (e.g. read from `data/`); we care that you design to stable contracts.
+**Layer 1** (Semantic Analysis)
+- Analyzes all conversations using sentence embeddings
+- Auto-decides clear cases (~80%)
+- Sends uncertain cases to Layer 2
+- Cost: $0 (runs locally)
 
-## Deliverables checklist
+**Layer 2** (Dual LLM Validation)
+- Two AI judges evaluate ambiguous conversations
+- Judge 1: Strict rule compliance
+- Judge 2: Empathetic + compliant
+- Both must agree to auto-validate
+- Cost: ~$0.0013 per conversation
 
-- [ ] Runnable code with clear entrypoint and setup instructions
-- [ ] Short presentation/notes/summary (in `docs/`)
-- [ ] Prompts and thinking process (in `prompts/` or `docs/`)
-- [ ] `AI_USAGE.md` filled: models, tools, token/cost estimate, scaling-to-prod commentary
+**Result:** ~92% automated, ~8% need human review
 
-Submit a single self-contained repo (or zip) with everything needed to run and evaluate your work.
+---
+
+## 📁 Key Outputs
+
+**For Decisions:**
+- `data/layer1_output/auto_decided.json` - High-confidence results
+- `data/layer2_output/validated_decisions.json` - LLM-validated results
+
+**For Human Review:**
+- `data/layer1_output/layer1_results.xlsx` - All Layer 1 results
+- `data/layer2_output/human_review_needed.xlsx` - Cases where judges disagreed
+- `data/layer2_output/layer2_all_results.xlsx` - Complete Layer 2 results
+
+**Tracking:**
+- `data/layer2_output/cost_report.json` - Token usage and costs
+
+---
+
+## 💰 Costs
+
+| Component | Cost |
+|-----------|------|
+| Generate 200 conversations | $0.08 |
+| Layer 1 (200 conversations) | $0.00 |
+| Layer 2 (~40 conversations) | $0.05 |
+| **Total** | **$0.13** |
+
+**Production scale (5,000/day):** ~$39/month
+
+---
+
+## ⚙️ Configuration
+
+**Adjust Layer 1 thresholds:** Edit `config/confidence_thresholds.json`
+```json
+{
+  "confidence_thresholds": {
+    "compliant": 0.70,
+    "medium": 0.75,
+    "high": 0.80,
+    "critical": 0.85
+  }
+}
+```
+
+**Change LLM models:** Edit `config/layer2_llm_config.json`
+```json
+{
+  "judge1": {"model": "gpt-4o-mini", ...},
+  "judge2": {"model": "claude-3-haiku-20240307", ...}
+}
+```
+
+---
+
+## 📖 Documentation
+
+- **[APPROACH.md](docs/APPROACH.md)** - Design decisions and tradeoffs
+- **[AI_USAGE.md](AI_USAGE.md)** - Models used, costs, scaling strategy
+- **[docs/api/](docs/api/)** - Data contract schemas
+
+---
+
+## 🎯 What Gets Flagged
+
+**Compliance violations:**
+- Legal threats (sue, garnish, arrest)
+- Contacting family/employer
+- Abusive language
+- Pressure tactics
+- Misrepresentation
+
+**Customer situations:**
+- Product loss (never received, double charged)
+- Substandard service (features broken, poor support)
+- Financial hardship (job loss, medical bills)
+
+---
+
+**Total setup time:** ~5 minutes  
+**Total runtime:** ~3 minutes for 200 conversations
