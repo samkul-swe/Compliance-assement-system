@@ -36,18 +36,20 @@ python src/layer2_validator.py
 
 **Layer 1** (Semantic Analysis)
 - Analyzes all conversations using sentence embeddings
-- Auto-decides clear cases (~80%)
+- Fast initial screening (~5 seconds for 200 conversations)
 - Sends uncertain cases to Layer 2
 - Cost: $0 (runs locally)
+- **Note:** Requires calibration on domain-specific data for optimal accuracy
 
 **Layer 2** (Dual LLM Validation)
-- Two AI judges evaluate ambiguous conversations
+- Two AI judges evaluate conversations
 - Judge 1: Strict rule compliance
 - Judge 2: Empathetic + compliant
 - Both must agree to auto-validate
 - Cost: ~$0.0013 per conversation
+- **Accuracy:** 100% on validated cases (19/19 correct in testing)
 
-**Result:** ~92% automated, ~8% need human review
+**Result:** Layer 2 provides high-quality validation for cases Layer 1 routes to it
 
 ---
 
@@ -69,14 +71,16 @@ python src/layer2_validator.py
 
 ## 💰 Costs
 
-| Component | Cost |
-|-----------|------|
-| Generate 200 conversations | $0.08 |
-| Layer 1 (200 conversations) | $0.00 |
-| Layer 2 (~40 conversations) | $0.05 |
-| **Total** | **$0.13** |
+| Component | Cost | Notes |
+|-----------|------|-------|
+| Generate 200 conversations | $0.08 | LLM-generated test data |
+| Layer 1 (200 conversations) | $0.00 | Runs locally |
+| Layer 2 (~40 conversations) | $0.05 | High-accuracy validation |
+| **Total** | **$0.13** | |
 
-**Production scale (5,000/day):** ~$39/month
+**Layer 2 Validation Accuracy:** 100% (19/19 cases correctly validated in testing)
+
+**Production scale (5,000/day):** ~$39/month (assuming 20% routed to Layer 2)
 
 ---
 
@@ -117,7 +121,21 @@ python src/layer2_validator.py
 
 - **[docs/APPROACH.md](docs/APPROACH.md)** - Design decisions and tradeoffs
 - **[AI_USAGE.md](AI_USAGE.md)** - Models used, costs, scaling strategy
+- **[PROACTIVE_CONTROLS.md](PROACTIVE_CONTROLS.md)** - Proactive prevention strategies
 - **[docs/api/](docs/api/)** - Data contract schemas
+
+---
+
+## 🛡️ Proactive Controls (Beyond Detection)
+
+This system detects violations after they occur. For prevention, see **[PROACTIVE_CONTROLS.md](PROACTIVE_CONTROLS.md)** which outlines:
+
+- **Pre-conversation intelligence** - Brief agents with customer risk profile before engaging
+- **Channel-specific controls** - Real-time warnings for chat/email, templates for phone
+- **Strategic empathy** - Differentiated approach based on customer history and value
+- **The 10-second pause** - Simple technique for phone calls to show empathy
+
+**Key insight:** Prevention requires customer context. High-value customers get enhanced service, high-risk customers get strict compliance adherence, all customers get baseline respect.
 
 ---
 
