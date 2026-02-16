@@ -1,0 +1,3397 @@
+[
+  {
+    "conversation_id": "conv_001",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.383,
+      "R002": 0.466,
+      "R003": 0.372,
+      "R004": 0.521,
+      "R005": 0.334
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:48.284770"
+  },
+  {
+    "conversation_id": "conv_002",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.347,
+      "R002": 0.467,
+      "R003": 0.372,
+      "R004": 0.493,
+      "R005": 0.355
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.348552"
+  },
+  {
+    "conversation_id": "conv_003",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.579,
+      "R002": 0.495,
+      "R003": 0.549,
+      "R004": 0.571,
+      "R005": 0.519
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.402261"
+  },
+  {
+    "conversation_id": "conv_004",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.58,
+      "R002": 0.549,
+      "R003": 0.607,
+      "R004": 0.615,
+      "R005": 0.457
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:48.447216"
+  },
+  {
+    "conversation_id": "conv_005",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.381,
+      "R002": 0.494,
+      "R003": 0.405,
+      "R004": 0.551,
+      "R005": 0.318
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:48.492800"
+  },
+  {
+    "conversation_id": "conv_006",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.388,
+      "R002": 0.48,
+      "R003": 0.372,
+      "R004": 0.512,
+      "R005": 0.389
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.541995"
+  },
+  {
+    "conversation_id": "conv_008",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.386,
+      "R002": 0.478,
+      "R003": 0.363,
+      "R004": 0.586,
+      "R005": 0.377
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.634345"
+  },
+  {
+    "conversation_id": "conv_009",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.424,
+      "R002": 0.5,
+      "R003": 0.345,
+      "R004": 0.473,
+      "R005": 0.332
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.691983"
+  },
+  {
+    "conversation_id": "conv_010",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.327,
+      "R002": 0.461,
+      "R003": 0.428,
+      "R004": 0.453,
+      "R005": 0.418
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.715826"
+  },
+  {
+    "conversation_id": "conv_012",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.561,
+      "R002": 0.473,
+      "R003": 0.504,
+      "R004": 0.533,
+      "R005": 0.466
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:48.809560"
+  },
+  {
+    "conversation_id": "conv_013",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.38,
+      "R002": 0.489,
+      "R003": 0.378,
+      "R004": 0.49,
+      "R005": 0.367
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.856176"
+  },
+  {
+    "conversation_id": "conv_014",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.358,
+      "R002": 0.467,
+      "R003": 0.365,
+      "R004": 0.537,
+      "R005": 0.348
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.879758"
+  },
+  {
+    "conversation_id": "conv_015",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.475,
+      "R002": 0.546,
+      "R003": 0.586,
+      "R004": 0.57,
+      "R005": 0.59
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:48.901718"
+  },
+  {
+    "conversation_id": "conv_016",
+    "compliant": true,
+    "confidence": 0.76,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.57,
+      "R002": 0.495,
+      "R003": 0.464,
+      "R004": 0.513,
+      "R005": 0.405
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.951804"
+  },
+  {
+    "conversation_id": "conv_017",
+    "compliant": true,
+    "confidence": 0.7,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.61,
+      "R002": 0.62,
+      "R003": 0.547,
+      "R004": 0.679,
+      "R005": 0.552
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:48.999783"
+  },
+  {
+    "conversation_id": "conv_018",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.398,
+      "R002": 0.504,
+      "R003": 0.413,
+      "R004": 0.502,
+      "R005": 0.394
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.020517"
+  },
+  {
+    "conversation_id": "conv_019",
+    "compliant": false,
+    "confidence": 0.8600000143051147,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 2,
+        "matched_text": "I understand that, but you really need to resolve this. We can't just keep waiting. If you don't pay",
+        "similarity_score": 0.7564874887466431,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R004 (medium): \"I understand that, but you really need to resolve this. We can't just keep waiti...\" (similarity: 0.76)"
+    ],
+    "similarity_scores": {
+      "R001": 0.555,
+      "R002": 0.605,
+      "R003": 0.549,
+      "R004": 0.756,
+      "R005": 0.436
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.041539"
+  },
+  {
+    "conversation_id": "conv_020",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.62,
+      "R002": 0.552,
+      "R003": 0.551,
+      "R004": 0.703,
+      "R005": 0.372
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.061328"
+  },
+  {
+    "conversation_id": "conv_021",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.597,
+      "R002": 0.542,
+      "R003": 0.61,
+      "R004": 0.7,
+      "R005": 0.37
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.127785"
+  },
+  {
+    "conversation_id": "conv_022",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.512,
+      "R002": 0.534,
+      "R003": 0.476,
+      "R004": 0.554,
+      "R005": 0.407
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.181577"
+  },
+  {
+    "conversation_id": "conv_023",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.356,
+      "R002": 0.48,
+      "R003": 0.439,
+      "R004": 0.529,
+      "R005": 0.387
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.204835"
+  },
+  {
+    "conversation_id": "conv_024",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.338,
+      "R002": 0.485,
+      "R003": 0.336,
+      "R004": 0.583,
+      "R005": 0.358
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.227334"
+  },
+  {
+    "conversation_id": "conv_025",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.57,
+      "R002": 0.527,
+      "R003": 0.506,
+      "R004": 0.647,
+      "R005": 0.385
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.245192"
+  },
+  {
+    "conversation_id": "conv_026",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.529,
+      "R002": 0.453,
+      "R003": 0.553,
+      "R004": 0.615,
+      "R005": 0.338
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.297829"
+  },
+  {
+    "conversation_id": "conv_027",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.483,
+      "R002": 0.598,
+      "R003": 0.432,
+      "R004": 0.532,
+      "R005": 0.406
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.322320"
+  },
+  {
+    "conversation_id": "conv_028",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.382,
+      "R002": 0.477,
+      "R003": 0.357,
+      "R004": 0.57,
+      "R005": 0.367
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.343198"
+  },
+  {
+    "conversation_id": "conv_029",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.36,
+      "R002": 0.451,
+      "R003": 0.349,
+      "R004": 0.55,
+      "R005": 0.289
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.363664"
+  },
+  {
+    "conversation_id": "conv_030",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.526,
+      "R002": 0.493,
+      "R003": 0.465,
+      "R004": 0.596,
+      "R005": 0.502
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.406672"
+  },
+  {
+    "conversation_id": "conv_031",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.518,
+      "R002": 0.491,
+      "R003": 0.458,
+      "R004": 0.578,
+      "R005": 0.416
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.448187"
+  },
+  {
+    "conversation_id": "conv_032",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.358,
+      "R002": 0.474,
+      "R003": 0.37,
+      "R004": 0.452,
+      "R005": 0.427
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.496806"
+  },
+  {
+    "conversation_id": "conv_033",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.517,
+      "R002": 0.569,
+      "R003": 0.484,
+      "R004": 0.585,
+      "R005": 0.567
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.518807"
+  },
+  {
+    "conversation_id": "conv_034",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.509,
+      "R002": 0.696,
+      "R003": 0.472,
+      "R004": 0.567,
+      "R005": 0.484
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.542741"
+  },
+  {
+    "conversation_id": "conv_035",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.41,
+      "R002": 0.487,
+      "R003": 0.477,
+      "R004": 0.526,
+      "R005": 0.35
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.566475"
+  },
+  {
+    "conversation_id": "conv_036",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.362,
+      "R002": 0.439,
+      "R003": 0.442,
+      "R004": 0.487,
+      "R005": 0.315
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.619641"
+  },
+  {
+    "conversation_id": "conv_037",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.381,
+      "R002": 0.487,
+      "R003": 0.369,
+      "R004": 0.521,
+      "R005": 0.37
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.639551"
+  },
+  {
+    "conversation_id": "conv_038",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.371,
+      "R002": 0.482,
+      "R003": 0.349,
+      "R004": 0.54,
+      "R005": 0.348
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.661458"
+  },
+  {
+    "conversation_id": "conv_039",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.586,
+      "R002": 0.543,
+      "R003": 0.543,
+      "R004": 0.562,
+      "R005": 0.484
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.680933"
+  },
+  {
+    "conversation_id": "conv_040",
+    "compliant": true,
+    "confidence": 0.76,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.537,
+      "R002": 0.479,
+      "R003": 0.465,
+      "R004": 0.567,
+      "R005": 0.363
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.703960"
+  },
+  {
+    "conversation_id": "conv_042",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.461,
+      "R002": 0.525,
+      "R003": 0.529,
+      "R004": 0.651,
+      "R005": 0.552
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.739996"
+  },
+  {
+    "conversation_id": "conv_043",
+    "compliant": false,
+    "confidence": 0.75,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "I need immediate payment, or else I\u2019m afraid your account may be sent to our legal team.",
+        "similarity_score": 0.7531152963638306,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R004 (medium): \"I need immediate payment, or else I\u2019m afraid your account may be sent to our leg...\" (similarity: 0.75)"
+    ],
+    "similarity_scores": {
+      "R001": 0.533,
+      "R002": 0.513,
+      "R003": 0.53,
+      "R004": 0.753,
+      "R005": 0.393
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.758760"
+  },
+  {
+    "conversation_id": "conv_044",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.382,
+      "R002": 0.503,
+      "R003": 0.375,
+      "R004": 0.536,
+      "R005": 0.362
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.780797"
+  },
+  {
+    "conversation_id": "conv_045",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.364,
+      "R002": 0.501,
+      "R003": 0.354,
+      "R004": 0.552,
+      "R005": 0.392
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.802398"
+  },
+  {
+    "conversation_id": "conv_046",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.339,
+      "R002": 0.457,
+      "R003": 0.486,
+      "R004": 0.502,
+      "R005": 0.364
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.824001"
+  },
+  {
+    "conversation_id": "conv_047",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.374,
+      "R002": 0.481,
+      "R003": 0.371,
+      "R004": 0.551,
+      "R005": 0.306
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.876132"
+  },
+  {
+    "conversation_id": "conv_048",
+    "compliant": true,
+    "confidence": 0.81,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.346,
+      "R002": 0.465,
+      "R003": 0.364,
+      "R004": 0.448,
+      "R005": 0.304
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.897584"
+  },
+  {
+    "conversation_id": "conv_049",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.317,
+      "R002": 0.44,
+      "R003": 0.351,
+      "R004": 0.459,
+      "R005": 0.4
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.918162"
+  },
+  {
+    "conversation_id": "conv_050",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.543,
+      "R002": 0.545,
+      "R003": 0.533,
+      "R004": 0.56,
+      "R005": 0.413
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.969542"
+  },
+  {
+    "conversation_id": "conv_051",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.395,
+      "R002": 0.475,
+      "R003": 0.349,
+      "R004": 0.446,
+      "R005": 0.308
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:49.991003"
+  },
+  {
+    "conversation_id": "conv_053",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.377,
+      "R002": 0.467,
+      "R003": 0.373,
+      "R004": 0.51,
+      "R005": 0.399
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.033882"
+  },
+  {
+    "conversation_id": "conv_054",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.483,
+      "R002": 0.538,
+      "R003": 0.451,
+      "R004": 0.452,
+      "R005": 0.599
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.054829"
+  },
+  {
+    "conversation_id": "conv_055",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.547,
+      "R002": 0.496,
+      "R003": 0.554,
+      "R004": 0.634,
+      "R005": 0.447
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.108039"
+  },
+  {
+    "conversation_id": "conv_056",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.406,
+      "R002": 0.473,
+      "R003": 0.414,
+      "R004": 0.506,
+      "R005": 0.352
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.129241"
+  },
+  {
+    "conversation_id": "conv_057",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.34,
+      "R002": 0.456,
+      "R003": 0.481,
+      "R004": 0.462,
+      "R005": 0.365
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.149363"
+  },
+  {
+    "conversation_id": "conv_058",
+    "compliant": false,
+    "confidence": 0.8600000143051147,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Honestly, if you don't pay soon, there's no way to avoid us escalating this to our lawyers.",
+        "similarity_score": 0.6224592924118042,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 2,
+        "matched_text": "I understand that, but you really need to pay this immediately or we\u2019ll have to involve legal action",
+        "similarity_score": 0.7644094228744507,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Honestly, if you don't pay soon, there's no way to avoid us escalating this to o...\" (similarity: 0.62)",
+      "R004 (medium): \"I understand that, but you really need to pay this immediately or we\u2019ll have to ...\" (similarity: 0.76)"
+    ],
+    "similarity_scores": {
+      "R001": 0.622,
+      "R002": 0.515,
+      "R003": 0.516,
+      "R004": 0.764,
+      "R005": 0.421
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.197046"
+  },
+  {
+    "conversation_id": "conv_059",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.326,
+      "R002": 0.466,
+      "R003": 0.364,
+      "R004": 0.488,
+      "R005": 0.373
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.220907"
+  },
+  {
+    "conversation_id": "conv_060",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.402,
+      "R002": 0.519,
+      "R003": 0.368,
+      "R004": 0.564,
+      "R005": 0.41
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.241523"
+  },
+  {
+    "conversation_id": "conv_061",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.417,
+      "R002": 0.404,
+      "R003": 0.522,
+      "R004": 0.474,
+      "R005": 0.337
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.261231"
+  },
+  {
+    "conversation_id": "conv_063",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.419,
+      "R002": 0.485,
+      "R003": 0.425,
+      "R004": 0.461,
+      "R005": 0.365
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.300979"
+  },
+  {
+    "conversation_id": "conv_064",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.46,
+      "R002": 0.495,
+      "R003": 0.472,
+      "R004": 0.447,
+      "R005": 0.59
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.319262"
+  },
+  {
+    "conversation_id": "conv_067",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.347,
+      "R002": 0.468,
+      "R003": 0.486,
+      "R004": 0.499,
+      "R005": 0.368
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.409759"
+  },
+  {
+    "conversation_id": "conv_068",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.415,
+      "R002": 0.472,
+      "R003": 0.355,
+      "R004": 0.567,
+      "R005": 0.405
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.434188"
+  },
+  {
+    "conversation_id": "conv_069",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.517,
+      "R002": 0.517,
+      "R003": 0.506,
+      "R004": 0.638,
+      "R005": 0.39
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.457082"
+  },
+  {
+    "conversation_id": "conv_071",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.474,
+      "R002": 0.499,
+      "R003": 0.385,
+      "R004": 0.524,
+      "R005": 0.362
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.500818"
+  },
+  {
+    "conversation_id": "conv_072",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.587,
+      "R002": 0.487,
+      "R003": 0.472,
+      "R004": 0.556,
+      "R005": 0.393
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.521888"
+  },
+  {
+    "conversation_id": "conv_073",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.357,
+      "R002": 0.462,
+      "R003": 0.357,
+      "R004": 0.483,
+      "R005": 0.342
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.544202"
+  },
+  {
+    "conversation_id": "conv_074",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.551,
+      "R002": 0.485,
+      "R003": 0.502,
+      "R004": 0.665,
+      "R005": 0.354
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.562921"
+  },
+  {
+    "conversation_id": "conv_075",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.593,
+      "R002": 0.513,
+      "R003": 0.471,
+      "R004": 0.649,
+      "R005": 0.358
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.584493"
+  },
+  {
+    "conversation_id": "conv_076",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.377,
+      "R002": 0.483,
+      "R003": 0.394,
+      "R004": 0.524,
+      "R005": 0.332
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.607767"
+  },
+  {
+    "conversation_id": "conv_077",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.588,
+      "R002": 0.505,
+      "R003": 0.561,
+      "R004": 0.623,
+      "R005": 0.428
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.651487"
+  },
+  {
+    "conversation_id": "conv_078",
+    "compliant": true,
+    "confidence": 0.7,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.599,
+      "R002": 0.584,
+      "R003": 0.624,
+      "R004": 0.629,
+      "R005": 0.546
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.699192"
+  },
+  {
+    "conversation_id": "conv_079",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.4,
+      "R002": 0.506,
+      "R003": 0.39,
+      "R004": 0.473,
+      "R005": 0.384
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.716384"
+  },
+  {
+    "conversation_id": "conv_080",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.54,
+      "R002": 0.507,
+      "R003": 0.535,
+      "R004": 0.567,
+      "R005": 0.385
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.766173"
+  },
+  {
+    "conversation_id": "conv_081",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.494,
+      "R002": 0.599,
+      "R003": 0.549,
+      "R004": 0.661,
+      "R005": 0.449
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.788019"
+  },
+  {
+    "conversation_id": "conv_082",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.356,
+      "R002": 0.452,
+      "R003": 0.354,
+      "R004": 0.504,
+      "R005": 0.356
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.809799"
+  },
+  {
+    "conversation_id": "conv_084",
+    "compliant": true,
+    "confidence": 0.76,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.422,
+      "R002": 0.489,
+      "R003": 0.434,
+      "R004": 0.524,
+      "R005": 0.557
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.846131"
+  },
+  {
+    "conversation_id": "conv_085",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.542,
+      "R002": 0.469,
+      "R003": 0.488,
+      "R004": 0.628,
+      "R005": 0.366
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.863168"
+  },
+  {
+    "conversation_id": "conv_086",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.56,
+      "R002": 0.499,
+      "R003": 0.486,
+      "R004": 0.565,
+      "R005": 0.358
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.881138"
+  },
+  {
+    "conversation_id": "conv_088",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.385,
+      "R002": 0.492,
+      "R003": 0.391,
+      "R004": 0.522,
+      "R005": 0.343
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.920827"
+  },
+  {
+    "conversation_id": "conv_090",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.352,
+      "R002": 0.496,
+      "R003": 0.389,
+      "R004": 0.483,
+      "R005": 0.362
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.991827"
+  },
+  {
+    "conversation_id": "conv_091",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.552,
+      "R002": 0.579,
+      "R003": 0.512,
+      "R004": 0.632,
+      "R005": 0.463
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.016986"
+  },
+  {
+    "conversation_id": "conv_092",
+    "compliant": true,
+    "confidence": 0.76,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.484,
+      "R002": 0.515,
+      "R003": 0.522,
+      "R004": 0.498,
+      "R005": 0.403
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.068962"
+  },
+  {
+    "conversation_id": "conv_093",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.551,
+      "R002": 0.5,
+      "R003": 0.538,
+      "R004": 0.529,
+      "R005": 0.645
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.085502"
+  },
+  {
+    "conversation_id": "conv_094",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.355,
+      "R002": 0.467,
+      "R003": 0.491,
+      "R004": 0.555,
+      "R005": 0.405
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.107069"
+  },
+  {
+    "conversation_id": "conv_095",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.385,
+      "R002": 0.461,
+      "R003": 0.386,
+      "R004": 0.461,
+      "R005": 0.378
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.132387"
+  },
+  {
+    "conversation_id": "conv_097",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.515,
+      "R002": 0.606,
+      "R003": 0.468,
+      "R004": 0.542,
+      "R005": 0.426
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.172389"
+  },
+  {
+    "conversation_id": "conv_098",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.394,
+      "R002": 0.464,
+      "R003": 0.346,
+      "R004": 0.471,
+      "R005": 0.426
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.191773"
+  },
+  {
+    "conversation_id": "conv_099",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.356,
+      "R002": 0.486,
+      "R003": 0.435,
+      "R004": 0.516,
+      "R005": 0.416
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.212178"
+  },
+  {
+    "conversation_id": "conv_100",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.419,
+      "R002": 0.474,
+      "R003": 0.462,
+      "R004": 0.542,
+      "R005": 0.375
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.235099"
+  },
+  {
+    "conversation_id": "conv_101",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.346,
+      "R002": 0.471,
+      "R003": 0.462,
+      "R004": 0.51,
+      "R005": 0.284
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.257623"
+  },
+  {
+    "conversation_id": "conv_102",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.593,
+      "R002": 0.516,
+      "R003": 0.561,
+      "R004": 0.678,
+      "R005": 0.502
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.281135"
+  },
+  {
+    "conversation_id": "conv_103",
+    "compliant": true,
+    "confidence": 0.81,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.364,
+      "R002": 0.459,
+      "R003": 0.311,
+      "R004": 0.456,
+      "R005": 0.318
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.306423"
+  },
+  {
+    "conversation_id": "conv_104",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.654,
+      "R002": 0.473,
+      "R003": 0.533,
+      "R004": 0.568,
+      "R005": 0.357
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.324769"
+  },
+  {
+    "conversation_id": "conv_105",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.543,
+      "R002": 0.508,
+      "R003": 0.487,
+      "R004": 0.552,
+      "R005": 0.591
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.343240"
+  },
+  {
+    "conversation_id": "conv_106",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.359,
+      "R002": 0.45,
+      "R003": 0.373,
+      "R004": 0.487,
+      "R005": 0.355
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.365458"
+  },
+  {
+    "conversation_id": "conv_107",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.327,
+      "R002": 0.481,
+      "R003": 0.393,
+      "R004": 0.481,
+      "R005": 0.353
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.383610"
+  },
+  {
+    "conversation_id": "conv_108",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.351,
+      "R002": 0.488,
+      "R003": 0.34,
+      "R004": 0.528,
+      "R005": 0.4
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.406453"
+  },
+  {
+    "conversation_id": "conv_109",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.473,
+      "R002": 0.515,
+      "R003": 0.539,
+      "R004": 0.564,
+      "R005": 0.38
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.429998"
+  },
+  {
+    "conversation_id": "conv_110",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.539,
+      "R002": 0.571,
+      "R003": 0.51,
+      "R004": 0.659,
+      "R005": 0.518
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.485657"
+  },
+  {
+    "conversation_id": "conv_111",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.558,
+      "R002": 0.5,
+      "R003": 0.496,
+      "R004": 0.538,
+      "R005": 0.421
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.508332"
+  },
+  {
+    "conversation_id": "conv_112",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.579,
+      "R002": 0.516,
+      "R003": 0.591,
+      "R004": 0.587,
+      "R005": 0.431
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.529334"
+  },
+  {
+    "conversation_id": "conv_113",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.364,
+      "R002": 0.461,
+      "R003": 0.343,
+      "R004": 0.475,
+      "R005": 0.388
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.553343"
+  },
+  {
+    "conversation_id": "conv_114",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.487,
+      "R002": 0.444,
+      "R003": 0.539,
+      "R004": 0.584,
+      "R005": 0.427
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.603692"
+  },
+  {
+    "conversation_id": "conv_115",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.494,
+      "R002": 0.462,
+      "R003": 0.497,
+      "R004": 0.548,
+      "R005": 0.498
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.621598"
+  },
+  {
+    "conversation_id": "conv_116",
+    "compliant": true,
+    "confidence": 0.81,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.372,
+      "R002": 0.448,
+      "R003": 0.364,
+      "R004": 0.46,
+      "R005": 0.298
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.646311"
+  },
+  {
+    "conversation_id": "conv_117",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.549,
+      "R002": 0.551,
+      "R003": 0.536,
+      "R004": 0.625,
+      "R005": 0.541
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.666301"
+  },
+  {
+    "conversation_id": "conv_118",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.398,
+      "R002": 0.495,
+      "R003": 0.434,
+      "R004": 0.523,
+      "R005": 0.414
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.690420"
+  },
+  {
+    "conversation_id": "conv_119",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.388,
+      "R002": 0.513,
+      "R003": 0.419,
+      "R004": 0.456,
+      "R005": 0.327
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.713824"
+  },
+  {
+    "conversation_id": "conv_120",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.398,
+      "R002": 0.468,
+      "R003": 0.347,
+      "R004": 0.498,
+      "R005": 0.357
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.737110"
+  },
+  {
+    "conversation_id": "conv_121",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.344,
+      "R002": 0.467,
+      "R003": 0.324,
+      "R004": 0.624,
+      "R005": 0.377
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.760599"
+  },
+  {
+    "conversation_id": "conv_122",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.534,
+      "R002": 0.497,
+      "R003": 0.541,
+      "R004": 0.624,
+      "R005": 0.361
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.780583"
+  },
+  {
+    "conversation_id": "conv_123",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.456,
+      "R002": 0.473,
+      "R003": 0.351,
+      "R004": 0.462,
+      "R005": 0.419
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.801492"
+  },
+  {
+    "conversation_id": "conv_124",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.378,
+      "R002": 0.479,
+      "R003": 0.365,
+      "R004": 0.483,
+      "R005": 0.398
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.825257"
+  },
+  {
+    "conversation_id": "conv_126",
+    "compliant": false,
+    "confidence": 0.8199999928474426,
+    "threshold": 0.8,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 4,
+        "matched_text": "I really can't help you unless you pay. Your credit will be ruined if this continues much longer.",
+        "similarity_score": 0.724856436252594,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R005 (high): \"I really can't help you unless you pay. Your credit will be ruined if this conti...\" (similarity: 0.72)"
+    ],
+    "similarity_scores": {
+      "R001": 0.49,
+      "R002": 0.504,
+      "R003": 0.52,
+      "R004": 0.571,
+      "R005": 0.725
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.863367"
+  },
+  {
+    "conversation_id": "conv_127",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.369,
+      "R002": 0.47,
+      "R003": 0.368,
+      "R004": 0.505,
+      "R005": 0.367
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.884745"
+  },
+  {
+    "conversation_id": "conv_128",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.448,
+      "R002": 0.481,
+      "R003": 0.387,
+      "R004": 0.473,
+      "R005": 0.415
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.908756"
+  },
+  {
+    "conversation_id": "conv_129",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.377,
+      "R002": 0.483,
+      "R003": 0.388,
+      "R004": 0.522,
+      "R005": 0.339
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:51.935022"
+  },
+  {
+    "conversation_id": "conv_130",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.508,
+      "R002": 0.528,
+      "R003": 0.463,
+      "R004": 0.618,
+      "R005": 0.381
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.952177"
+  },
+  {
+    "conversation_id": "conv_131",
+    "compliant": true,
+    "confidence": 0.71,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.535,
+      "R002": 0.509,
+      "R003": 0.545,
+      "R004": 0.663,
+      "R005": 0.615
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.996100"
+  },
+  {
+    "conversation_id": "conv_132",
+    "compliant": false,
+    "confidence": 0.7799999713897705,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "Honestly, if you can't pay immediately, I don\u2019t see any other option. It will just get worse for you",
+        "similarity_score": 0.6773694753646851,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R004 (medium): \"Honestly, if you can't pay immediately, I don\u2019t see any other option. It will ju...\" (similarity: 0.68)"
+    ],
+    "similarity_scores": {
+      "R001": 0.563,
+      "R002": 0.516,
+      "R003": 0.542,
+      "R004": 0.677,
+      "R005": 0.396
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.025134"
+  },
+  {
+    "conversation_id": "conv_133",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.383,
+      "R002": 0.466,
+      "R003": 0.372,
+      "R004": 0.43,
+      "R005": 0.354
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.050213"
+  },
+  {
+    "conversation_id": "conv_134",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.576,
+      "R002": 0.727,
+      "R003": 0.527,
+      "R004": 0.561,
+      "R005": 0.443
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.068961"
+  },
+  {
+    "conversation_id": "conv_135",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.579,
+      "R002": 0.536,
+      "R003": 0.547,
+      "R004": 0.523,
+      "R005": 0.445
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.092767"
+  },
+  {
+    "conversation_id": "conv_136",
+    "compliant": true,
+    "confidence": 0.71,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.554,
+      "R002": 0.702,
+      "R003": 0.522,
+      "R004": 0.511,
+      "R005": 0.596
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.114438"
+  },
+  {
+    "conversation_id": "conv_137",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.386,
+      "R002": 0.499,
+      "R003": 0.388,
+      "R004": 0.517,
+      "R005": 0.42
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.137643"
+  },
+  {
+    "conversation_id": "conv_138",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.346,
+      "R002": 0.496,
+      "R003": 0.361,
+      "R004": 0.517,
+      "R005": 0.378
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.157790"
+  },
+  {
+    "conversation_id": "conv_139",
+    "compliant": false,
+    "confidence": 0.800000011920929,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I understand that, but if you don\u2019t pay up, we might have to take legal action against you.",
+        "similarity_score": 0.7006899118423462,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "We can\u2019t keep delaying this. You should pay immediately or you\u2019ll be facing serious consequences.",
+        "similarity_score": 0.6863532662391663,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I understand that, but if you don\u2019t pay up, we might have to take legal action a...\" (similarity: 0.70)",
+      "R004 (medium): \"We can\u2019t keep delaying this. You should pay immediately or you\u2019ll be facing seri...\" (similarity: 0.69)"
+    ],
+    "similarity_scores": {
+      "R001": 0.701,
+      "R002": 0.548,
+      "R003": 0.597,
+      "R004": 0.686,
+      "R005": 0.406
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.180221"
+  },
+  {
+    "conversation_id": "conv_140",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.337,
+      "R002": 0.45,
+      "R003": 0.344,
+      "R004": 0.458,
+      "R005": 0.386
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.202838"
+  },
+  {
+    "conversation_id": "conv_141",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.484,
+      "R002": 0.469,
+      "R003": 0.369,
+      "R004": 0.452,
+      "R005": 0.364
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.225102"
+  },
+  {
+    "conversation_id": "conv_142",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.326,
+      "R002": 0.482,
+      "R003": 0.45,
+      "R004": 0.392,
+      "R005": 0.398
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.244451"
+  },
+  {
+    "conversation_id": "conv_143",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.544,
+      "R002": 0.521,
+      "R003": 0.532,
+      "R004": 0.585,
+      "R005": 0.638
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.261883"
+  },
+  {
+    "conversation_id": "conv_144",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.573,
+      "R002": 0.532,
+      "R003": 0.548,
+      "R004": 0.633,
+      "R005": 0.564
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.279384"
+  },
+  {
+    "conversation_id": "conv_145",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.405,
+      "R002": 0.519,
+      "R003": 0.452,
+      "R004": 0.494,
+      "R005": 0.362
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.299224"
+  },
+  {
+    "conversation_id": "conv_147",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.404,
+      "R002": 0.479,
+      "R003": 0.394,
+      "R004": 0.529,
+      "R005": 0.366
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.337857"
+  },
+  {
+    "conversation_id": "conv_148",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.527,
+      "R002": 0.666,
+      "R003": 0.534,
+      "R004": 0.533,
+      "R005": 0.409
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.356405"
+  },
+  {
+    "conversation_id": "conv_149",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.387,
+      "R002": 0.481,
+      "R003": 0.34,
+      "R004": 0.501,
+      "R005": 0.303
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.382106"
+  },
+  {
+    "conversation_id": "conv_150",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.404,
+      "R002": 0.475,
+      "R003": 0.487,
+      "R004": 0.534,
+      "R005": 0.404
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.407904"
+  },
+  {
+    "conversation_id": "conv_151",
+    "compliant": true,
+    "confidence": 0.7,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.605,
+      "R002": 0.47,
+      "R003": 0.559,
+      "R004": 0.711,
+      "R005": 0.646
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.432089"
+  },
+  {
+    "conversation_id": "conv_152",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.361,
+      "R002": 0.462,
+      "R003": 0.352,
+      "R004": 0.479,
+      "R005": 0.367
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.450206"
+  },
+  {
+    "conversation_id": "conv_154",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.366,
+      "R002": 0.484,
+      "R003": 0.452,
+      "R004": 0.486,
+      "R005": 0.418
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.496662"
+  },
+  {
+    "conversation_id": "conv_155",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.373,
+      "R002": 0.479,
+      "R003": 0.34,
+      "R004": 0.507,
+      "R005": 0.352
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.517462"
+  },
+  {
+    "conversation_id": "conv_156",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.583,
+      "R002": 0.437,
+      "R003": 0.555,
+      "R004": 0.609,
+      "R005": 0.353
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.540183"
+  },
+  {
+    "conversation_id": "conv_157",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.345,
+      "R002": 0.475,
+      "R003": 0.373,
+      "R004": 0.571,
+      "R005": 0.36
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.562104"
+  },
+  {
+    "conversation_id": "conv_158",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.358,
+      "R002": 0.476,
+      "R003": 0.348,
+      "R004": 0.475,
+      "R005": 0.369
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.582226"
+  },
+  {
+    "conversation_id": "conv_159",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.59,
+      "R002": 0.494,
+      "R003": 0.537,
+      "R004": 0.607,
+      "R005": 0.428
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.600713"
+  },
+  {
+    "conversation_id": "conv_160",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.565,
+      "R002": 0.489,
+      "R003": 0.513,
+      "R004": 0.626,
+      "R005": 0.368
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.619003"
+  },
+  {
+    "conversation_id": "conv_161",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.379,
+      "R002": 0.517,
+      "R003": 0.458,
+      "R004": 0.536,
+      "R005": 0.34
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.638568"
+  },
+  {
+    "conversation_id": "conv_162",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.52,
+      "R002": 0.485,
+      "R003": 0.489,
+      "R004": 0.61,
+      "R005": 0.585
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.659765"
+  },
+  {
+    "conversation_id": "conv_163",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.366,
+      "R002": 0.51,
+      "R003": 0.361,
+      "R004": 0.523,
+      "R005": 0.368
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.683810"
+  },
+  {
+    "conversation_id": "conv_164",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.377,
+      "R002": 0.475,
+      "R003": 0.395,
+      "R004": 0.511,
+      "R005": 0.327
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.704155"
+  },
+  {
+    "conversation_id": "conv_165",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.347,
+      "R002": 0.455,
+      "R003": 0.342,
+      "R004": 0.488,
+      "R005": 0.358
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.727392"
+  },
+  {
+    "conversation_id": "conv_166",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.4,
+      "R002": 0.46,
+      "R003": 0.406,
+      "R004": 0.553,
+      "R005": 0.346
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.745586"
+  },
+  {
+    "conversation_id": "conv_167",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.388,
+      "R002": 0.489,
+      "R003": 0.482,
+      "R004": 0.485,
+      "R005": 0.336
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.765160"
+  },
+  {
+    "conversation_id": "conv_168",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.388,
+      "R002": 0.481,
+      "R003": 0.35,
+      "R004": 0.529,
+      "R005": 0.411
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.785248"
+  },
+  {
+    "conversation_id": "conv_169",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.387,
+      "R002": 0.489,
+      "R003": 0.39,
+      "R004": 0.557,
+      "R005": 0.451
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.809035"
+  },
+  {
+    "conversation_id": "conv_170",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.382,
+      "R002": 0.485,
+      "R003": 0.349,
+      "R004": 0.5,
+      "R005": 0.363
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.831487"
+  },
+  {
+    "conversation_id": "conv_172",
+    "compliant": true,
+    "confidence": 0.71,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.607,
+      "R002": 0.632,
+      "R003": 0.546,
+      "R004": 0.676,
+      "R005": 0.487
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.870979"
+  },
+  {
+    "conversation_id": "conv_173",
+    "compliant": true,
+    "confidence": 0.7,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.612,
+      "R002": 0.522,
+      "R003": 0.588,
+      "R004": 0.561,
+      "R005": 0.685
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.887862"
+  },
+  {
+    "conversation_id": "conv_174",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.373,
+      "R002": 0.494,
+      "R003": 0.389,
+      "R004": 0.538,
+      "R005": 0.322
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.911224"
+  },
+  {
+    "conversation_id": "conv_175",
+    "compliant": false,
+    "confidence": 0.7799999713897705,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I get that, but you need to understand that if you don\u2019t pay, we will have to take serious action, l",
+        "similarity_score": 0.6819097995758057,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "I understand, but waiting isn't an option anymore. If you don't pay immediately, your credit is goin",
+        "similarity_score": 0.67787766456604,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I get that, but you need to understand that if you don\u2019t pay, we will have to ta...\" (similarity: 0.68)",
+      "R004 (medium): \"I understand, but waiting isn't an option anymore. If you don't pay immediately,...\" (similarity: 0.68)"
+    ],
+    "similarity_scores": {
+      "R001": 0.682,
+      "R002": 0.524,
+      "R003": 0.559,
+      "R004": 0.678,
+      "R005": 0.447
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.932512"
+  },
+  {
+    "conversation_id": "conv_176",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.442,
+      "R002": 0.682,
+      "R003": 0.491,
+      "R004": 0.61,
+      "R005": 0.54
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.956083"
+  },
+  {
+    "conversation_id": "conv_177",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.402,
+      "R002": 0.494,
+      "R003": 0.513,
+      "R004": 0.523,
+      "R005": 0.405
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.977225"
+  },
+  {
+    "conversation_id": "conv_178",
+    "compliant": true,
+    "confidence": 0.7,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.558,
+      "R002": 0.489,
+      "R003": 0.607,
+      "R004": 0.66,
+      "R005": 0.722
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.993920"
+  },
+  {
+    "conversation_id": "conv_180",
+    "compliant": true,
+    "confidence": 0.76,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.404,
+      "R002": 0.567,
+      "R003": 0.468,
+      "R004": 0.548,
+      "R005": 0.388
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.095877"
+  },
+  {
+    "conversation_id": "conv_181",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.348,
+      "R002": 0.477,
+      "R003": 0.378,
+      "R004": 0.408,
+      "R005": 0.349
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.114816"
+  },
+  {
+    "conversation_id": "conv_182",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.365,
+      "R002": 0.501,
+      "R003": 0.365,
+      "R004": 0.44,
+      "R005": 0.323
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.134262"
+  },
+  {
+    "conversation_id": "conv_183",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.359,
+      "R002": 0.472,
+      "R003": 0.327,
+      "R004": 0.52,
+      "R005": 0.394
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.156595"
+  },
+  {
+    "conversation_id": "conv_184",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.339,
+      "R002": 0.461,
+      "R003": 0.461,
+      "R004": 0.546,
+      "R005": 0.318
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.179138"
+  },
+  {
+    "conversation_id": "conv_185",
+    "compliant": true,
+    "confidence": 0.8,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.347,
+      "R002": 0.473,
+      "R003": 0.355,
+      "R004": 0.473,
+      "R005": 0.348
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.200612"
+  },
+  {
+    "conversation_id": "conv_186",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.4,
+      "R002": 0.493,
+      "R003": 0.408,
+      "R004": 0.494,
+      "R005": 0.401
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.219116"
+  },
+  {
+    "conversation_id": "conv_187",
+    "compliant": true,
+    "confidence": 0.78,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.34,
+      "R002": 0.476,
+      "R003": 0.415,
+      "R004": 0.503,
+      "R005": 0.454
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.237846"
+  },
+  {
+    "conversation_id": "conv_188",
+    "compliant": true,
+    "confidence": 0.75,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.519,
+      "R002": 0.499,
+      "R003": 0.53,
+      "R004": 0.534,
+      "R005": 0.369
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.257060"
+  },
+  {
+    "conversation_id": "conv_190",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.628,
+      "R002": 0.443,
+      "R003": 0.531,
+      "R004": 0.663,
+      "R005": 0.367
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.298700"
+  },
+  {
+    "conversation_id": "conv_191",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.55,
+      "R002": 0.472,
+      "R003": 0.558,
+      "R004": 0.588,
+      "R005": 0.398
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.315044"
+  },
+  {
+    "conversation_id": "conv_192",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.634,
+      "R002": 0.546,
+      "R003": 0.538,
+      "R004": 0.55,
+      "R005": 0.369
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.334055"
+  },
+  {
+    "conversation_id": "conv_194",
+    "compliant": true,
+    "confidence": 0.79,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.354,
+      "R002": 0.452,
+      "R003": 0.367,
+      "R004": 0.529,
+      "R005": 0.369
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.377899"
+  },
+  {
+    "conversation_id": "conv_195",
+    "compliant": true,
+    "confidence": 0.72,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.522,
+      "R002": 0.561,
+      "R003": 0.522,
+      "R004": 0.605,
+      "R005": 0.587
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.396747"
+  },
+  {
+    "conversation_id": "conv_196",
+    "compliant": true,
+    "confidence": 0.77,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.412,
+      "R002": 0.498,
+      "R003": 0.342,
+      "R004": 0.601,
+      "R005": 0.421
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.416825"
+  },
+  {
+    "conversation_id": "conv_197",
+    "compliant": true,
+    "confidence": 0.74,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.579,
+      "R002": 0.505,
+      "R003": 0.526,
+      "R004": 0.666,
+      "R005": 0.328
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.432551"
+  },
+  {
+    "conversation_id": "conv_198",
+    "compliant": true,
+    "confidence": 0.71,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.575,
+      "R002": 0.64,
+      "R003": 0.507,
+      "R004": 0.645,
+      "R005": 0.493
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.452141"
+  },
+  {
+    "conversation_id": "conv_199",
+    "compliant": true,
+    "confidence": 0.73,
+    "threshold": 0.7,
+    "needs_llm_review": false,
+    "violations": [],
+    "evidence": [],
+    "similarity_scores": {
+      "R001": 0.599,
+      "R002": 0.527,
+      "R003": 0.564,
+      "R004": 0.644,
+      "R005": 0.406
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:53.473833"
+  },
+  {
+    "conversation_id": "conv_200",
+    "compliant": false,
+    "confidence": 0.8199999928474426,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "I can't help you with that. If you don't pay immediately, we're going to report this to credit agenc",
+        "similarity_score": 0.7238598465919495,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R004 (medium): \"I can't help you with that. If you don't pay immediately, we're going to report ...\" (similarity: 0.72)"
+    ],
+    "similarity_scores": {
+      "R001": 0.511,
+      "R002": 0.514,
+      "R003": 0.61,
+      "R004": 0.724,
+      "R005": 0.566
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.494433"
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "conversation_id": "conv_007",
+    "compliant": false,
+    "confidence": 0.75,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I understand, but you really need to pay this now. If you don\u2019t, we might have to take legal action ",
+        "similarity_score": 0.6478127837181091,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I understand, but you really need to pay this now. If you don\u2019t, we might have t...\" (similarity: 0.65)"
+    ],
+    "similarity_scores": {
+      "R001": 0.648,
+      "R002": 0.517,
+      "R003": 0.573,
+      "R004": 0.673,
+      "R005": 0.38
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:48.584820"
+  },
+  {
+    "conversation_id": "conv_011",
+    "compliant": false,
+    "confidence": 0.7300000190734863,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I understand that, but you really need to pay something. If you don\u2019t, we might have to take legal a",
+        "similarity_score": 0.6276326179504395,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I understand that, but you really need to pay something. If you don\u2019t, we might ...\" (similarity: 0.63)"
+    ],
+    "similarity_scores": {
+      "R001": 0.628,
+      "R002": 0.492,
+      "R003": 0.495,
+      "R004": 0.63,
+      "R005": 0.328
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:48.764166"
+  },
+  {
+    "conversation_id": "conv_041",
+    "compliant": false,
+    "confidence": 0.75,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Honestly, if you don\u2019t pay us by the end of this week, we might have to take legal action. This is s",
+        "similarity_score": 0.6502176523208618,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Honestly, if you don\u2019t pay us by the end of this week, we might have to take leg...\" (similarity: 0.65)"
+    ],
+    "similarity_scores": {
+      "R001": 0.65,
+      "R002": 0.489,
+      "R003": 0.618,
+      "R004": 0.552,
+      "R005": 0.404
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:49.723319"
+  },
+  {
+    "conversation_id": "conv_052",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but you have to understand that if this isn't paid soon, we might have to resort",
+        "similarity_score": 0.6611477136611938,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That's unfortunate, but you have to understand that if this isn't paid soon, we ...\" (similarity: 0.66)"
+    ],
+    "similarity_scores": {
+      "R001": 0.661,
+      "R002": 0.524,
+      "R003": 0.568,
+      "R004": 0.605,
+      "R005": 0.384
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.013216"
+  },
+  {
+    "conversation_id": "conv_062",
+    "compliant": false,
+    "confidence": 0.7200000286102295,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but you still need to pay the full amount. If you don\u2019t, we might have to take l",
+        "similarity_score": 0.6203283071517944,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That's unfortunate, but you still need to pay the full amount. If you don\u2019t, we ...\" (similarity: 0.62)"
+    ],
+    "similarity_scores": {
+      "R001": 0.62,
+      "R002": 0.539,
+      "R003": 0.576,
+      "R004": 0.656,
+      "R005": 0.533
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.280190"
+  },
+  {
+    "conversation_id": "conv_065",
+    "compliant": false,
+    "confidence": 0.7699999809265137,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Look, you signed up for this. If you don\u2019t pay soon, we\u2019ll have no choice but to take legal action a",
+        "similarity_score": 0.6736282706260681,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Look, you signed up for this. If you don\u2019t pay soon, we\u2019ll have no choice but to...\" (similarity: 0.67)"
+    ],
+    "similarity_scores": {
+      "R001": 0.674,
+      "R002": 0.558,
+      "R003": 0.567,
+      "R004": 0.675,
+      "R005": 0.45
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:50.372278"
+  },
+  {
+    "conversation_id": "conv_066",
+    "compliant": false,
+    "confidence": 0.75,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Honestly, if you don\u2019t pay by the end of the week, we will escalate this to our lawyers and that cou",
+        "similarity_score": 0.6460889577865601,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Honestly, if you don\u2019t pay by the end of the week, we will escalate this to our ...\" (similarity: 0.65)"
+    ],
+    "similarity_scores": {
+      "R001": 0.646,
+      "R002": 0.505,
+      "R003": 0.542,
+      "R004": 0.583,
+      "R005": 0.391
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.388012"
+  },
+  {
+    "conversation_id": "conv_070",
+    "compliant": false,
+    "confidence": 0.7300000190734863,
+    "threshold": 0.75,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I understand, but we still need payment. If you don\u2019t pay right now, we're going to have to take leg",
+        "similarity_score": 0.6278738379478455,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 2,
+        "matched_text": "I understand, but we still need payment. If you don\u2019t pay right now, we're going to have to take leg",
+        "similarity_score": 0.6327942609786987,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I understand, but we still need payment. If you don\u2019t pay right now, we're going...\" (similarity: 0.63)",
+      "R004 (medium): \"I understand, but we still need payment. If you don\u2019t pay right now, we're going...\" (similarity: 0.63)"
+    ],
+    "similarity_scores": {
+      "R001": 0.628,
+      "R002": 0.576,
+      "R003": 0.542,
+      "R004": 0.633,
+      "R005": 0.39
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.478387"
+  },
+  {
+    "conversation_id": "conv_083",
+    "compliant": false,
+    "confidence": 0.7200000286102295,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Look, if you don\u2019t pay this immediately, we will have to take legal action. You don\u2019t want a court j",
+        "similarity_score": 0.6196571588516235,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Look, if you don\u2019t pay this immediately, we will have to take legal action. You ...\" (similarity: 0.62)"
+    ],
+    "similarity_scores": {
+      "R001": 0.62,
+      "R002": 0.498,
+      "R003": 0.64,
+      "R004": 0.656,
+      "R005": 0.387
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.828168"
+  },
+  {
+    "conversation_id": "conv_087",
+    "compliant": false,
+    "confidence": 0.75,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That\u2019s not our issue. You agreed to these terms. If you don\u2019t pay, we\u2019ll have to escalate this, and ",
+        "similarity_score": 0.6528171896934509,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That\u2019s not our issue. You agreed to these terms. If you don\u2019t pay, we\u2019ll have to...\" (similarity: 0.65)"
+    ],
+    "similarity_scores": {
+      "R001": 0.653,
+      "R002": 0.528,
+      "R003": 0.577,
+      "R004": 0.523,
+      "R005": 0.41
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.899597"
+  },
+  {
+    "conversation_id": "conv_089",
+    "compliant": false,
+    "confidence": 0.75,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Honestly, if we don\u2019t receive payment soon, we might have no choice but to take legal action against",
+        "similarity_score": 0.6456220149993896,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Honestly, if we don\u2019t receive payment soon, we might have no choice but to take ...\" (similarity: 0.65)"
+    ],
+    "similarity_scores": {
+      "R001": 0.646,
+      "R002": 0.486,
+      "R003": 0.514,
+      "R004": 0.621,
+      "R005": 0.367
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:50.969977"
+  },
+  {
+    "conversation_id": "conv_096",
+    "compliant": false,
+    "confidence": 0.7099999785423279,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I understand, but you still owe the balance. If you don\u2019t pay, we might have to take legal action.",
+        "similarity_score": 0.6060672998428345,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I understand, but you still owe the balance. If you don\u2019t pay, we might have to ...\" (similarity: 0.61)"
+    ],
+    "similarity_scores": {
+      "R001": 0.606,
+      "R002": 0.502,
+      "R003": 0.551,
+      "R004": 0.565,
+      "R005": 0.421
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.151678"
+  },
+  {
+    "conversation_id": "conv_125",
+    "compliant": false,
+    "confidence": 0.7300000190734863,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Look, if you don\u2019t pay right away, we could end up taking legal action. It's better to avoid that si",
+        "similarity_score": 0.6345126628875732,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Look, if you don\u2019t pay right away, we could end up taking legal action. It's bet...\" (similarity: 0.63)"
+    ],
+    "similarity_scores": {
+      "R001": 0.635,
+      "R002": 0.493,
+      "R003": 0.528,
+      "R004": 0.735,
+      "R005": 0.393
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:51.844695"
+  },
+  {
+    "conversation_id": "conv_146",
+    "compliant": false,
+    "confidence": 0.7400000095367432,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Honestly, if you don't pay by next week, we will have no choice but to involve our lawyers. You shou",
+        "similarity_score": 0.6433238983154297,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Honestly, if you don't pay by next week, we will have no choice but to involve o...\" (similarity: 0.64)"
+    ],
+    "similarity_scores": {
+      "R001": 0.643,
+      "R002": 0.481,
+      "R003": 0.493,
+      "R004": 0.58,
+      "R005": 0.373
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:52.315874"
+  },
+  {
+    "conversation_id": "conv_153",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.8,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 6,
+        "matched_text": "Honestly, I think it\u2019s best if you just pay it all right away. Otherwise, your credit will be ruined",
+        "similarity_score": 0.6575554609298706,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R005 (high): \"Honestly, I think it\u2019s best if you just pay it all right away. Otherwise, your c...\" (similarity: 0.66)"
+    ],
+    "similarity_scores": {
+      "R001": 0.548,
+      "R002": 0.49,
+      "R003": 0.504,
+      "R004": 0.621,
+      "R005": 0.658
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.474532"
+  },
+  {
+    "conversation_id": "conv_171",
+    "compliant": false,
+    "confidence": 0.7699999809265137,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but honestly, you signed a contract. If you don\u2019t pay, we\u2019ll have no choice but ",
+        "similarity_score": 0.6714180707931519,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That's unfortunate, but honestly, you signed a contract. If you don\u2019t pay, we\u2019ll...\" (similarity: 0.67)"
+    ],
+    "similarity_scores": {
+      "R001": 0.671,
+      "R002": 0.497,
+      "R003": 0.61,
+      "R004": 0.623,
+      "R005": 0.542
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-16T17:23:52.850026"
+  },
+  {
+    "conversation_id": "conv_179",
+    "compliant": false,
+    "confidence": 0.7099999785423279,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That\u2019s your problem, not ours. If you don\u2019t pay by end of the week, we\u2019ll take legal action.",
+        "similarity_score": 0.6139218807220459,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That\u2019s your problem, not ours. If you don\u2019t pay by end of the week, we\u2019ll take l...\" (similarity: 0.61)"
+    ],
+    "similarity_scores": {
+      "R001": 0.614,
+      "R002": 0.477,
+      "R003": 0.577,
+      "R004": 0.587,
+      "R005": 0.37
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.042295"
+  },
+  {
+    "conversation_id": "conv_189",
+    "compliant": false,
+    "confidence": 0.7099999785423279,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I understand, but you really need to pay this. If you don't, we might have to escalate this to our l",
+        "similarity_score": 0.6119996309280396,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I understand, but you really need to pay this. If you don't, we might have to es...\" (similarity: 0.61)"
+    ],
+    "similarity_scores": {
+      "R001": 0.612,
+      "R002": 0.496,
+      "R003": 0.543,
+      "R004": 0.588,
+      "R005": 0.349
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.277900"
+  },
+  {
+    "conversation_id": "conv_193",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.85,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That\u2019s unfortunate, but you still need to pay us. If you don\u2019t pay by the end of the week, we\u2019re goi",
+        "similarity_score": 0.6603571772575378,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That\u2019s unfortunate, but you still need to pay us. If you don\u2019t pay by the end of...\" (similarity: 0.66)"
+    ],
+    "similarity_scores": {
+      "R001": 0.66,
+      "R002": 0.509,
+      "R003": 0.564,
+      "R004": 0.655,
+      "R005": 0.363
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-16T17:23:53.356280"
+  }
+]

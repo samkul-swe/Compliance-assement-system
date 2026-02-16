@@ -3,7 +3,7 @@ Generate synthetic customer service conversations for compliance testing.
 Uses schemas from docs/api/ and compliance rules from data/compliance_rules.json
 
 Features:
-- Randomized distribution (20-60% each type)
+- 50% compliant, 50% non-compliant (for testing)
 - Schema-driven validation
 - LLM-powered for realistic conversations
 """
@@ -12,31 +12,13 @@ import json
 import random
 import os
 from datetime import datetime, timedelta
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from pathlib import Path
 import sys
 from dotenv import load_dotenv
 
 load_dotenv()
 random.seed()
-
-
-def load_schemas():
-    """Load schemas from docs/api/"""
-    conv_schema_path = Path("docs/api/conversation_schema.json")
-    rules_schema_path = Path("docs/api/compliance_rules_schema.json")
-    
-    if not conv_schema_path.exists() or not rules_schema_path.exists():
-        logger.warning("Schema files not found in docs/api/, using basic validation")
-        return None, None
-    
-    with open(conv_schema_path, 'r') as f:
-        conv_schema = json.load(f)
-    
-    with open(rules_schema_path, 'r') as f:
-        rules_schema = json.load(f)
-    
-    return conv_schema, rules_schema
 
 
 def load_compliance_rules() -> Dict:
@@ -96,8 +78,7 @@ def generate_conversation(client, model: str, prompt_template: str,
     """Generate one conversation using LLM."""
     type_instructions = {
         "compliant": "Professional, empathetic, helpful. NO violations.",
-        "non_compliant": "Clearly violates at least ONE rule. Make it obvious.",
-        "vague": "Borderline - urgent but not threatening. Genuinely ambiguous."
+        "non_compliant": "Clearly violates at least ONE rule. Make it obvious."
     }
     
     prompt = prompt_template.replace("{{RULES}}", rules_text)
@@ -136,7 +117,7 @@ def generate_conversation(client, model: str, prompt_template: str,
 
 
 def validate_conversation(conv: Dict) -> bool:
-    """Validate against schema."""
+    """Validate against conversation schema."""
     required = ['conversation_id', 'messages', 'channel', 'customer_segment']
     if not all(k in conv for k in required):
         return False
@@ -151,50 +132,71 @@ def validate_conversation(conv: Dict) -> bool:
 
 
 def generate_all(client, model: str, prompt_template: str, rules_text: str, 
-                 total: int = 200) -> Tuple[List[Dict], Dict, int]:
-    """Generate all conversations with randomized distribution."""
-    # Randomize (min 20% each)
-    min_each = int(total * 0.20)
-    remaining = total - (min_each * 3)
+                 total: int = 200) -> Tuple[List[Dict], List[Dict], int]:
+    """Generate conversations with 50/50 split and ground truth labels."""
+    num_compliant = total // 2
+    num_non_compliant = total - num_compliant
     
-    extra_compliant = random.randint(0, remaining)
-    remaining -= extra_compliant
-    extra_non_compliant = random.randint(0, remaining)
-    extra_vague = remaining - extra_non_compliant
-    
-    distribution = {
-        'compliant': min_each + extra_compliant,
-        'non_compliant': min_each + extra_non_compliant,
-        'vague': min_each + extra_vague
-    }
-    
-    print(f"\n📊 Distribution: Compliant {distribution['compliant']}, "
-          f"Non-Compliant {distribution['non_compliant']}, Vague {distribution['vague']}")
+    print(f"\n📊 Distribution for Testing:")
+    print(f"   Compliant: {num_compliant} (50%)")
+    print(f"   Non-Compliant: {num_non_compliant} (50%)")
     
     conversations = []
-    total_tokens = 0
+    ground_truth = []
     conv_counter = 1
     
-    for conv_type, count in distribution.items():
-        print(f"\nGenerating {count} {conv_type} conversations...")
-        for _ in range(count):
-            conv_id = f"conv_{conv_counter:03d}"
-            conv = generate_conversation(client, model, prompt_template, rules_text, conv_type, conv_id)
-            
-            if conv and validate_conversation(conv):
-                conversations.append(conv)
-                conv_counter += 1
-                if conv_counter % 10 == 1:
-                    print(f"  Generated {conv_counter-1}...")
+    # Generate compliant
+    print(f"\nGenerating {num_compliant} compliant conversations...")
+    for i in range(num_compliant):
+        conv_id = f"conv_{conv_counter:03d}"
+        conv = generate_conversation(client, model, prompt_template, rules_text, "compliant", conv_id)
+        
+        if conv and validate_conversation(conv):
+            conversations.append(conv)
+            ground_truth.append({
+                "conversation_id": conv_id,
+                "label": "compliant",
+                "generation_type": "compliant"
+            })
+            conv_counter += 1
+            if (i + 1) % 10 == 0:
+                print(f"  Generated {i + 1}/{num_compliant}...")
     
-    random.shuffle(conversations)
-    for i, conv in enumerate(conversations, 1):
-        conv["conversation_id"] = f"conv_{i:03d}"
+    # Generate non-compliant
+    print(f"\nGenerating {num_non_compliant} non-compliant conversations...")
+    for i in range(num_non_compliant):
+        conv_id = f"conv_{conv_counter:03d}"
+        conv = generate_conversation(client, model, prompt_template, rules_text, "non_compliant", conv_id)
+        
+        if conv and validate_conversation(conv):
+            conversations.append(conv)
+            ground_truth.append({
+                "conversation_id": conv_id,
+                "label": "non_compliant",
+                "generation_type": "non_compliant"
+            })
+            conv_counter += 1
+            if (i + 1) % 10 == 0:
+                print(f"  Generated {i + 1}/{num_non_compliant}...")
     
-    # Estimate tokens (approximate)
-    total_tokens = len(conversations) * 800  # ~800 tokens per conversation
+    # Shuffle conversations (but keep ground truth aligned)
+    print("\nShuffling conversations...")
+    combined = list(zip(conversations, ground_truth))
+    random.shuffle(combined)
+    conversations, ground_truth = zip(*combined)
+    conversations = list(conversations)
+    ground_truth = list(ground_truth)
     
-    return conversations, distribution, total_tokens
+    # Reassign IDs sequentially after shuffle
+    for i, (conv, gt) in enumerate(zip(conversations, ground_truth), 1):
+        new_id = f"conv_{i:03d}"
+        conv["conversation_id"] = new_id
+        gt["conversation_id"] = new_id
+    
+    # Estimate tokens
+    total_tokens = len(conversations) * 800
+    
+    return conversations, ground_truth, total_tokens
 
 
 def save_conversations(conversations: List[Dict]):
@@ -207,10 +209,21 @@ def save_conversations(conversations: List[Dict]):
     print(f"\n✅ Saved {len(conversations)} conversations to data/generated_conversations.json")
 
 
+def save_ground_truth(ground_truth: List[Dict]):
+    """Save ground truth labels to data/ground_truth.json"""
+    Path("data").mkdir(exist_ok=True)
+    
+    with open("data/ground_truth.json", 'w') as f:
+        json.dump(ground_truth, f, indent=2)
+    
+    print(f"✅ Saved {len(ground_truth)} labels to data/ground_truth.json")
+    print("   ⚠️  Use this for evaluation ONLY - not for training/testing!")
+
+
 def main():
     """Generate conversations."""
     print("="*70)
-    print("CONVERSATION GENERATION")
+    print("CONVERSATION GENERATION (50/50 Split for Testing)")
     print("="*70)
     
     # Load
@@ -220,24 +233,26 @@ def main():
     rules_text = format_rules_for_prompt(rules_data)
     
     # Estimate cost
-    print(f"\n💰 Estimated cost: ~$0.08 for 200 conversations")
+    print(f"\n💰 Estimated cost: ~$0.08 for 200 conversations (100 compliant + 100 non-compliant)")
     response = input("Continue? (y/n): ").strip().lower()
     if response != 'y':
         return
     
     # Generate
-    conversations, distribution, tokens = generate_all(client, model, prompt_template, rules_text)
+    conversations, ground_truth, tokens = generate_all(client, model, prompt_template, rules_text, total=200)
     
     # Save
     save_conversations(conversations)
-    
+    save_ground_truth(ground_truth)
+
     # Cost
     cost = tokens * (0.150 / 1_000_000) * 0.6 + tokens * (0.600 / 1_000_000) * 0.4
     print(f"\n💰 Actual cost: ${cost:.4f} ({tokens:,} tokens)")
     
     print("\n" + "="*70)
-    print("✨ COMPLETE")
+    print("✨ GENERATION COMPLETE")
     print("="*70)
+    print("\n💡 Generated data is balanced 50/50 for testing system performance")
 
 
 if __name__ == "__main__":

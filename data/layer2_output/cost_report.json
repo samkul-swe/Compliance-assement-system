@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-02-16T17:27:30.370556",
+  "conversations_processed": 19,
+  "judge1": {
+    "model": "gpt-4o-mini",
+    "tokens": 37288,
+    "cost_usd": 0.0123
+  },
+  "judge2": {
+    "model": "gpt-4o-mini",
+    "tokens": 37614,
+    "cost_usd": 0.0124
+  },
+  "total": {
+    "tokens": 74902,
+    "cost_usd": 0.0247
+  },
+  "cost_per_conversation": 0.0013
+}
