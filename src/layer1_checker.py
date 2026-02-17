@@ -305,24 +305,22 @@ class SemanticComplianceChecker:
                             keyword_match = True
                             break
                 
-                # High similarity or keyword match = violation
-                if keyword_match or max_similarity >= 0.75:
-                    rule = self.rules[rule_id]
-                    violations.append(ComplianceViolation(
-                        rule_id=rule_id,
-                        category=rule['category'],
-                        severity=rule['severity'],
-                        description=rule['description'],
-                        message_index=best_match_msg_idx,
-                        matched_text=best_match_text[:100],
-                        similarity_score=max_similarity,
-                        keyword_match=keyword_match
-                    ))
-                    
-                    evidence_list.append(
-                        f"{rule_id} ({rule['severity']}): \"{best_match_text[:80]}...\" "
-                        f"(similarity: {max_similarity:.2f})"
-                    )
+                rule = self.rules[rule_id]
+                violations.append(ComplianceViolation(
+                    rule_id=rule_id,
+                    category=rule['category'],
+                    severity=rule['severity'],
+                    description=rule['description'],
+                    message_index=best_match_msg_idx,
+                    matched_text=best_match_text[:100],
+                    similarity_score=max_similarity,
+                    keyword_match=keyword_match
+                ))
+                
+                evidence_list.append(
+                    f"{rule_id} ({rule['severity']}): \"{best_match_text[:80]}...\" "
+                    f"(similarity: {max_similarity:.2f})"
+                )
         
         # Calculate confidence (simple: based on max similarity)
         confidence = self._calculate_confidence(violations, similarity_scores)

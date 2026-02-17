@@ -1,6 +1,6 @@
 [
   {
-    "conversation_id": "conv_007",
+    "conversation_id": "conv_004",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.85,
@@ -9,29 +9,29 @@
         "R004",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to the explicit nature of the violations.",
-      "tokens": 1953
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment in a threatening manner, while also dismissing the customer's expressed hardship. High confidence due to the explicit nature of the violations.",
+      "tokens": 1999
     },
     "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
-        "R004",
+        "R003",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options or acknowledging the customer's situation. High confidence due to the explicit nature of the violations.",
-      "tokens": 1966
+      "reasoning": "The agent made a clear legal threat regarding potential action for non-payment, which violates R001. The language used was dismissive and demeaning, violating R003. Furthermore, the agent did not acknowledge the customer's financial hardship, violating R006. High confidence due to the explicit nature of the violations.",
+      "tokens": 2009
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
     "avg_confidence": 0.85,
     "situation": {
       "has_product_loss": false,
-      "has_substandard_service": false,
+      "has_substandard_service": true,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:24:22.584740"
+    "timestamp": "2026-02-17T16:48:25.972784"
   },
   {
     "conversation_id": "conv_011",
@@ -44,17 +44,18 @@
         "R006"
       ],
       "reasoning": "The agent made a clear legal threat and demanded payment in a way that could be perceived as threatening. The agent also failed to acknowledge the customer's stated hardship. High confidence due to the explicit nature of the violations.",
-      "tokens": 1956
+      "tokens": 1958
     },
     "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
+        "R004",
         "R006"
       ],
-      "reasoning": "The agent's statement about potential legal action constitutes a violation of R001. Additionally, the agent did not adequately acknowledge the customer's financial hardship, violating R006. High confidence due to the clear nature of the legal threat and lack of empathy.",
-      "tokens": 1935
+      "reasoning": "The agent's statements included a clear legal threat and a demand for immediate payment without offering options, which violates compliance rules. The lack of empathy towards the customer's situation further supports the non-compliance. High confidence due to the explicit nature of the violations.",
+      "tokens": 1975
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -64,7 +65,212 @@
       "has_substandard_service": true,
       "situation_other": false
     },
-    "timestamp": "2026-02-16T17:24:32.281252"
+    "timestamp": "2026-02-17T16:48:36.222383"
+  },
+  {
+    "conversation_id": "conv_017",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent made a legal threat regarding potential action and overstated the consequences of non-payment. Additionally, the agent demanded immediate payment without offering options and failed to acknowledge the customer's financial hardship. These violations are clear and unambiguous.",
+      "tokens": 2047
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's statements included a clear legal threat and demanded immediate payment without offering options or acknowledging the customer's situation. This indicates non-compliance with multiple regulations. Confidence is moderate due to the clear violations present.",
+      "tokens": 2011
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:48:47.823394"
+  },
+  {
+    "conversation_id": "conv_020",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.9,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1964
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's statements included a clear legal threat and a demand for immediate payment without offering options, which violates compliance rules. The lack of empathy towards the customer's situation further supports the non-compliance. High confidence due to the explicit nature of the violations.",
+      "tokens": 1972
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.875,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:48:57.093885"
+  },
+  {
+    "conversation_id": "conv_021",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R004"
+      ],
+      "reasoning": "Multiple violations present: threats of contacting the employer and implying immediate payment without options. High confidence due to clear language indicating threats.",
+      "tokens": 1977
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R004"
+      ],
+      "reasoning": "The agent made threats regarding legal action and contacting the employer, which are clear violations of R001 and R002. The language used was also coercive, violating R004. High confidence due to the explicit nature of the threats.",
+      "tokens": 1996
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:49:07.229713"
+  },
+  {
+    "conversation_id": "conv_025",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R004"
+      ],
+      "reasoning": "Multiple clear violations: explicit threat to contact employer and legal threat, along with demanding immediate payment. High confidence due to the clarity of the statements.",
+      "tokens": 1956
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made multiple violations: threats of contacting the employer and legal action, demanding immediate payment, and failing to acknowledge the customer's hardship. High confidence due to clear violations.",
+      "tokens": 2017
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:49:20.028195"
+  },
+  {
+    "conversation_id": "conv_026",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.9,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "Multiple clear violations: explicit legal threats and demanding immediate payment without offering options, as well as dismissing the customer's hardship. High confidence due to the unambiguous nature of the statements.",
+      "tokens": 1978
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and failed to acknowledge the customer's financial hardship, violating multiple compliance rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1958
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.875,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": false
+    },
+    "timestamp": "2026-02-17T16:49:28.735641"
+  },
+  {
+    "conversation_id": "conv_034",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.9,
+      "violations": [
+        "R002",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "Multiple clear violations: explicit threat to contact employer and demand for immediate payment in a threatening manner, along with failure to acknowledge the customer's hardship. High confidence due to the clarity of the violations.",
+      "tokens": 1990
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R002",
+        "R003"
+      ],
+      "reasoning": "The agent's statement about informing the employer constitutes a violation of R002, and the dismissive language used violates R003. High confidence due to the clear nature of the violations.",
+      "tokens": 1960
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.875,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": false
+    },
+    "timestamp": "2026-02-17T16:49:38.158451"
   },
   {
     "conversation_id": "conv_041",
@@ -73,54 +279,22 @@
       "confidence": 0.85,
       "violations": [
         "R001",
-        "R004"
-      ],
-      "reasoning": "The agent made a clear threat of legal action and demanded immediate payment, both of which violate compliance rules. High confidence due to the explicit nature of the statements.",
-      "tokens": 1948
-    },
-    "judge2": {
-      "decision": "non_compliant",
-      "confidence": 0.85,
-      "violations": [
-        "R001",
+        "R004",
         "R006"
       ],
-      "reasoning": "The agent's statement about potential legal action constitutes a clear violation of R001. Additionally, the agent did not show empathy towards the customer's situation of job loss, violating R006. High confidence due to the explicit nature of the legal threat and lack of empathy.",
-      "tokens": 1959
-    },
-    "judges_agree": true,
-    "final_decision": "non_compliant",
-    "avg_confidence": 0.85,
-    "situation": {
-      "has_product_loss": false,
-      "has_substandard_service": false,
-      "situation_other": true
-    },
-    "timestamp": "2026-02-16T17:24:42.824926"
-  },
-  {
-    "conversation_id": "conv_052",
-    "judge1": {
-      "decision": "non_compliant",
-      "confidence": 0.85,
-      "violations": [
-        "R001",
-        "R002",
-        "R004"
-      ],
-      "reasoning": "Multiple clear violations: explicit legal threat, threat to involve employer, and demanding immediate payment. High confidence due to the unambiguous nature of the statements.",
-      "tokens": 1987
+      "reasoning": "The agent made a clear legal threat and failed to acknowledge the customer's financial hardship, while also demanding immediate payment without offering options. High confidence due to the explicit nature of the violations.",
+      "tokens": 1971
     },
     "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
-        "R002",
-        "R004"
+        "R003",
+        "R006"
       ],
-      "reasoning": "The agent made explicit threats regarding legal action and contacting the employer, which are clear violations of R001 and R002. The language used also pressured the customer for immediate payment, violating R004. High confidence due to the clarity of the violations.",
-      "tokens": 1996
+      "reasoning": "The agent made a clear legal threat regarding potential action for non-payment, which violates R001. The language used was dismissive and lacked empathy, violating R003. Furthermore, the agent did not acknowledge the customer's financial hardship, violating R006. High confidence due to the explicit nature of the violations.",
+      "tokens": 1995
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -130,44 +304,43 @@
       "has_substandard_service": true,
       "situation_other": false
     },
-    "timestamp": "2026-02-16T17:24:53.296927"
+    "timestamp": "2026-02-17T16:49:47.160710"
   },
   {
-    "conversation_id": "conv_062",
+    "conversation_id": "conv_042",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
-        "R001",
+        "R004",
         "R005",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat and misrepresented the consequences of non-payment. Additionally, the agent did not acknowledge the customer's stated hardship. High confidence due to the explicit nature of the violations.",
-      "tokens": 1955
+      "reasoning": "The agent's language was demanding and did not offer options, which violates R004. The statement about credit score consequences is misleading, violating R005. The agent also failed to acknowledge the customer's hardship, violating R006. High confidence due to clear violations.",
+      "tokens": 1961
     },
     "judge2": {
       "decision": "non_compliant",
-      "confidence": 0.85,
+      "confidence": 0.75,
       "violations": [
-        "R001",
-        "R005",
+        "R004",
         "R006"
       ],
-      "reasoning": "The agent's statement about potential legal action constitutes a violation of R001, and the claim about the credit score drop misrepresents consequences, violating R005. Additionally, the agent did not acknowledge the customer's job loss or financial hardship, violating R006. High confidence due to clear violations.",
-      "tokens": 1982
+      "reasoning": "The agent's insistence on immediate payment without offering options or showing understanding of the customer's situation indicates a violation of R004. Additionally, the agent did not sufficiently acknowledge the customer's financial hardship, violating R006. Confidence is moderate due to the subjective nature of the agent's tone.",
+      "tokens": 1942
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
-    "avg_confidence": 0.85,
+    "avg_confidence": 0.8,
     "situation": {
       "has_product_loss": false,
       "has_substandard_service": false,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:25:02.690011"
+    "timestamp": "2026-02-17T16:49:55.642645"
   },
   {
-    "conversation_id": "conv_065",
+    "conversation_id": "conv_055",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.85,
@@ -176,29 +349,29 @@
         "R004",
         "R006"
       ],
-      "reasoning": "The agent made clear threats of legal action and demanded immediate payment without acknowledging the customer's situation. High confidence due to the explicit nature of the violations.",
-      "tokens": 2003
+      "reasoning": "The agent made a legal threat and demanded immediate payment in a threatening manner, while also failing to acknowledge the customer's financial hardship. High confidence due to clear violations.",
+      "tokens": 2061
     },
     "judge2": {
       "decision": "non_compliant",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "violations": [
         "R001",
-        "R003",
-        "R004"
+        "R004",
+        "R006"
       ],
-      "reasoning": "The agent made explicit threats of legal action and used dismissive language, which violates R001 and R003. Additionally, the agent's demand for immediate payment without offering options violates R004. High confidence due to clear violations.",
-      "tokens": 1991
+      "reasoning": "The agent's statements included a legal threat and pressured the customer for immediate payment without offering options or acknowledging their situation. This indicates non-compliance with multiple regulations. Confidence is high due to clear violations.",
+      "tokens": 2036
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
-    "avg_confidence": 0.85,
+    "avg_confidence": 0.825,
     "situation": {
       "has_product_loss": false,
-      "has_substandard_service": true,
+      "has_substandard_service": false,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:25:11.800601"
+    "timestamp": "2026-02-17T16:50:06.888476"
   },
   {
     "conversation_id": "conv_066",
@@ -209,8 +382,8 @@
         "R001",
         "R005"
       ],
-      "reasoning": "Agent made a clear legal threat and misrepresented consequences of non-payment. Both statements are unambiguous. High confidence due to explicit violations.",
-      "tokens": 1970
+      "reasoning": "Agent made a clear legal threat and misrepresented the consequences of non-payment. Both statements are unambiguous. High confidence warranted.",
+      "tokens": 1968
     },
     "judge2": {
       "decision": "non_compliant",
@@ -220,8 +393,8 @@
         "R005",
         "R006"
       ],
-      "reasoning": "The agent's statements included a clear threat of legal action and misrepresented the consequences of non-payment, which are both violations. The lack of empathy towards the customer's situation further supports the non-compliance. High confidence due to the explicit nature of the violations.",
-      "tokens": 2021
+      "reasoning": "The agent's statement contains a clear legal threat and misrepresents the consequences of non-payment, which are both violations. The agent also failed to show empathy towards the customer's situation. High confidence due to the explicit nature of the violations.",
+      "tokens": 2002
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -231,7 +404,41 @@
       "has_substandard_service": false,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:25:21.940213"
+    "timestamp": "2026-02-17T16:50:15.326008"
+  },
+  {
+    "conversation_id": "conv_069",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to clear violations in the agent's statements.",
+      "tokens": 1960
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.75,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's language included a threat of escalation to legal action and demanded immediate payment without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further supports the non-compliance assessment. Confidence is moderate due to the clear violations present.",
+      "tokens": 1991
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.8,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:50:25.773148"
   },
   {
     "conversation_id": "conv_070",
@@ -244,8 +451,8 @@
         "R004",
         "R006"
       ],
-      "reasoning": "Multiple violations present: explicit legal threat, threat to contact employer, demanding immediate payment, and failure to acknowledge customer hardship. High confidence due to clear violations.",
-      "tokens": 2006
+      "reasoning": "Multiple violations present: explicit legal threat, threat to contact a third party, demand for immediate payment, and failure to acknowledge customer hardship. High confidence due to clear and unambiguous statements.",
+      "tokens": 2015
     },
     "judge2": {
       "decision": "non_compliant",
@@ -256,8 +463,8 @@
         "R004",
         "R006"
       ],
-      "reasoning": "The agent made explicit threats of legal action and to escalate to the customer's employer, violating R001 and R002. Additionally, the demand for immediate payment and lack of acknowledgment of the customer's service issues further indicate non-compliance. High confidence due to clear violations.",
-      "tokens": 2031
+      "reasoning": "Multiple clear violations: explicit legal threat, threat to contact employer, demanding immediate payment, and lack of acknowledgment of customer hardship. High confidence due to the unambiguous nature of the statements.",
+      "tokens": 1990
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -267,22 +474,11 @@
       "has_substandard_service": true,
       "situation_other": false
     },
-    "timestamp": "2026-02-16T17:25:34.224919"
+    "timestamp": "2026-02-17T16:50:37.391300"
   },
   {
-    "conversation_id": "conv_083",
+    "conversation_id": "conv_074",
     "judge1": {
-      "decision": "non_compliant",
-      "confidence": 0.85,
-      "violations": [
-        "R001",
-        "R004",
-        "R005"
-      ],
-      "reasoning": "Agent made a clear legal threat and misrepresented the consequences of non-payment. Additionally, demanding immediate payment in a threatening manner violates R004. High confidence due to the explicit nature of the violations.",
-      "tokens": 1957
-    },
-    "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
@@ -290,8 +486,152 @@
         "R004",
         "R006"
       ],
-      "reasoning": "The agent's statements included a clear legal threat and demanded immediate payment without offering options, which violates compliance rules. The lack of empathy towards the customer's situation further compounds the issue. High confidence due to the explicit nature of the violations.",
-      "tokens": 1986
+      "reasoning": "The agent made a legal threat and demanded immediate payment, both of which are violations. Additionally, the agent failed to acknowledge the customer's stated financial hardship. High confidence due to clear violations.",
+      "tokens": 1954
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's statements imply a threat of legal action and demand immediate payment without offering options or acknowledging the customer's situation, which violates multiple compliance rules. Confidence is moderate due to the clear implications of the agent's language.",
+      "tokens": 1956
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:50:49.017619"
+  },
+  {
+    "conversation_id": "conv_075",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R005"
+      ],
+      "reasoning": "The agent's statements imply legal action and misrepresent the consequences of non-payment, both of which are clear violations. High confidence due to the explicit nature of the threats.",
+      "tokens": 1960
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.75,
+      "violations": [
+        "R001",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about referring the account to the legal team can be interpreted as a threat of legal action, which violates R001. Additionally, the agent did not show sufficient empathy towards the customer's situation of job loss, which violates R006. Confidence is moderate due to the ambiguity in the phrasing of the threat.",
+      "tokens": 1984
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.8,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:51:02.717122"
+  },
+  {
+    "conversation_id": "conv_077",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004"
+      ],
+      "reasoning": "Agent made a clear legal threat and demanded payment in a threatening manner. Both statements are unambiguous. High confidence due to the explicit nature of the violations.",
+      "tokens": 1962
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R006"
+      ],
+      "reasoning": "The agent issued a clear legal threat regarding potential action for non-payment, violating R001. Additionally, while the agent acknowledged the customer's situation, the response lacked sufficient empathy and did not offer any options or support, violating R006. Confidence is moderate due to the clear violation of R001 but some ambiguity in the level of empathy shown.",
+      "tokens": 2000
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:51:12.877461"
+  },
+  {
+    "conversation_id": "conv_078",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent's language pressured the customer for immediate payment and misrepresented the consequences of non-payment. The agent also failed to acknowledge the customer's situation of job loss. High confidence due to clear violations present in the conversation.",
+      "tokens": 1980
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's language was demanding and lacked empathy towards the customer's situation of job loss. The immediate payment demand was presented in a threatening manner, and the agent did not acknowledge the customer's hardship appropriately. Confidence is moderate due to the clear demand for payment and lack of empathy.",
+      "tokens": 1984
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:51:23.831076"
+  },
+  {
+    "conversation_id": "conv_081",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "Multiple violations present: explicit legal threat, demanding immediate payment, misrepresentation of credit consequences, and failure to acknowledge customer hardship. High confidence due to clear violations.",
+      "tokens": 1978
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent made a legal threat regarding escalation (R001), demanded immediate payment in a threatening manner (R004), misrepresented the consequences of non-payment (R005), and failed to acknowledge the customer's financial hardship (R006). High confidence due to multiple clear violations.",
+      "tokens": 1977
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -301,7 +641,40 @@
       "has_substandard_service": false,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:25:43.422073"
+    "timestamp": "2026-02-17T16:51:32.848998"
+  },
+  {
+    "conversation_id": "conv_085",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R005"
+      ],
+      "reasoning": "Agent made a clear legal threat regarding potential action and implied consequences of non-payment, violating R001 and R005. High confidence due to the explicit nature of the statements.",
+      "tokens": 1938
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.75,
+      "violations": [
+        "R001",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about potential legal action constitutes a violation of R001, and the language used could be interpreted as a misrepresentation of consequences, violating R005. The agent also failed to show sufficient empathy towards the customer's situation, violating R006. Confidence is moderate due to the nuances in the agent's language.",
+      "tokens": 1994
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.8,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:51:41.757564"
   },
   {
     "conversation_id": "conv_087",
@@ -313,8 +686,8 @@
         "R004",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat regarding consequences of non-payment, demanded immediate payment, and failed to acknowledge the customer's financial hardship. High confidence due to the explicit nature of the violations.",
-      "tokens": 1973
+      "reasoning": "Agent made a legal threat and demanded immediate payment without offering options, violating R001 and R004. Additionally, the agent failed to acknowledge the customer's hardship, violating R006. High confidence due to clear violations.",
+      "tokens": 1942
     },
     "judge2": {
       "decision": "non_compliant",
@@ -324,40 +697,42 @@
         "R004",
         "R006"
       ],
-      "reasoning": "The agent's statements included a clear legal threat and a demand for immediate payment without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further exacerbates the non-compliance. High confidence due to the explicit nature of the violations.",
-      "tokens": 1995
+      "reasoning": "Agent's statements include a clear legal threat and a lack of empathy towards the customer's situation. The agent dismissed the customer's hardship and demanded immediate payment, which violates multiple compliance rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1954
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
     "avg_confidence": 0.85,
     "situation": {
       "has_product_loss": false,
-      "has_substandard_service": false,
-      "situation_other": true
+      "has_substandard_service": true,
+      "situation_other": false
     },
-    "timestamp": "2026-02-16T17:25:53.683836"
+    "timestamp": "2026-02-17T16:51:50.049874"
   },
   {
-    "conversation_id": "conv_089",
+    "conversation_id": "conv_091",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
+        "R004",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat regarding potential action for non-payment, violating R001. Additionally, the agent did not acknowledge the customer's stated hardship of losing their job, violating R006. High confidence due to the explicit nature of the threat and the lack of acknowledgment.",
-      "tokens": 1954
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1974
     },
     "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
+        "R004",
         "R006"
       ],
-      "reasoning": "The agent's statement about potential legal action constitutes a clear violation of R001. Additionally, the agent did not show empathy towards the customer's situation of job loss, violating R006. High confidence due to the explicit nature of the threat and lack of empathy.",
-      "tokens": 1959
+      "reasoning": "The agent made a clear legal threat regarding potential action for non-payment, which violates R001. The demand for immediate payment without offering options or acknowledging the customer's situation also violates R004 and R006. High confidence due to the explicit nature of the violations.",
+      "tokens": 1993
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -367,7 +742,41 @@
       "has_substandard_service": false,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:26:02.696135"
+    "timestamp": "2026-02-17T16:51:59.777700"
+  },
+  {
+    "conversation_id": "conv_093",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent issued a clear legal threat and misrepresented the consequences of non-payment. Additionally, the agent failed to acknowledge the customer's stated hardship. High confidence due to the explicit nature of the violations.",
+      "tokens": 2039
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.75,
+      "violations": [
+        "R001",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent issued a clear legal threat regarding potential action for non-payment, which violates R001. The suggestion to consider a loan also misrepresents the customer's situation and fails to show empathy for their hardship. Confidence is moderate due to the clear violations present.",
+      "tokens": 2031
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.8,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:52:09.914333"
   },
   {
     "conversation_id": "conv_096",
@@ -378,8 +787,8 @@
         "R001",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat regarding potential action for non-payment, violating R001. Additionally, the agent's response to the customer's hardship was dismissive, violating R006. High confidence due to the explicit nature of the violations.",
-      "tokens": 1946
+      "reasoning": "The agent made a clear legal threat regarding potential action for non-payment, violating R001. Additionally, the agent failed to acknowledge the customer's financial hardship, violating R006. High confidence due to the explicit nature of the threat and the lack of acknowledgment.",
+      "tokens": 1948
     },
     "judge2": {
       "decision": "non_compliant",
@@ -388,8 +797,8 @@
         "R001",
         "R006"
       ],
-      "reasoning": "The agent's statement about potential legal action constitutes a violation of R001, as it implies a threat without proper context or authorization. Additionally, the agent did not show empathy towards the customer's financial hardship, violating R006. High confidence due to the clear nature of the violations.",
-      "tokens": 1972
+      "reasoning": "The agent's statement about potential legal action constitutes a violation of R001. Additionally, the agent failed to acknowledge the customer's financial hardship, which violates R006. High confidence due to the clear nature of the legal threat and lack of empathy.",
+      "tokens": 1944
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -399,19 +808,20 @@
       "has_substandard_service": false,
       "situation_other": false
     },
-    "timestamp": "2026-02-16T17:26:11.812156"
+    "timestamp": "2026-02-17T16:52:18.445338"
   },
   {
-    "conversation_id": "conv_125",
+    "conversation_id": "conv_097",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
-        "R004"
+        "R004",
+        "R005"
       ],
-      "reasoning": "Agent made a clear legal threat and demanded immediate payment, both of which violate compliance rules. High confidence due to the explicit nature of the statements.",
-      "tokens": 1935
+      "reasoning": "Agent made a legal threat regarding potential action for non-payment (R001), demanded immediate payment in a threatening manner (R004), and misrepresented the consequences of not paying (R005). High confidence due to clear violations.",
+      "tokens": 2007
     },
     "judge2": {
       "decision": "non_compliant",
@@ -421,8 +831,8 @@
         "R004",
         "R006"
       ],
-      "reasoning": "The agent's statements imply a threat of legal action and demand immediate payment without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further supports the non-compliance. Confidence is moderate due to the clear implications of the agent's language.",
-      "tokens": 1996
+      "reasoning": "The agent's statement about potential legal action constitutes a violation of R001, and the demand for immediate payment violates R004. The lack of empathy towards the customer's financial hardship also violates R006. The combination of these factors leads to a clear determination of non-compliance.",
+      "tokens": 2023
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -430,9 +840,385 @@
     "situation": {
       "has_product_loss": false,
       "has_substandard_service": true,
-      "situation_other": false
+      "situation_other": true
     },
-    "timestamp": "2026-02-16T17:26:21.944820"
+    "timestamp": "2026-02-17T16:52:28.448134"
+  },
+  {
+    "conversation_id": "conv_102",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R005"
+      ],
+      "reasoning": "Multiple clear violations: explicit legal threat, threat to contact employer, and misrepresentation of credit consequences. High confidence due to the unambiguous nature of the statements.",
+      "tokens": 1978
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R005"
+      ],
+      "reasoning": "The agent made explicit threats regarding legal action and contacting the employer, which are clear violations of compliance rules. The language used was also coercive, indicating a lack of empathy for the customer's situation. High confidence due to the clarity of the violations.",
+      "tokens": 2000
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:52:38.075185"
+  },
+  {
+    "conversation_id": "conv_104",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R005"
+      ],
+      "reasoning": "The agent's statements imply a threat of legal action and misrepresent the consequences of non-payment. Both violations are clear and unambiguous. High confidence due to the explicit nature of the statements.",
+      "tokens": 1943
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent's statements imply a threat of legal action and misrepresent the consequences of non-payment, which are clear violations. The lack of empathy towards the customer's situation further supports the non-compliance. Confidence is moderate due to the clear implications of the agent's language.",
+      "tokens": 1993
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:52:46.881459"
+  },
+  {
+    "conversation_id": "conv_110",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.9,
+      "violations": [
+        "R001",
+        "R003",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "Multiple violations present: explicit threat of legal action (R001), abusive language (R003), demanding immediate payment in a threatening manner (R004), and failure to acknowledge the customer's hardship (R006). High confidence due to clear and unambiguous statements.",
+      "tokens": 2076
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R003",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "Multiple violations present: clear legal threat, abusive language, and failure to acknowledge the customer's situation. High confidence due to the explicit nature of the violations.",
+      "tokens": 2060
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.875,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:52:58.143868"
+  },
+  {
+    "conversation_id": "conv_117",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1981
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further exacerbates the non-compliance. High confidence due to the explicit nature of the violations.",
+      "tokens": 2009
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:53:07.933759"
+  },
+  {
+    "conversation_id": "conv_122",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.9,
+      "violations": [
+        "R001",
+        "R002",
+        "R004"
+      ],
+      "reasoning": "Agent made explicit threats of legal action and contacting the employer, which violates R001 and R002. Additionally, demanding immediate payment in a threatening manner violates R004. High confidence due to clear violations.",
+      "tokens": 1963
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent displayed multiple violations including dismissive language, threats to contact the employer, and a lack of empathy towards the customer's situation. High confidence due to clear and unambiguous statements.",
+      "tokens": 2021
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.875,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:53:26.817825"
+  },
+  {
+    "conversation_id": "conv_130",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1983
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further compounds the issue. Confidence is moderate due to the clear violations present.",
+      "tokens": 2005
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:53:37.879211"
+  },
+  {
+    "conversation_id": "conv_131",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005"
+      ],
+      "reasoning": "The agent made explicit threats of legal action and demanded immediate payment, which violates multiple rules. High confidence due to clear and unambiguous statements.",
+      "tokens": 1946
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made explicit threats of legal action without proper context or authorization, which violates R001. The demand for immediate payment was also threatening, violating R004. Furthermore, the agent failed to show empathy towards the customer's situation, violating R006. High confidence due to clear violations.",
+      "tokens": 1984
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:53:46.782713"
+  },
+  {
+    "conversation_id": "conv_134",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R002",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about informing the employer constitutes a violation of R002, and the agent did not acknowledge the customer's financial hardship, violating R006. High confidence due to clear violations.",
+      "tokens": 1918
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R002",
+        "R003"
+      ],
+      "reasoning": "The agent's statement about informing the employer constitutes a threat to contact a third party without consent, violating R002. Additionally, the language used is dismissive and lacks empathy, violating R003. High confidence due to clear violations.",
+      "tokens": 1959
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:53:56.135729"
+  },
+  {
+    "conversation_id": "conv_136",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.9,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "Agent made a clear legal threat and used demeaning language, both of which violate compliance rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1994
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R003",
+        "R006"
+      ],
+      "reasoning": "The agent's language was demeaning and dismissive, violating R003, and they made a legal threat, violating R001. The agent also did not acknowledge the customer's financial hardship, violating R006. High confidence due to clear violations.",
+      "tokens": 1994
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.875,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:54:05.528076"
+  },
+  {
+    "conversation_id": "conv_143",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "Multiple clear violations: explicit legal threat, demanding immediate payment in a threatening manner, overstating consequences of non-payment, and not acknowledging the customer's hardship. High confidence due to the clarity of the violations.",
+      "tokens": 1995
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat regarding potential action and used demanding language without offering options, which violates R001 and R004. The lack of empathy towards the customer's situation also violates R006. High confidence due to the explicit nature of the violations.",
+      "tokens": 1968
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:54:18.528054"
+  },
+  {
+    "conversation_id": "conv_144",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and misrepresented the consequences of non-payment. The agent also failed to acknowledge the customer's stated hardship. High confidence due to the explicit nature of the violations.",
+      "tokens": 1978
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.75,
+      "violations": [
+        "R001",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about potential legal action and the impact on credit constitutes a violation of R001 and R005. The lack of empathy towards the customer's situation also violates R006. Confidence is moderate due to the clear violations but the context of urgency could be interpreted differently.",
+      "tokens": 2000
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.8,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:54:28.528491"
   },
   {
     "conversation_id": "conv_146",
@@ -462,34 +1248,33 @@
     "avg_confidence": 0.85,
     "situation": {
       "has_product_loss": false,
-      "has_substandard_service": false,
-      "situation_other": true
+      "has_substandard_service": true,
+      "situation_other": false
     },
-    "timestamp": "2026-02-16T17:26:32.288661"
+    "timestamp": "2026-02-17T16:54:38.261132"
   },
   {
-    "conversation_id": "conv_153",
+    "conversation_id": "conv_148",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
-        "R004",
-        "R005",
+        "R002",
         "R006"
       ],
-      "reasoning": "Agent made a clear legal threat and misrepresented the consequences of non-payment. Additionally, the agent did not acknowledge the customer's hardship, which is a violation of R006. High confidence due to the explicit nature of the violations.",
-      "tokens": 1980
+      "reasoning": "The agent made a clear legal threat regarding potential action and threatened to contact the customer's employer about the debt, violating R001 and R002. Additionally, the agent failed to acknowledge the customer's financial hardship, violating R006. High confidence due to the explicit nature of the violations.",
+      "tokens": 1997
     },
     "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
-        "R004",
+        "R002",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat and used demanding language without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further compounds the issue. High confidence due to the explicit nature of the violations.",
+      "reasoning": "The agent made explicit threats regarding legal action and contacting the employer, which are clear violations of R001 and R002. The lack of empathy towards the customer's financial hardship also violates R006. High confidence due to the clarity of the violations.",
       "tokens": 2001
     },
     "judges_agree": true,
@@ -500,20 +1285,20 @@
       "has_substandard_service": false,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:26:45.294111"
+    "timestamp": "2026-02-17T16:54:47.273889"
   },
   {
-    "conversation_id": "conv_171",
+    "conversation_id": "conv_151",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
         "R004",
-        "R006"
+        "R005"
       ],
-      "reasoning": "The agent made a clear legal threat and demanded immediate payment without acknowledging the customer's financial hardship. High confidence due to the explicit nature of the violations.",
-      "tokens": 1998
+      "reasoning": "Multiple clear violations: explicit legal threat, demanding immediate payment in a threatening manner, and misrepresentation of credit consequences. High confidence due to the unambiguous nature of the statements.",
+      "tokens": 1983
     },
     "judge2": {
       "decision": "non_compliant",
@@ -521,10 +1306,11 @@
       "violations": [
         "R001",
         "R004",
+        "R005",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further compounds the issue. High confidence due to the explicit nature of the violations.",
-      "tokens": 1999
+      "reasoning": "The agent made a legal threat and demanded immediate payment without acknowledging the customer's hardship, violating multiple compliance rules. High confidence due to clear violations.",
+      "tokens": 1956
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -534,7 +1320,282 @@
       "has_substandard_service": false,
       "situation_other": true
     },
-    "timestamp": "2026-02-16T17:26:59.220849"
+    "timestamp": "2026-02-17T16:54:56.183171"
+  },
+  {
+    "conversation_id": "conv_156",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004"
+      ],
+      "reasoning": "Agent made a clear legal threat and demanded immediate payment, both of which violate compliance rules. High confidence due to the explicit nature of the statements.",
+      "tokens": 1954
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's statements included a clear legal threat and a demand for immediate payment without offering options, which violates multiple compliance rules. The lack of empathy towards the customer's situation further exacerbates the issue. High confidence due to the explicit nature of the violations.",
+      "tokens": 2002
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:55:05.125671"
+  },
+  {
+    "conversation_id": "conv_159",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without acknowledging the customer's situation. High confidence due to the explicit nature of the violations.",
+      "tokens": 1964
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.75,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about potential legal action constitutes a violation of R001, and the insistence on immediate payment without considering the customer's situation violates R004. The lack of empathy towards the customer's hardship also violates R006. Moderate confidence due to the clear violations present.",
+      "tokens": 2000
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.8,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:55:15.977139"
+  },
+  {
+    "conversation_id": "conv_160",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1935
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat regarding potential action and used demanding language without offering options or showing empathy towards the customer's situation. High confidence due to the explicit nature of the violations.",
+      "tokens": 1949
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": false
+    },
+    "timestamp": "2026-02-17T16:55:25.195857"
+  },
+  {
+    "conversation_id": "conv_162",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "Multiple violations are present: a clear threat of legal action, misrepresentation of consequences, and failure to acknowledge the customer's hardship. High confidence due to the explicit nature of the statements.",
+      "tokens": 2039
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.75,
+      "violations": [
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent's language was urgent and somewhat threatening regarding legal action and credit reporting, which violates R004 and R005. The agent also failed to show empathy towards the customer's situation, which is a violation of R006. Confidence is moderate due to the clear but somewhat nuanced nature of the violations.",
+      "tokens": 2024
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.8,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:55:35.536793"
+  },
+  {
+    "conversation_id": "conv_172",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without acknowledging the customer's financial hardship. High confidence due to the explicit nature of the violations.",
+      "tokens": 1985
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about potential legal actions constitutes a clear violation of R001. The demand for immediate payment without consideration of the customer's situation violates R004. Furthermore, the agent failed to show empathy towards the customer's unemployment, violating R006. Confidence is high due to the clear nature of the violations.",
+      "tokens": 2026
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:55:48.553196"
+  },
+  {
+    "conversation_id": "conv_173",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R005",
+        "R004"
+      ],
+      "reasoning": "Multiple clear violations: explicit legal threat, misrepresentation of consequences, and demanding immediate payment in a threatening manner. High confidence due to the clarity of the statements.",
+      "tokens": 1986
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent's statements included explicit threats of legal action and misrepresentation of consequences, along with a lack of empathy towards the customer's situation. High confidence due to clear violations.",
+      "tokens": 2019
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:55:59.698891"
+  },
+  {
+    "conversation_id": "conv_176",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent made a legal threat and misrepresented the consequences of non-payment, while also failing to acknowledge the customer's stated hardship. High confidence due to clear violations.",
+      "tokens": 2003
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about escalating legally constitutes a threat, violating R001. The demanding tone regarding payment violates R004. The agent also failed to show sufficient empathy towards the customer's situation, which violates R006. Confidence is moderate due to the clear violations present.",
+      "tokens": 2006
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:56:10.677188"
+  },
+  {
+    "conversation_id": "conv_178",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "Multiple violations present: demeaning language, implied legal threat, demand for immediate payment, misrepresentation of consequences, and failure to acknowledge hardship. High confidence due to clear violations.",
+      "tokens": 2030
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R003",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "The agent used demeaning language, implied legal threats, misrepresented consequences of non-payment, and failed to acknowledge the customer's hardship. These violations are clear and unambiguous, leading to a high confidence in the assessment.",
+      "tokens": 2021
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:56:21.610938"
   },
   {
     "conversation_id": "conv_179",
@@ -546,8 +1607,8 @@
         "R003",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat and used demeaning language, both of which are violations. The lack of acknowledgment of the customer's hardship further supports non-compliance. High confidence due to the explicit nature of the violations.",
-      "tokens": 1950
+      "reasoning": "Agent made a clear legal threat and used demeaning language, both of which are violations. Additionally, the agent did not acknowledge the customer's financial hardship, which is also a violation. High confidence due to the explicit nature of the violations.",
+      "tokens": 1937
     },
     "judge2": {
       "decision": "non_compliant",
@@ -557,8 +1618,8 @@
         "R003",
         "R006"
       ],
-      "reasoning": "The agent's response included a clear legal threat and used dismissive language, both of which violate compliance rules. The lack of empathy towards the customer's situation further supports the non-compliance. High confidence due to the explicit nature of the violations.",
-      "tokens": 1948
+      "reasoning": "The agent's response included a clear legal threat and used dismissive language, which violates multiple compliance rules. The lack of empathy towards the customer's situation further supports the non-compliance. High confidence due to the explicit nature of the violations.",
+      "tokens": 1947
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -568,7 +1629,7 @@
       "has_substandard_service": true,
       "situation_other": false
     },
-    "timestamp": "2026-02-16T17:27:09.438163"
+    "timestamp": "2026-02-17T16:56:30.116129"
   },
   {
     "conversation_id": "conv_189",
@@ -577,52 +1638,127 @@
       "confidence": 0.85,
       "violations": [
         "R001",
+        "R004",
         "R006"
       ],
-      "reasoning": "The agent made a clear legal threat regarding escalation to lawyers, violating R001. Additionally, the agent failed to acknowledge the customer's financial hardship, violating R006. High confidence due to the explicit nature of the statements.",
-      "tokens": 1924
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without acknowledging the customer's financial hardship. High confidence due to the explicit nature of the violations.",
+      "tokens": 1954
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R006"
+      ],
+      "reasoning": "The agent's statement about escalating to legal action constitutes a clear violation of R001. Additionally, the agent did not adequately acknowledge the customer's situation of job loss, which violates R006. Confidence is moderate due to the clear violation of a critical rule and the lack of empathy shown.",
+      "tokens": 1942
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": true,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:56:39.738363"
+  },
+  {
+    "conversation_id": "conv_190",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without acknowledging the customer's hardship, violating multiple rules. High confidence due to the explicit nature of the violations.",
+      "tokens": 1997
     },
     "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
+        "R004",
         "R006"
       ],
-      "reasoning": "The agent's statement about potential legal action constitutes a clear violation of R001. Additionally, the agent did not adequately acknowledge the customer's situation of job loss, which violates R006. High confidence due to the explicit nature of the legal threat and the lack of empathy shown.",
-      "tokens": 1943
+      "reasoning": "The agent made a clear legal threat and used demanding language without offering options or showing empathy towards the customer's situation. High confidence due to the explicit nature of the violations.",
+      "tokens": 1989
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
     "avg_confidence": 0.85,
     "situation": {
-      "has_product_loss": true,
-      "has_substandard_service": false,
+      "has_product_loss": false,
+      "has_substandard_service": true,
       "situation_other": false
     },
-    "timestamp": "2026-02-16T17:27:19.393445"
+    "timestamp": "2026-02-17T16:56:49.017617"
   },
   {
-    "conversation_id": "conv_193",
+    "conversation_id": "conv_192",
     "judge1": {
       "decision": "non_compliant",
       "confidence": 0.9,
       "violations": [
         "R001",
-        "R004"
+        "R002",
+        "R006"
       ],
-      "reasoning": "The agent made a clear legal threat and used demanding language, both of which violate compliance rules. High confidence due to the explicit nature of the violations.",
-      "tokens": 1959
+      "reasoning": "The agent made explicit threats of legal action and to contact the employer, both of which are clear violations of the FDCPA. The agent also failed to acknowledge the customer's financial hardship, which is a requirement. High confidence due to the clarity of the violations.",
+      "tokens": 1996
     },
     "judge2": {
       "decision": "non_compliant",
       "confidence": 0.85,
       "violations": [
         "R001",
-        "R003"
+        "R002",
+        "R003",
+        "R004"
       ],
-      "reasoning": "The agent made a clear legal threat and used dismissive language towards the customer's situation. Both statements are unambiguous and violate compliance rules. High confidence due to the explicit nature of the violations.",
-      "tokens": 1966
+      "reasoning": "The agent's language was dismissive and threatening, violating multiple compliance rules. The agent failed to show empathy towards the customer's situation, which is critical in collections. High confidence due to clear violations present in the conversation.",
+      "tokens": 1990
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.875,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:56:58.277290"
+  },
+  {
+    "conversation_id": "conv_195",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.9,
+      "violations": [
+        "R001",
+        "R002",
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "reasoning": "Agent made explicit threats of legal action and contacting the employer, which violates R001 and R002. Additionally, the agent's language was dismissive and threatening, violating R004 and R006. The misrepresentation of consequences regarding credit impact violates R005. High confidence due to clear violations.",
+      "tokens": 2040
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made explicit legal threats and threatened to contact the customer's employer, which violates R001 and R002. Additionally, the agent's demanding tone and lack of empathy towards the customer's situation further indicate non-compliance. High confidence due to clear violations.",
+      "tokens": 2047
     },
     "judges_agree": true,
     "final_decision": "non_compliant",
@@ -630,8 +1766,110 @@
     "situation": {
       "has_product_loss": false,
       "has_substandard_service": true,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:57:10.258947"
+  },
+  {
+    "conversation_id": "conv_197",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R005"
+      ],
+      "reasoning": "The agent made explicit legal threats and demanded immediate payment, which violates multiple rules. High confidence due to clear violations in the agent's statements.",
+      "tokens": 1987
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.8,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat regarding potential action and demanded immediate payment without acknowledging the customer's hardship adequately. This indicates a lack of empathy and violates multiple compliance rules.",
+      "tokens": 1955
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.825,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
       "situation_other": false
     },
-    "timestamp": "2026-02-16T17:27:29.223091"
+    "timestamp": "2026-02-17T16:57:31.575846"
+  },
+  {
+    "conversation_id": "conv_198",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made a clear legal threat and demanded immediate payment without offering options, violating multiple rules. High confidence due to the explicit nature of the statements.",
+      "tokens": 1999
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R004",
+        "R006"
+      ],
+      "reasoning": "The agent made threats of serious action and legal involvement without offering any options or acknowledging the customer's hardship, violating R001 and R004. The lack of empathy towards the customer's situation also violates R006. High confidence due to clear violations.",
+      "tokens": 2018
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": false,
+      "situation_other": true
+    },
+    "timestamp": "2026-02-17T16:57:45.995785"
+  },
+  {
+    "conversation_id": "conv_199",
+    "judge1": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R006"
+      ],
+      "reasoning": "The agent made explicit threats of legal action and involving the employer, which are clear violations of R001 and R002. Additionally, the agent failed to acknowledge the customer's financial hardship, violating R006. High confidence due to the clarity of the violations.",
+      "tokens": 2021
+    },
+    "judge2": {
+      "decision": "non_compliant",
+      "confidence": 0.85,
+      "violations": [
+        "R001",
+        "R002",
+        "R006"
+      ],
+      "reasoning": "The agent made explicit threats of legal action and contacting the employer, which are clear violations of R001 and R002. The lack of empathy towards the customer's situation also violates R006. High confidence due to the clarity of the violations.",
+      "tokens": 2008
+    },
+    "judges_agree": true,
+    "final_decision": "non_compliant",
+    "avg_confidence": 0.85,
+    "situation": {
+      "has_product_loss": false,
+      "has_substandard_service": true,
+      "situation_other": false
+    },
+    "timestamp": "2026-02-17T16:57:58.592080"
   }
 ]

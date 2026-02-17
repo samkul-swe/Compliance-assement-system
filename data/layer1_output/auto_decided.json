@@ -15,7 +15,7 @@
       "R005": 0.334
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:48.284770"
+    "timestamp": "2026-02-17T16:48:00.887045"
   },
   {
     "conversation_id": "conv_002",
@@ -33,7 +33,7 @@
       "R005": 0.355
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.348552"
+    "timestamp": "2026-02-17T16:48:00.951227"
   },
   {
     "conversation_id": "conv_003",
@@ -51,25 +51,7 @@
       "R005": 0.519
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.402261"
-  },
-  {
-    "conversation_id": "conv_004",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.58,
-      "R002": 0.549,
-      "R003": 0.607,
-      "R004": 0.615,
-      "R005": 0.457
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:48.447216"
+    "timestamp": "2026-02-17T16:48:01.005497"
   },
   {
     "conversation_id": "conv_005",
@@ -87,7 +69,7 @@
       "R005": 0.318
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:48.492800"
+    "timestamp": "2026-02-17T16:48:01.153405"
   },
   {
     "conversation_id": "conv_006",
@@ -105,7 +87,49 @@
       "R005": 0.389
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.541995"
+    "timestamp": "2026-02-17T16:48:01.206983"
+  },
+  {
+    "conversation_id": "conv_007",
+    "compliant": false,
+    "confidence": 0.7699999809265137,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "I understand, but you really need to pay this now. If you don\u2019t, we might have to take legal action ",
+        "similarity_score": 0.6478127837181091,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 2,
+        "matched_text": "I understand, but you really need to pay this now. If you don\u2019t, we might have to take legal action ",
+        "similarity_score": 0.6729369163513184,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"I understand, but you really need to pay this now. If you don\u2019t, we might have t...\" (similarity: 0.65)",
+      "R004 (medium): \"I understand, but you really need to pay this now. If you don\u2019t, we might have t...\" (similarity: 0.67)"
+    ],
+    "similarity_scores": {
+      "R001": 0.648,
+      "R002": 0.517,
+      "R003": 0.573,
+      "R004": 0.673,
+      "R005": 0.38
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-17T16:48:01.252052"
   },
   {
     "conversation_id": "conv_008",
@@ -123,7 +147,7 @@
       "R005": 0.377
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.634345"
+    "timestamp": "2026-02-17T16:48:01.300655"
   },
   {
     "conversation_id": "conv_009",
@@ -141,7 +165,7 @@
       "R005": 0.332
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.691983"
+    "timestamp": "2026-02-17T16:48:01.356168"
   },
   {
     "conversation_id": "conv_010",
@@ -159,7 +183,7 @@
       "R005": 0.418
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.715826"
+    "timestamp": "2026-02-17T16:48:01.379072"
   },
   {
     "conversation_id": "conv_012",
@@ -177,7 +201,7 @@
       "R005": 0.466
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:48.809560"
+    "timestamp": "2026-02-17T16:48:01.476368"
   },
   {
     "conversation_id": "conv_013",
@@ -195,7 +219,7 @@
       "R005": 0.367
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.856176"
+    "timestamp": "2026-02-17T16:48:01.525886"
   },
   {
     "conversation_id": "conv_014",
@@ -213,7 +237,7 @@
       "R005": 0.348
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.879758"
+    "timestamp": "2026-02-17T16:48:01.549239"
   },
   {
     "conversation_id": "conv_015",
@@ -231,7 +255,7 @@
       "R005": 0.59
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:48.901718"
+    "timestamp": "2026-02-17T16:48:01.569001"
   },
   {
     "conversation_id": "conv_016",
@@ -249,25 +273,7 @@
       "R005": 0.405
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.951804"
-  },
-  {
-    "conversation_id": "conv_017",
-    "compliant": true,
-    "confidence": 0.7,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.61,
-      "R002": 0.62,
-      "R003": 0.547,
-      "R004": 0.679,
-      "R005": 0.552
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:48.999783"
+    "timestamp": "2026-02-17T16:48:01.622432"
   },
   {
     "conversation_id": "conv_018",
@@ -285,7 +291,7 @@
       "R005": 0.394
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.020517"
+    "timestamp": "2026-02-17T16:48:01.690628"
   },
   {
     "conversation_id": "conv_019",
@@ -294,6 +300,16 @@
     "threshold": 0.75,
     "needs_llm_review": false,
     "violations": [
+      {
+        "rule_id": "R002",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
+        "message_index": 4,
+        "matched_text": "It's your responsibility to pay the debt. If it goes to court, it'll only get worse for you.",
+        "similarity_score": 0.6046768426895142,
+        "keyword_match": false
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
@@ -306,6 +322,7 @@
       }
     ],
     "evidence": [
+      "R002 (critical): \"It's your responsibility to pay the debt. If it goes to court, it'll only get wo...\" (similarity: 0.60)",
       "R004 (medium): \"I understand that, but you really need to resolve this. We can't just keep waiti...\" (similarity: 0.76)"
     ],
     "similarity_scores": {
@@ -316,43 +333,7 @@
       "R005": 0.436
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.041539"
-  },
-  {
-    "conversation_id": "conv_020",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.62,
-      "R002": 0.552,
-      "R003": 0.551,
-      "R004": 0.703,
-      "R005": 0.372
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.061328"
-  },
-  {
-    "conversation_id": "conv_021",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.597,
-      "R002": 0.542,
-      "R003": 0.61,
-      "R004": 0.7,
-      "R005": 0.37
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.127785"
+    "timestamp": "2026-02-17T16:48:01.710719"
   },
   {
     "conversation_id": "conv_022",
@@ -370,7 +351,7 @@
       "R005": 0.407
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.181577"
+    "timestamp": "2026-02-17T16:48:01.788492"
   },
   {
     "conversation_id": "conv_023",
@@ -388,7 +369,7 @@
       "R005": 0.387
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.204835"
+    "timestamp": "2026-02-17T16:48:01.809927"
   },
   {
     "conversation_id": "conv_024",
@@ -406,43 +387,7 @@
       "R005": 0.358
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.227334"
-  },
-  {
-    "conversation_id": "conv_025",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.57,
-      "R002": 0.527,
-      "R003": 0.506,
-      "R004": 0.647,
-      "R005": 0.385
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.245192"
-  },
-  {
-    "conversation_id": "conv_026",
-    "compliant": true,
-    "confidence": 0.75,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.529,
-      "R002": 0.453,
-      "R003": 0.553,
-      "R004": 0.615,
-      "R005": 0.338
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.297829"
+    "timestamp": "2026-02-17T16:48:01.831050"
   },
   {
     "conversation_id": "conv_027",
@@ -460,7 +405,7 @@
       "R005": 0.406
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.322320"
+    "timestamp": "2026-02-17T16:48:01.919945"
   },
   {
     "conversation_id": "conv_028",
@@ -478,7 +423,7 @@
       "R005": 0.367
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.343198"
+    "timestamp": "2026-02-17T16:48:01.940646"
   },
   {
     "conversation_id": "conv_029",
@@ -496,7 +441,7 @@
       "R005": 0.289
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.363664"
+    "timestamp": "2026-02-17T16:48:01.959651"
   },
   {
     "conversation_id": "conv_030",
@@ -514,7 +459,7 @@
       "R005": 0.502
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.406672"
+    "timestamp": "2026-02-17T16:48:02.005027"
   },
   {
     "conversation_id": "conv_031",
@@ -532,7 +477,7 @@
       "R005": 0.416
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.448187"
+    "timestamp": "2026-02-17T16:48:02.050351"
   },
   {
     "conversation_id": "conv_032",
@@ -550,7 +495,7 @@
       "R005": 0.427
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.496806"
+    "timestamp": "2026-02-17T16:48:02.096314"
   },
   {
     "conversation_id": "conv_033",
@@ -568,25 +513,7 @@
       "R005": 0.567
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.518807"
-  },
-  {
-    "conversation_id": "conv_034",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.509,
-      "R002": 0.696,
-      "R003": 0.472,
-      "R004": 0.567,
-      "R005": 0.484
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.542741"
+    "timestamp": "2026-02-17T16:48:02.114945"
   },
   {
     "conversation_id": "conv_035",
@@ -604,7 +531,7 @@
       "R005": 0.35
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.566475"
+    "timestamp": "2026-02-17T16:48:02.163698"
   },
   {
     "conversation_id": "conv_036",
@@ -622,7 +549,7 @@
       "R005": 0.315
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.619641"
+    "timestamp": "2026-02-17T16:48:02.215782"
   },
   {
     "conversation_id": "conv_037",
@@ -640,7 +567,7 @@
       "R005": 0.37
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.639551"
+    "timestamp": "2026-02-17T16:48:02.236371"
   },
   {
     "conversation_id": "conv_038",
@@ -658,7 +585,7 @@
       "R005": 0.348
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.661458"
+    "timestamp": "2026-02-17T16:48:02.257772"
   },
   {
     "conversation_id": "conv_039",
@@ -676,7 +603,7 @@
       "R005": 0.484
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.680933"
+    "timestamp": "2026-02-17T16:48:02.279418"
   },
   {
     "conversation_id": "conv_040",
@@ -694,25 +621,7 @@
       "R005": 0.363
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.703960"
-  },
-  {
-    "conversation_id": "conv_042",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.461,
-      "R002": 0.525,
-      "R003": 0.529,
-      "R004": 0.651,
-      "R005": 0.552
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.739996"
+    "timestamp": "2026-02-17T16:48:02.300483"
   },
   {
     "conversation_id": "conv_043",
@@ -743,7 +652,7 @@
       "R005": 0.393
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.758760"
+    "timestamp": "2026-02-17T16:48:02.352582"
   },
   {
     "conversation_id": "conv_044",
@@ -761,7 +670,7 @@
       "R005": 0.362
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.780797"
+    "timestamp": "2026-02-17T16:48:02.374242"
   },
   {
     "conversation_id": "conv_045",
@@ -779,7 +688,7 @@
       "R005": 0.392
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.802398"
+    "timestamp": "2026-02-17T16:48:02.401078"
   },
   {
     "conversation_id": "conv_046",
@@ -797,7 +706,7 @@
       "R005": 0.364
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.824001"
+    "timestamp": "2026-02-17T16:48:02.420349"
   },
   {
     "conversation_id": "conv_047",
@@ -815,7 +724,7 @@
       "R005": 0.306
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.876132"
+    "timestamp": "2026-02-17T16:48:02.473648"
   },
   {
     "conversation_id": "conv_048",
@@ -833,7 +742,7 @@
       "R005": 0.304
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.897584"
+    "timestamp": "2026-02-17T16:48:02.497705"
   },
   {
     "conversation_id": "conv_049",
@@ -851,7 +760,7 @@
       "R005": 0.4
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.918162"
+    "timestamp": "2026-02-17T16:48:02.518416"
   },
   {
     "conversation_id": "conv_050",
@@ -869,7 +778,7 @@
       "R005": 0.413
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:49.969542"
+    "timestamp": "2026-02-17T16:48:02.568507"
   },
   {
     "conversation_id": "conv_051",
@@ -887,7 +796,49 @@
       "R005": 0.308
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:49.991003"
+    "timestamp": "2026-02-17T16:48:02.587120"
+  },
+  {
+    "conversation_id": "conv_052",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but you have to understand that if this isn't paid soon, we might have to resort",
+        "similarity_score": 0.6611477136611938,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but you have to understand that if this isn't paid soon, we might have to resort",
+        "similarity_score": 0.605208694934845,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That's unfortunate, but you have to understand that if this isn't paid soon, we ...\" (similarity: 0.66)",
+      "R004 (medium): \"That's unfortunate, but you have to understand that if this isn't paid soon, we ...\" (similarity: 0.61)"
+    ],
+    "similarity_scores": {
+      "R001": 0.661,
+      "R002": 0.524,
+      "R003": 0.568,
+      "R004": 0.605,
+      "R005": 0.384
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-17T16:48:02.609778"
   },
   {
     "conversation_id": "conv_053",
@@ -905,7 +856,7 @@
       "R005": 0.399
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.033882"
+    "timestamp": "2026-02-17T16:48:02.633028"
   },
   {
     "conversation_id": "conv_054",
@@ -923,25 +874,7 @@
       "R005": 0.599
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.054829"
-  },
-  {
-    "conversation_id": "conv_055",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.547,
-      "R002": 0.496,
-      "R003": 0.554,
-      "R004": 0.634,
-      "R005": 0.447
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.108039"
+    "timestamp": "2026-02-17T16:48:02.651217"
   },
   {
     "conversation_id": "conv_056",
@@ -959,7 +892,7 @@
       "R005": 0.352
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.129241"
+    "timestamp": "2026-02-17T16:48:02.724636"
   },
   {
     "conversation_id": "conv_057",
@@ -977,7 +910,7 @@
       "R005": 0.365
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.149363"
+    "timestamp": "2026-02-17T16:48:02.743614"
   },
   {
     "conversation_id": "conv_058",
@@ -1019,7 +952,7 @@
       "R005": 0.421
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.197046"
+    "timestamp": "2026-02-17T16:48:02.792372"
   },
   {
     "conversation_id": "conv_059",
@@ -1037,7 +970,7 @@
       "R005": 0.373
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.220907"
+    "timestamp": "2026-02-17T16:48:02.818030"
   },
   {
     "conversation_id": "conv_060",
@@ -1055,7 +988,7 @@
       "R005": 0.41
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.241523"
+    "timestamp": "2026-02-17T16:48:02.837407"
   },
   {
     "conversation_id": "conv_061",
@@ -1073,7 +1006,49 @@
       "R005": 0.337
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.261231"
+    "timestamp": "2026-02-17T16:48:02.856577"
+  },
+  {
+    "conversation_id": "conv_062",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but you still need to pay the full amount. If you don\u2019t, we might have to take l",
+        "similarity_score": 0.6203283071517944,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but you still need to pay the full amount. If you don\u2019t, we might have to take l",
+        "similarity_score": 0.6555098295211792,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That's unfortunate, but you still need to pay the full amount. If you don\u2019t, we ...\" (similarity: 0.62)",
+      "R004 (medium): \"That's unfortunate, but you still need to pay the full amount. If you don\u2019t, we ...\" (similarity: 0.66)"
+    ],
+    "similarity_scores": {
+      "R001": 0.62,
+      "R002": 0.539,
+      "R003": 0.576,
+      "R004": 0.656,
+      "R005": 0.533
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-17T16:48:02.875212"
   },
   {
     "conversation_id": "conv_063",
@@ -1091,7 +1066,7 @@
       "R005": 0.365
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.300979"
+    "timestamp": "2026-02-17T16:48:02.894201"
   },
   {
     "conversation_id": "conv_064",
@@ -1109,7 +1084,49 @@
       "R005": 0.59
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.319262"
+    "timestamp": "2026-02-17T16:48:02.912844"
+  },
+  {
+    "conversation_id": "conv_065",
+    "compliant": false,
+    "confidence": 0.7699999809265137,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Look, you signed up for this. If you don\u2019t pay soon, we\u2019ll have no choice but to take legal action a",
+        "similarity_score": 0.6736282706260681,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "Look, you signed up for this. If you don\u2019t pay soon, we\u2019ll have no choice but to take legal action a",
+        "similarity_score": 0.6746776700019836,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Look, you signed up for this. If you don\u2019t pay soon, we\u2019ll have no choice but to...\" (similarity: 0.67)",
+      "R004 (medium): \"Look, you signed up for this. If you don\u2019t pay soon, we\u2019ll have no choice but to...\" (similarity: 0.67)"
+    ],
+    "similarity_scores": {
+      "R001": 0.674,
+      "R002": 0.558,
+      "R003": 0.567,
+      "R004": 0.675,
+      "R005": 0.45
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-17T16:48:02.961780"
   },
   {
     "conversation_id": "conv_067",
@@ -1127,7 +1144,7 @@
       "R005": 0.368
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.409759"
+    "timestamp": "2026-02-17T16:48:03.000843"
   },
   {
     "conversation_id": "conv_068",
@@ -1145,25 +1162,7 @@
       "R005": 0.405
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.434188"
-  },
-  {
-    "conversation_id": "conv_069",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.517,
-      "R002": 0.517,
-      "R003": 0.506,
-      "R004": 0.638,
-      "R005": 0.39
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.457082"
+    "timestamp": "2026-02-17T16:48:03.020949"
   },
   {
     "conversation_id": "conv_071",
@@ -1181,7 +1180,7 @@
       "R005": 0.362
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.500818"
+    "timestamp": "2026-02-17T16:48:03.080284"
   },
   {
     "conversation_id": "conv_072",
@@ -1199,7 +1198,7 @@
       "R005": 0.393
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.521888"
+    "timestamp": "2026-02-17T16:48:03.101747"
   },
   {
     "conversation_id": "conv_073",
@@ -1217,43 +1216,7 @@
       "R005": 0.342
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.544202"
-  },
-  {
-    "conversation_id": "conv_074",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.551,
-      "R002": 0.485,
-      "R003": 0.502,
-      "R004": 0.665,
-      "R005": 0.354
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.562921"
-  },
-  {
-    "conversation_id": "conv_075",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.593,
-      "R002": 0.513,
-      "R003": 0.471,
-      "R004": 0.649,
-      "R005": 0.358
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.584493"
+    "timestamp": "2026-02-17T16:48:03.127243"
   },
   {
     "conversation_id": "conv_076",
@@ -1271,43 +1234,7 @@
       "R005": 0.332
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.607767"
-  },
-  {
-    "conversation_id": "conv_077",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.588,
-      "R002": 0.505,
-      "R003": 0.561,
-      "R004": 0.623,
-      "R005": 0.428
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.651487"
-  },
-  {
-    "conversation_id": "conv_078",
-    "compliant": true,
-    "confidence": 0.7,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.599,
-      "R002": 0.584,
-      "R003": 0.624,
-      "R004": 0.629,
-      "R005": 0.546
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.699192"
+    "timestamp": "2026-02-17T16:48:03.187181"
   },
   {
     "conversation_id": "conv_079",
@@ -1325,7 +1252,7 @@
       "R005": 0.384
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.716384"
+    "timestamp": "2026-02-17T16:48:03.298641"
   },
   {
     "conversation_id": "conv_080",
@@ -1343,25 +1270,7 @@
       "R005": 0.385
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.766173"
-  },
-  {
-    "conversation_id": "conv_081",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.494,
-      "R002": 0.599,
-      "R003": 0.549,
-      "R004": 0.661,
-      "R005": 0.449
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.788019"
+    "timestamp": "2026-02-17T16:48:03.350859"
   },
   {
     "conversation_id": "conv_082",
@@ -1379,7 +1288,60 @@
       "R005": 0.356
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.809799"
+    "timestamp": "2026-02-17T16:48:03.396503"
+  },
+  {
+    "conversation_id": "conv_083",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Look, if you don\u2019t pay this immediately, we will have to take legal action. You don\u2019t want a court j",
+        "similarity_score": 0.6196571588516235,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but you really need to take care of this now or else we'll have to escalate. I m",
+        "similarity_score": 0.6397268176078796,
+        "keyword_match": false
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "Look, if you don\u2019t pay this immediately, we will have to take legal action. You don\u2019t want a court j",
+        "similarity_score": 0.6557424068450928,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Look, if you don\u2019t pay this immediately, we will have to take legal action. You ...\" (similarity: 0.62)",
+      "R003 (high): \"That's unfortunate, but you really need to take care of this now or else we'll h...\" (similarity: 0.64)",
+      "R004 (medium): \"Look, if you don\u2019t pay this immediately, we will have to take legal action. You ...\" (similarity: 0.66)"
+    ],
+    "similarity_scores": {
+      "R001": 0.62,
+      "R002": 0.498,
+      "R003": 0.64,
+      "R004": 0.656,
+      "R005": 0.387
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-17T16:48:03.413171"
   },
   {
     "conversation_id": "conv_084",
@@ -1397,25 +1359,7 @@
       "R005": 0.557
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.846131"
-  },
-  {
-    "conversation_id": "conv_085",
-    "compliant": true,
-    "confidence": 0.75,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.542,
-      "R002": 0.469,
-      "R003": 0.488,
-      "R004": 0.628,
-      "R005": 0.366
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.863168"
+    "timestamp": "2026-02-17T16:48:03.434496"
   },
   {
     "conversation_id": "conv_086",
@@ -1433,7 +1377,7 @@
       "R005": 0.358
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:50.881138"
+    "timestamp": "2026-02-17T16:48:03.466844"
   },
   {
     "conversation_id": "conv_088",
@@ -1451,7 +1395,49 @@
       "R005": 0.343
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.920827"
+    "timestamp": "2026-02-17T16:48:03.508048"
+  },
+  {
+    "conversation_id": "conv_089",
+    "compliant": false,
+    "confidence": 0.75,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Honestly, if we don\u2019t receive payment soon, we might have no choice but to take legal action against",
+        "similarity_score": 0.6456220149993896,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "Honestly, if we don\u2019t receive payment soon, we might have no choice but to take legal action against",
+        "similarity_score": 0.6212931871414185,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Honestly, if we don\u2019t receive payment soon, we might have no choice but to take ...\" (similarity: 0.65)",
+      "R004 (medium): \"Honestly, if we don\u2019t receive payment soon, we might have no choice but to take ...\" (similarity: 0.62)"
+    ],
+    "similarity_scores": {
+      "R001": 0.646,
+      "R002": 0.486,
+      "R003": 0.514,
+      "R004": 0.621,
+      "R005": 0.367
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-17T16:48:03.555194"
   },
   {
     "conversation_id": "conv_090",
@@ -1469,25 +1455,7 @@
       "R005": 0.362
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:50.991827"
-  },
-  {
-    "conversation_id": "conv_091",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.552,
-      "R002": 0.579,
-      "R003": 0.512,
-      "R004": 0.632,
-      "R005": 0.463
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.016986"
+    "timestamp": "2026-02-17T16:48:03.576850"
   },
   {
     "conversation_id": "conv_092",
@@ -1505,25 +1473,7 @@
       "R005": 0.403
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.068962"
-  },
-  {
-    "conversation_id": "conv_093",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.551,
-      "R002": 0.5,
-      "R003": 0.538,
-      "R004": 0.529,
-      "R005": 0.645
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.085502"
+    "timestamp": "2026-02-17T16:48:03.650558"
   },
   {
     "conversation_id": "conv_094",
@@ -1541,7 +1491,7 @@
       "R005": 0.405
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.107069"
+    "timestamp": "2026-02-17T16:48:03.695525"
   },
   {
     "conversation_id": "conv_095",
@@ -1559,25 +1509,7 @@
       "R005": 0.378
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.132387"
-  },
-  {
-    "conversation_id": "conv_097",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.515,
-      "R002": 0.606,
-      "R003": 0.468,
-      "R004": 0.542,
-      "R005": 0.426
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.172389"
+    "timestamp": "2026-02-17T16:48:03.717775"
   },
   {
     "conversation_id": "conv_098",
@@ -1595,7 +1527,7 @@
       "R005": 0.426
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.191773"
+    "timestamp": "2026-02-17T16:48:03.777769"
   },
   {
     "conversation_id": "conv_099",
@@ -1613,7 +1545,7 @@
       "R005": 0.416
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.212178"
+    "timestamp": "2026-02-17T16:48:03.796964"
   },
   {
     "conversation_id": "conv_100",
@@ -1631,7 +1563,7 @@
       "R005": 0.375
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.235099"
+    "timestamp": "2026-02-17T16:48:03.818109"
   },
   {
     "conversation_id": "conv_101",
@@ -1649,25 +1581,7 @@
       "R005": 0.284
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.257623"
-  },
-  {
-    "conversation_id": "conv_102",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.593,
-      "R002": 0.516,
-      "R003": 0.561,
-      "R004": 0.678,
-      "R005": 0.502
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.281135"
+    "timestamp": "2026-02-17T16:48:03.835036"
   },
   {
     "conversation_id": "conv_103",
@@ -1685,25 +1599,7 @@
       "R005": 0.318
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.306423"
-  },
-  {
-    "conversation_id": "conv_104",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.654,
-      "R002": 0.473,
-      "R003": 0.533,
-      "R004": 0.568,
-      "R005": 0.357
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.324769"
+    "timestamp": "2026-02-17T16:48:03.882833"
   },
   {
     "conversation_id": "conv_105",
@@ -1721,7 +1617,7 @@
       "R005": 0.591
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.343240"
+    "timestamp": "2026-02-17T16:48:03.919543"
   },
   {
     "conversation_id": "conv_106",
@@ -1739,7 +1635,7 @@
       "R005": 0.355
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.365458"
+    "timestamp": "2026-02-17T16:48:03.943750"
   },
   {
     "conversation_id": "conv_107",
@@ -1757,7 +1653,7 @@
       "R005": 0.353
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.383610"
+    "timestamp": "2026-02-17T16:48:03.964723"
   },
   {
     "conversation_id": "conv_108",
@@ -1775,7 +1671,7 @@
       "R005": 0.4
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.406453"
+    "timestamp": "2026-02-17T16:48:03.989587"
   },
   {
     "conversation_id": "conv_109",
@@ -1793,25 +1689,7 @@
       "R005": 0.38
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.429998"
-  },
-  {
-    "conversation_id": "conv_110",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.539,
-      "R002": 0.571,
-      "R003": 0.51,
-      "R004": 0.659,
-      "R005": 0.518
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.485657"
+    "timestamp": "2026-02-17T16:48:04.015426"
   },
   {
     "conversation_id": "conv_111",
@@ -1829,7 +1707,7 @@
       "R005": 0.421
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.508332"
+    "timestamp": "2026-02-17T16:48:04.091504"
   },
   {
     "conversation_id": "conv_112",
@@ -1847,7 +1725,7 @@
       "R005": 0.431
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.529334"
+    "timestamp": "2026-02-17T16:48:04.113934"
   },
   {
     "conversation_id": "conv_113",
@@ -1865,7 +1743,7 @@
       "R005": 0.388
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.553343"
+    "timestamp": "2026-02-17T16:48:04.134618"
   },
   {
     "conversation_id": "conv_114",
@@ -1883,7 +1761,7 @@
       "R005": 0.427
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.603692"
+    "timestamp": "2026-02-17T16:48:04.184589"
   },
   {
     "conversation_id": "conv_115",
@@ -1901,7 +1779,7 @@
       "R005": 0.498
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.621598"
+    "timestamp": "2026-02-17T16:48:04.200988"
   },
   {
     "conversation_id": "conv_116",
@@ -1919,25 +1797,7 @@
       "R005": 0.298
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.646311"
-  },
-  {
-    "conversation_id": "conv_117",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.549,
-      "R002": 0.551,
-      "R003": 0.536,
-      "R004": 0.625,
-      "R005": 0.541
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.666301"
+    "timestamp": "2026-02-17T16:48:04.222803"
   },
   {
     "conversation_id": "conv_118",
@@ -1955,7 +1815,7 @@
       "R005": 0.414
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.690420"
+    "timestamp": "2026-02-17T16:48:04.263208"
   },
   {
     "conversation_id": "conv_119",
@@ -1973,7 +1833,7 @@
       "R005": 0.327
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.713824"
+    "timestamp": "2026-02-17T16:48:04.282298"
   },
   {
     "conversation_id": "conv_120",
@@ -1991,43 +1851,7 @@
       "R005": 0.357
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.737110"
-  },
-  {
-    "conversation_id": "conv_121",
-    "compliant": true,
-    "confidence": 0.79,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.344,
-      "R002": 0.467,
-      "R003": 0.324,
-      "R004": 0.624,
-      "R005": 0.377
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.760599"
-  },
-  {
-    "conversation_id": "conv_122",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.534,
-      "R002": 0.497,
-      "R003": 0.541,
-      "R004": 0.624,
-      "R005": 0.361
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.780583"
+    "timestamp": "2026-02-17T16:48:04.302686"
   },
   {
     "conversation_id": "conv_123",
@@ -2045,7 +1869,7 @@
       "R005": 0.419
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.801492"
+    "timestamp": "2026-02-17T16:48:04.390566"
   },
   {
     "conversation_id": "conv_124",
@@ -2063,7 +1887,49 @@
       "R005": 0.398
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.825257"
+    "timestamp": "2026-02-17T16:48:04.426437"
+  },
+  {
+    "conversation_id": "conv_125",
+    "compliant": false,
+    "confidence": 0.8299999833106995,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 4,
+        "matched_text": "Look, if you don\u2019t pay right away, we could end up taking legal action. It's better to avoid that si",
+        "similarity_score": 0.6345126628875732,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "Look, if you don\u2019t pay right away, we could end up taking legal action. It's better to avoid that si",
+        "similarity_score": 0.7347294092178345,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"Look, if you don\u2019t pay right away, we could end up taking legal action. It's bet...\" (similarity: 0.63)",
+      "R004 (medium): \"Look, if you don\u2019t pay right away, we could end up taking legal action. It's bet...\" (similarity: 0.73)"
+    ],
+    "similarity_scores": {
+      "R001": 0.635,
+      "R002": 0.493,
+      "R003": 0.528,
+      "R004": 0.735,
+      "R005": 0.393
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-17T16:48:04.446923"
   },
   {
     "conversation_id": "conv_126",
@@ -2094,7 +1960,7 @@
       "R005": 0.725
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.863367"
+    "timestamp": "2026-02-17T16:48:04.467322"
   },
   {
     "conversation_id": "conv_127",
@@ -2112,7 +1978,7 @@
       "R005": 0.367
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.884745"
+    "timestamp": "2026-02-17T16:48:04.489104"
   },
   {
     "conversation_id": "conv_128",
@@ -2130,7 +1996,7 @@
       "R005": 0.415
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.908756"
+    "timestamp": "2026-02-17T16:48:04.509180"
   },
   {
     "conversation_id": "conv_129",
@@ -2148,43 +2014,7 @@
       "R005": 0.339
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:51.935022"
-  },
-  {
-    "conversation_id": "conv_130",
-    "compliant": true,
-    "confidence": 0.75,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.508,
-      "R002": 0.528,
-      "R003": 0.463,
-      "R004": 0.618,
-      "R005": 0.381
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.952177"
-  },
-  {
-    "conversation_id": "conv_131",
-    "compliant": true,
-    "confidence": 0.71,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.535,
-      "R002": 0.509,
-      "R003": 0.545,
-      "R004": 0.663,
-      "R005": 0.615
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:51.996100"
+    "timestamp": "2026-02-17T16:48:04.535167"
   },
   {
     "conversation_id": "conv_132",
@@ -2215,7 +2045,7 @@
       "R005": 0.396
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.025134"
+    "timestamp": "2026-02-17T16:48:04.593417"
   },
   {
     "conversation_id": "conv_133",
@@ -2233,25 +2063,7 @@
       "R005": 0.354
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.050213"
-  },
-  {
-    "conversation_id": "conv_134",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.576,
-      "R002": 0.727,
-      "R003": 0.527,
-      "R004": 0.561,
-      "R005": 0.443
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.068961"
+    "timestamp": "2026-02-17T16:48:04.614250"
   },
   {
     "conversation_id": "conv_135",
@@ -2269,25 +2081,7 @@
       "R005": 0.445
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.092767"
-  },
-  {
-    "conversation_id": "conv_136",
-    "compliant": true,
-    "confidence": 0.71,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.554,
-      "R002": 0.702,
-      "R003": 0.522,
-      "R004": 0.511,
-      "R005": 0.596
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.114438"
+    "timestamp": "2026-02-17T16:48:04.656439"
   },
   {
     "conversation_id": "conv_137",
@@ -2305,7 +2099,7 @@
       "R005": 0.42
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.137643"
+    "timestamp": "2026-02-17T16:48:04.701685"
   },
   {
     "conversation_id": "conv_138",
@@ -2323,7 +2117,7 @@
       "R005": 0.378
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.157790"
+    "timestamp": "2026-02-17T16:48:04.720741"
   },
   {
     "conversation_id": "conv_139",
@@ -2365,7 +2159,7 @@
       "R005": 0.406
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.180221"
+    "timestamp": "2026-02-17T16:48:04.740965"
   },
   {
     "conversation_id": "conv_140",
@@ -2383,7 +2177,7 @@
       "R005": 0.386
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.202838"
+    "timestamp": "2026-02-17T16:48:04.762926"
   },
   {
     "conversation_id": "conv_141",
@@ -2401,7 +2195,7 @@
       "R005": 0.364
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.225102"
+    "timestamp": "2026-02-17T16:48:04.784118"
   },
   {
     "conversation_id": "conv_142",
@@ -2419,43 +2213,7 @@
       "R005": 0.398
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.244451"
-  },
-  {
-    "conversation_id": "conv_143",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.544,
-      "R002": 0.521,
-      "R003": 0.532,
-      "R004": 0.585,
-      "R005": 0.638
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.261883"
-  },
-  {
-    "conversation_id": "conv_144",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.573,
-      "R002": 0.532,
-      "R003": 0.548,
-      "R004": 0.633,
-      "R005": 0.564
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.279384"
+    "timestamp": "2026-02-17T16:48:04.804403"
   },
   {
     "conversation_id": "conv_145",
@@ -2473,7 +2231,7 @@
       "R005": 0.362
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.299224"
+    "timestamp": "2026-02-17T16:48:04.861802"
   },
   {
     "conversation_id": "conv_147",
@@ -2491,25 +2249,7 @@
       "R005": 0.366
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.337857"
-  },
-  {
-    "conversation_id": "conv_148",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.527,
-      "R002": 0.666,
-      "R003": 0.534,
-      "R004": 0.533,
-      "R005": 0.409
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.356405"
+    "timestamp": "2026-02-17T16:48:04.906187"
   },
   {
     "conversation_id": "conv_149",
@@ -2527,7 +2267,7 @@
       "R005": 0.303
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.382106"
+    "timestamp": "2026-02-17T16:48:04.949084"
   },
   {
     "conversation_id": "conv_150",
@@ -2545,25 +2285,7 @@
       "R005": 0.404
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.407904"
-  },
-  {
-    "conversation_id": "conv_151",
-    "compliant": true,
-    "confidence": 0.7,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.605,
-      "R002": 0.47,
-      "R003": 0.559,
-      "R004": 0.711,
-      "R005": 0.646
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.432089"
+    "timestamp": "2026-02-17T16:48:04.971505"
   },
   {
     "conversation_id": "conv_152",
@@ -2581,7 +2303,49 @@
       "R005": 0.367
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.450206"
+    "timestamp": "2026-02-17T16:48:05.010242"
+  },
+  {
+    "conversation_id": "conv_153",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.75,
+    "needs_llm_review": false,
+    "violations": [
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "I get that, but we don\u2019t have time for that. It\u2019s either pay now or face the consequences.",
+        "similarity_score": 0.620672881603241,
+        "keyword_match": false
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 6,
+        "matched_text": "Honestly, I think it\u2019s best if you just pay it all right away. Otherwise, your credit will be ruined",
+        "similarity_score": 0.6575554609298706,
+        "keyword_match": true
+      }
+    ],
+    "evidence": [
+      "R004 (medium): \"I get that, but we don\u2019t have time for that. It\u2019s either pay now or face the con...\" (similarity: 0.62)",
+      "R005 (high): \"Honestly, I think it\u2019s best if you just pay it all right away. Otherwise, your c...\" (similarity: 0.66)"
+    ],
+    "similarity_scores": {
+      "R001": 0.548,
+      "R002": 0.49,
+      "R003": 0.504,
+      "R004": 0.621,
+      "R005": 0.658
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-17T16:48:05.032609"
   },
   {
     "conversation_id": "conv_154",
@@ -2599,7 +2363,7 @@
       "R005": 0.418
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.496662"
+    "timestamp": "2026-02-17T16:48:05.054913"
   },
   {
     "conversation_id": "conv_155",
@@ -2617,25 +2381,7 @@
       "R005": 0.352
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.517462"
-  },
-  {
-    "conversation_id": "conv_156",
-    "compliant": true,
-    "confidence": 0.75,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.583,
-      "R002": 0.437,
-      "R003": 0.555,
-      "R004": 0.609,
-      "R005": 0.353
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.540183"
+    "timestamp": "2026-02-17T16:48:05.076339"
   },
   {
     "conversation_id": "conv_157",
@@ -2653,7 +2399,7 @@
       "R005": 0.36
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.562104"
+    "timestamp": "2026-02-17T16:48:05.116288"
   },
   {
     "conversation_id": "conv_158",
@@ -2671,43 +2417,7 @@
       "R005": 0.369
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.582226"
-  },
-  {
-    "conversation_id": "conv_159",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.59,
-      "R002": 0.494,
-      "R003": 0.537,
-      "R004": 0.607,
-      "R005": 0.428
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.600713"
-  },
-  {
-    "conversation_id": "conv_160",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.565,
-      "R002": 0.489,
-      "R003": 0.513,
-      "R004": 0.626,
-      "R005": 0.368
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.619003"
+    "timestamp": "2026-02-17T16:48:05.136581"
   },
   {
     "conversation_id": "conv_161",
@@ -2725,25 +2435,7 @@
       "R005": 0.34
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.638568"
-  },
-  {
-    "conversation_id": "conv_162",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.52,
-      "R002": 0.485,
-      "R003": 0.489,
-      "R004": 0.61,
-      "R005": 0.585
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.659765"
+    "timestamp": "2026-02-17T16:48:05.196403"
   },
   {
     "conversation_id": "conv_163",
@@ -2761,7 +2453,7 @@
       "R005": 0.368
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.683810"
+    "timestamp": "2026-02-17T16:48:05.238643"
   },
   {
     "conversation_id": "conv_164",
@@ -2779,7 +2471,7 @@
       "R005": 0.327
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.704155"
+    "timestamp": "2026-02-17T16:48:05.258214"
   },
   {
     "conversation_id": "conv_165",
@@ -2797,7 +2489,7 @@
       "R005": 0.358
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.727392"
+    "timestamp": "2026-02-17T16:48:05.283877"
   },
   {
     "conversation_id": "conv_166",
@@ -2815,7 +2507,7 @@
       "R005": 0.346
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.745586"
+    "timestamp": "2026-02-17T16:48:05.304722"
   },
   {
     "conversation_id": "conv_167",
@@ -2833,7 +2525,7 @@
       "R005": 0.336
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.765160"
+    "timestamp": "2026-02-17T16:48:05.325511"
   },
   {
     "conversation_id": "conv_168",
@@ -2851,7 +2543,7 @@
       "R005": 0.411
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.785248"
+    "timestamp": "2026-02-17T16:48:05.347428"
   },
   {
     "conversation_id": "conv_169",
@@ -2869,7 +2561,7 @@
       "R005": 0.451
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.809035"
+    "timestamp": "2026-02-17T16:48:05.367863"
   },
   {
     "conversation_id": "conv_170",
@@ -2887,43 +2579,60 @@
       "R005": 0.363
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.831487"
+    "timestamp": "2026-02-17T16:48:05.387060"
   },
   {
-    "conversation_id": "conv_172",
-    "compliant": true,
-    "confidence": 0.71,
-    "threshold": 0.7,
+    "conversation_id": "conv_171",
+    "compliant": false,
+    "confidence": 0.7699999809265137,
+    "threshold": 0.75,
     "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but honestly, you signed a contract. If you don\u2019t pay, we\u2019ll have no choice but ",
+        "similarity_score": 0.6714180707931519,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 2,
+        "matched_text": "That's unfortunate, but honestly, you signed a contract. If you don\u2019t pay, we\u2019ll have no choice but ",
+        "similarity_score": 0.6096924543380737,
+        "keyword_match": false
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 6,
+        "matched_text": "Honestly, a payment plan won\u2019t do much good at this point. We need the full amount paid by the end o",
+        "similarity_score": 0.6234561800956726,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That's unfortunate, but honestly, you signed a contract. If you don\u2019t pay, we\u2019ll...\" (similarity: 0.67)",
+      "R003 (high): \"That's unfortunate, but honestly, you signed a contract. If you don\u2019t pay, we\u2019ll...\" (similarity: 0.61)",
+      "R004 (medium): \"Honestly, a payment plan won\u2019t do much good at this point. We need the full amou...\" (similarity: 0.62)"
+    ],
     "similarity_scores": {
-      "R001": 0.607,
-      "R002": 0.632,
-      "R003": 0.546,
-      "R004": 0.676,
-      "R005": 0.487
+      "R001": 0.671,
+      "R002": 0.497,
+      "R003": 0.61,
+      "R004": 0.623,
+      "R005": 0.542
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.870979"
-  },
-  {
-    "conversation_id": "conv_173",
-    "compliant": true,
-    "confidence": 0.7,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.612,
-      "R002": 0.522,
-      "R003": 0.588,
-      "R004": 0.561,
-      "R005": 0.685
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.887862"
+    "timestamp": "2026-02-17T16:48:05.409005"
   },
   {
     "conversation_id": "conv_174",
@@ -2941,7 +2650,7 @@
       "R005": 0.322
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.911224"
+    "timestamp": "2026-02-17T16:48:05.475829"
   },
   {
     "conversation_id": "conv_175",
@@ -2983,25 +2692,7 @@
       "R005": 0.447
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.932512"
-  },
-  {
-    "conversation_id": "conv_176",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.442,
-      "R002": 0.682,
-      "R003": 0.491,
-      "R004": 0.61,
-      "R005": 0.54
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.956083"
+    "timestamp": "2026-02-17T16:48:05.492595"
   },
   {
     "conversation_id": "conv_177",
@@ -3019,25 +2710,7 @@
       "R005": 0.405
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:52.977225"
-  },
-  {
-    "conversation_id": "conv_178",
-    "compliant": true,
-    "confidence": 0.7,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.558,
-      "R002": 0.489,
-      "R003": 0.607,
-      "R004": 0.66,
-      "R005": 0.722
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:52.993920"
+    "timestamp": "2026-02-17T16:48:05.537258"
   },
   {
     "conversation_id": "conv_180",
@@ -3055,7 +2728,7 @@
       "R005": 0.388
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.095877"
+    "timestamp": "2026-02-17T16:48:05.653826"
   },
   {
     "conversation_id": "conv_181",
@@ -3073,7 +2746,7 @@
       "R005": 0.349
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.114816"
+    "timestamp": "2026-02-17T16:48:05.672584"
   },
   {
     "conversation_id": "conv_182",
@@ -3091,7 +2764,7 @@
       "R005": 0.323
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:53.134262"
+    "timestamp": "2026-02-17T16:48:05.691607"
   },
   {
     "conversation_id": "conv_183",
@@ -3109,7 +2782,7 @@
       "R005": 0.394
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.156595"
+    "timestamp": "2026-02-17T16:48:05.715293"
   },
   {
     "conversation_id": "conv_184",
@@ -3127,7 +2800,7 @@
       "R005": 0.318
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.179138"
+    "timestamp": "2026-02-17T16:48:05.737439"
   },
   {
     "conversation_id": "conv_185",
@@ -3145,7 +2818,7 @@
       "R005": 0.348
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.200612"
+    "timestamp": "2026-02-17T16:48:05.761728"
   },
   {
     "conversation_id": "conv_186",
@@ -3163,7 +2836,7 @@
       "R005": 0.401
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.219116"
+    "timestamp": "2026-02-17T16:48:05.782147"
   },
   {
     "conversation_id": "conv_187",
@@ -3181,7 +2854,7 @@
       "R005": 0.454
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.237846"
+    "timestamp": "2026-02-17T16:48:05.802154"
   },
   {
     "conversation_id": "conv_188",
@@ -3199,25 +2872,7 @@
       "R005": 0.369
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:53.257060"
-  },
-  {
-    "conversation_id": "conv_190",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.628,
-      "R002": 0.443,
-      "R003": 0.531,
-      "R004": 0.663,
-      "R005": 0.367
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.298700"
+    "timestamp": "2026-02-17T16:48:05.820829"
   },
   {
     "conversation_id": "conv_191",
@@ -3235,25 +2890,49 @@
       "R005": 0.398
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:53.315044"
+    "timestamp": "2026-02-17T16:48:05.878449"
   },
   {
-    "conversation_id": "conv_192",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
+    "conversation_id": "conv_193",
+    "compliant": false,
+    "confidence": 0.7599999904632568,
+    "threshold": 0.75,
     "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
+    "violations": [
+      {
+        "rule_id": "R001",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
+        "message_index": 2,
+        "matched_text": "That\u2019s unfortunate, but you still need to pay us. If you don\u2019t pay by the end of the week, we\u2019re goi",
+        "similarity_score": 0.6603571772575378,
+        "keyword_match": true
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 2,
+        "matched_text": "That\u2019s unfortunate, but you still need to pay us. If you don\u2019t pay by the end of the week, we\u2019re goi",
+        "similarity_score": 0.6547479033470154,
+        "keyword_match": false
+      }
+    ],
+    "evidence": [
+      "R001 (critical): \"That\u2019s unfortunate, but you still need to pay us. If you don\u2019t pay by the end of...\" (similarity: 0.66)",
+      "R004 (medium): \"That\u2019s unfortunate, but you still need to pay us. If you don\u2019t pay by the end of...\" (similarity: 0.65)"
+    ],
     "similarity_scores": {
-      "R001": 0.634,
-      "R002": 0.546,
-      "R003": 0.538,
-      "R004": 0.55,
-      "R005": 0.369
+      "R001": 0.66,
+      "R002": 0.509,
+      "R003": 0.564,
+      "R004": 0.655,
+      "R005": 0.363
     },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.334055"
+    "agent_message_count": 3,
+    "timestamp": "2026-02-17T16:48:05.922246"
   },
   {
     "conversation_id": "conv_194",
@@ -3271,97 +2950,7 @@
       "R005": 0.369
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.377899"
-  },
-  {
-    "conversation_id": "conv_195",
-    "compliant": true,
-    "confidence": 0.72,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.522,
-      "R002": 0.561,
-      "R003": 0.522,
-      "R004": 0.605,
-      "R005": 0.587
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.396747"
-  },
-  {
-    "conversation_id": "conv_196",
-    "compliant": true,
-    "confidence": 0.77,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.412,
-      "R002": 0.498,
-      "R003": 0.342,
-      "R004": 0.601,
-      "R005": 0.421
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.416825"
-  },
-  {
-    "conversation_id": "conv_197",
-    "compliant": true,
-    "confidence": 0.74,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.579,
-      "R002": 0.505,
-      "R003": 0.526,
-      "R004": 0.666,
-      "R005": 0.328
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:53.432551"
-  },
-  {
-    "conversation_id": "conv_198",
-    "compliant": true,
-    "confidence": 0.71,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.575,
-      "R002": 0.64,
-      "R003": 0.507,
-      "R004": 0.645,
-      "R005": 0.493
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.452141"
-  },
-  {
-    "conversation_id": "conv_199",
-    "compliant": true,
-    "confidence": 0.73,
-    "threshold": 0.7,
-    "needs_llm_review": false,
-    "violations": [],
-    "evidence": [],
-    "similarity_scores": {
-      "R001": 0.599,
-      "R002": 0.527,
-      "R003": 0.564,
-      "R004": 0.644,
-      "R005": 0.406
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-16T17:23:53.473833"
+    "timestamp": "2026-02-17T16:48:05.942104"
   },
   {
     "conversation_id": "conv_200",
@@ -3370,6 +2959,16 @@
     "threshold": 0.75,
     "needs_llm_review": false,
     "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 4,
+        "matched_text": "I can't help you with that. If you don't pay immediately, we're going to report this to credit agenc",
+        "similarity_score": 0.6098612546920776,
+        "keyword_match": false
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
@@ -3382,6 +2981,7 @@
       }
     ],
     "evidence": [
+      "R003 (high): \"I can't help you with that. If you don't pay immediately, we're going to report ...\" (similarity: 0.61)",
       "R004 (medium): \"I can't help you with that. If you don't pay immediately, we're going to report ...\" (similarity: 0.72)"
     ],
     "similarity_scores": {
@@ -3392,6 +2992,6 @@
       "R005": 0.566
     },
     "agent_message_count": 3,
-    "timestamp": "2026-02-16T17:23:53.494433"
+    "timestamp": "2026-02-17T16:48:06.064502"
   }
 ]
