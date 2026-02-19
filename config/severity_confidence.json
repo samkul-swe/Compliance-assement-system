@@ -1,12 +1,12 @@
 {
-  "version": "1.0",
-  "last_updated": "2026-02-15",
-  "semantic_threshold": 0.60,
-  "confidence_thresholds": {
-    "compliant": 0.70,
-    "low": 0.70,
-    "medium": 0.75,
-    "high": 0.80,
-    "critical": 0.85
-  }
+  "version": "2.0",
+  "last_updated": "2026-02-19",
+  "severity_thresholds": {
+    "compliant": 0.20,
+    "low":       0.35,
+    "medium":    0.55,
+    "high":      0.70,
+    "critical":  0.82
+  },
+  "escalation_confidence_cutoff": 0.70
 }

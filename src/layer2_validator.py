@@ -601,6 +601,44 @@ class OutputGenerator:
                 worksheet.column_dimensions[column[0].column_letter].width = adjusted_width
         
         logger.info(f"  ✓ {filepath} (Excel - all results)")
+
+    
+    def _save_excel(self, results: List[ValidationResult], filename: str):
+        """Save subset of results to Excel (used for human review queue)."""
+        filepath = self.output_dir / filename
+
+        rows = []
+        for r in results:
+            rows.append({
+                'Conversation ID': r.conversation_id,
+                'Final Decision': r.final_decision.replace('_', ' ').upper(),
+                'Judges Agree': 'YES' if r.judges_agree else 'NO',
+                'Avg Confidence': f"{r.avg_confidence:.0%}",
+                'Judge 1 Says': r.judge1_decision.upper(),
+                'Judge 1 Conf': f"{r.judge1_confidence:.0%}",
+                'Judge 1 Violations': ', '.join(r.judge1_violations) if r.judge1_violations else '-',
+                'Judge 1 Reasoning': r.judge1_reasoning[:200] if r.judge1_reasoning else '-',
+                'Judge 2 Says': r.judge2_decision.upper(),
+                'Judge 2 Conf': f"{r.judge2_confidence:.0%}",
+                'Judge 2 Violations': ', '.join(r.judge2_violations) if r.judge2_violations else '-',
+                'Judge 2 Reasoning': r.judge2_reasoning[:200] if r.judge2_reasoning else '-',
+                'Product Loss': 'YES' if r.situation_product_loss else 'NO',
+                'Substandard Service': 'YES' if r.situation_substandard_service else 'NO',
+                'Other Situation': 'YES' if r.situation_other else 'NO'
+            })
+
+        df = pd.DataFrame(rows)
+
+        with pd.ExcelWriter(filepath, engine='openpyxl') as writer:
+            df.to_excel(writer, sheet_name='Human Review', index=False)
+
+            worksheet = writer.sheets['Human Review']
+            for column in worksheet.columns:
+                max_length = max(len(str(cell.value or '')) for cell in column)
+                adjusted_width = min(max_length + 2, 50)
+                worksheet.column_dimensions[column[0].column_letter].width = adjusted_width
+
+        logger.info(f"  ✓ {filepath} ({len(results)} records for human review)")
     
     def _save_cost_report(self, cost_summary: Dict, total_convs: int):
         """Save cost report."""

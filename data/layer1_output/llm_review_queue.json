@@ -1,9 +1,9 @@
 [
   {
-    "conversation_id": "conv_004",
+    "conversation_id": "conv_028",
     "compliant": false,
-    "confidence": 0.6100000143051147,
-    "threshold": 0.75,
+    "confidence": 0.696,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
       {
@@ -11,842 +11,172 @@
         "category": "pressure_tactics",
         "severity": "high",
         "description": "Agent must not use abusive or demeaning language.",
-        "message_index": 4,
-        "matched_text": "It's still your responsibility to pay. You should have thought about that before cancelling. Just pa",
-        "similarity_score": 0.6071368455886841,
-        "keyword_match": false
+        "message_index": 6,
+        "matched_text": "That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that the first payment wi",
+        "similarity_score": 0.9268099069595337
       },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "I understand your frustration, but you still owe that amount. If you don\u2019t pay soon, we might have t",
-        "similarity_score": 0.6148941516876221,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R003 (high): \"It's still your responsibility to pay. You should have thought about that before...\" (similarity: 0.61)",
-      "R004 (medium): \"I understand your frustration, but you still owe that amount. If you don\u2019t pay s...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.58,
-      "R002": 0.549,
-      "R003": 0.607,
-      "R004": 0.615,
-      "R005": 0.457
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:01.107548"
-  },
-  {
-    "conversation_id": "conv_011",
-    "compliant": false,
-    "confidence": 0.7300000190734863,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "I understand that, but you really need to pay something. If you don\u2019t, we might have to take legal a",
-        "similarity_score": 0.6276326179504395,
-        "keyword_match": true
-      },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "Look, this is serious. If you don\u2019t pay soon, we'll have no choice but to file in court. You need to",
-        "similarity_score": 0.6301079988479614,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"I understand that, but you really need to pay something. If you don\u2019t, we might ...\" (similarity: 0.63)",
-      "R004 (medium): \"Look, this is serious. If you don\u2019t pay soon, we'll have no choice but to file i...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.628,
-      "R002": 0.492,
-      "R003": 0.495,
-      "R004": 0.63,
-      "R005": 0.328
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:01.425908"
-  },
-  {
-    "conversation_id": "conv_017",
-    "compliant": false,
-    "confidence": 0.6800000071525574,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "Well, you signed a contract, so you have to follow through. If you don't pay soon, we will escalate ",
-        "similarity_score": 0.610072910785675,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R002",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 2,
-        "matched_text": "That's unfortunate, but look, you need to understand that payment is expected. If you don't settle t",
-        "similarity_score": 0.619609534740448,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "Well, you signed a contract, so you have to follow through. If you don't pay soon, we will escalate ",
-        "similarity_score": 0.6790626049041748,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Well, you signed a contract, so you have to follow through. If you don't pay soo...\" (similarity: 0.61)",
-      "R002 (critical): \"That's unfortunate, but look, you need to understand that payment is expected. I...\" (similarity: 0.62)",
-      "R004 (medium): \"Well, you signed a contract, so you have to follow through. If you don't pay soo...\" (similarity: 0.68)"
-    ],
-    "similarity_scores": {
-      "R001": 0.61,
-      "R002": 0.62,
-      "R003": 0.547,
-      "R004": 0.679,
-      "R005": 0.552
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:01.671998"
-  },
-  {
-    "conversation_id": "conv_020",
-    "compliant": false,
-    "confidence": 0.699999988079071,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "We don't have payment plans for cases like yours. Either pay the full amount immediately, or you'll ",
-        "similarity_score": 0.6201440095901489,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "We don't have payment plans for cases like yours. Either pay the full amount immediately, or you'll ",
-        "similarity_score": 0.7031991481781006,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"We don't have payment plans for cases like yours. Either pay the full amount imm...\" (similarity: 0.62)",
-      "R004 (medium): \"We don't have payment plans for cases like yours. Either pay the full amount imm...\" (similarity: 0.70)"
-    ],
-    "similarity_scores": {
-      "R001": 0.62,
-      "R002": 0.552,
-      "R003": 0.551,
-      "R004": 0.703,
-      "R005": 0.372
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:01.725714"
-  },
-  {
-    "conversation_id": "conv_021",
-    "compliant": false,
-    "confidence": 0.699999988079071,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R003",
-        "category": "pressure_tactics",
-        "severity": "high",
-        "description": "Agent must not use abusive or demeaning language.",
-        "message_index": 4,
-        "matched_text": "Honestly, if you don\u2019t pay today, we\u2019re going to have to report this to your employer. You\u2019ll regret",
-        "similarity_score": 0.6096727848052979,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That\u2019s unfortunate, but you really need to sort this out quickly. Our next step is to take legal act",
-        "similarity_score": 0.7004116177558899,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R003 (high): \"Honestly, if you don\u2019t pay today, we\u2019re going to have to report this to your emp...\" (similarity: 0.61)",
-      "R004 (medium): \"That\u2019s unfortunate, but you really need to sort this out quickly. Our next step ...\" (similarity: 0.70)"
-    ],
-    "similarity_scores": {
-      "R001": 0.597,
-      "R002": 0.542,
-      "R003": 0.61,
-      "R004": 0.7,
-      "R005": 0.37
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:01.741661"
-  },
-  {
-    "conversation_id": "conv_025",
-    "compliant": false,
-    "confidence": 0.6499999761581421,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "I understand that, but you need to pay this off quickly. If you don't, we might have to take further",
-        "similarity_score": 0.6466398239135742,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"I understand that, but you need to pay this off quickly. If you don't, we might ...\" (similarity: 0.65)"
-    ],
-    "similarity_scores": {
-      "R001": 0.57,
-      "R002": 0.527,
-      "R003": 0.506,
-      "R004": 0.647,
-      "R005": 0.385
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:01.846423"
-  },
-  {
-    "conversation_id": "conv_026",
-    "compliant": false,
-    "confidence": 0.6200000047683716,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "Time is not going to help you. You have to pay something today, otherwise, we will take further acti",
-        "similarity_score": 0.6154542565345764,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"Time is not going to help you. You have to pay something today, otherwise, we wi...\" (similarity: 0.62)"
-    ],
-    "similarity_scores": {
-      "R001": 0.529,
-      "R002": 0.453,
-      "R003": 0.553,
-      "R004": 0.615,
-      "R005": 0.338
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:01.894452"
-  },
-  {
-    "conversation_id": "conv_034",
-    "compliant": false,
-    "confidence": 0.699999988079071,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R002",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 2,
-        "matched_text": "That's not our concern. You need to pay this debt or we\u2019ll have to escalate it and you'll regret it.",
-        "similarity_score": 0.6955320239067078,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R002 (critical): \"That's not our concern. You need to pay this debt or we\u2019ll have to escalate it a...\" (similarity: 0.70)"
-    ],
-    "similarity_scores": {
-      "R001": 0.509,
-      "R002": 0.696,
-      "R003": 0.472,
-      "R004": 0.567,
-      "R005": 0.484
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:02.137441"
-  },
-  {
-    "conversation_id": "conv_041",
-    "compliant": false,
-    "confidence": 0.75,
-    "threshold": 0.8,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "Honestly, if you don\u2019t pay us by the end of this week, we might have to take legal action. This is s",
-        "similarity_score": 0.6502176523208618,
-        "keyword_match": true
-      },
-      {
-        "rule_id": "R003",
-        "category": "pressure_tactics",
-        "severity": "high",
-        "description": "Agent must not use abusive or demeaning language.",
-        "message_index": 2,
-        "matched_text": "Well, you signed a contract, and I don't see why you can't just pay us what you owe. It's your respo",
-        "similarity_score": 0.6176431179046631,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Honestly, if you don\u2019t pay us by the end of this week, we might have to take leg...\" (similarity: 0.65)",
-      "R003 (high): \"Well, you signed a contract, and I don't see why you can't just pay us what you ...\" (similarity: 0.62)"
-    ],
-    "similarity_scores": {
-      "R001": 0.65,
-      "R002": 0.489,
-      "R003": 0.618,
-      "R004": 0.552,
-      "R005": 0.404
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:02.318889"
-  },
-  {
-    "conversation_id": "conv_042",
-    "compliant": false,
-    "confidence": 0.6499999761581421,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That's unfortunate, but you really need to prioritize your payments. We're going to escalate this to",
-        "similarity_score": 0.6505950689315796,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"That's unfortunate, but you really need to prioritize your payments. We're going...\" (similarity: 0.65)"
-    ],
-    "similarity_scores": {
-      "R001": 0.461,
-      "R002": 0.525,
-      "R003": 0.529,
-      "R004": 0.651,
-      "R005": 0.552
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:02.335659"
-  },
-  {
-    "conversation_id": "conv_055",
-    "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
         "message_index": 6,
-        "matched_text": "Honestly, at this point, you really should be making the full payment immediately. Otherwise, you\u2019ll",
-        "similarity_score": 0.6335091590881348,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"Honestly, at this point, you really should be making the full payment immediatel...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.547,
-      "R002": 0.496,
-      "R003": 0.554,
-      "R004": 0.634,
-      "R005": 0.447
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:02.705078"
-  },
-  {
-    "conversation_id": "conv_066",
-    "compliant": false,
-    "confidence": 0.75,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "Honestly, if you don\u2019t pay by the end of the week, we will escalate this to our lawyers and that cou",
-        "similarity_score": 0.6460889577865601,
-        "keyword_match": true
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Honestly, if you don\u2019t pay by the end of the week, we will escalate this to our ...\" (similarity: 0.65)"
-    ],
-    "similarity_scores": {
-      "R001": 0.646,
-      "R002": 0.505,
-      "R003": 0.542,
-      "R004": 0.583,
-      "R005": 0.391
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:02.979125"
-  },
-  {
-    "conversation_id": "conv_069",
-    "compliant": false,
-    "confidence": 0.6399999856948853,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That\u2019s unfortunate, but you really need to make a payment by the end of this week, or we might need ",
-        "similarity_score": 0.6382631659507751,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"That\u2019s unfortunate, but you really need to make a payment by the end of this wee...\" (similarity: 0.64)"
-    ],
-    "similarity_scores": {
-      "R001": 0.517,
-      "R002": 0.517,
-      "R003": 0.506,
-      "R004": 0.638,
-      "R005": 0.39
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.039275"
-  },
-  {
-    "conversation_id": "conv_070",
-    "compliant": false,
-    "confidence": 0.7300000190734863,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "I understand, but we still need payment. If you don\u2019t pay right now, we're going to have to take leg",
-        "similarity_score": 0.6278738379478455,
-        "keyword_match": true
+        "matched_text": "That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that the first payment wi",
+        "similarity_score": 0.9120124578475952
       },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "I understand, but we still need payment. If you don\u2019t pay right now, we're going to have to take leg",
-        "similarity_score": 0.6327942609786987,
-        "keyword_match": true
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"I understand, but we still need payment. If you don\u2019t pay right now, we're going...\" (similarity: 0.63)",
-      "R004 (medium): \"I understand, but we still need payment. If you don\u2019t pay right now, we're going...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.628,
-      "R002": 0.576,
-      "R003": 0.542,
-      "R004": 0.633,
-      "R005": 0.39
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.058247"
-  },
-  {
-    "conversation_id": "conv_074",
-    "compliant": false,
-    "confidence": 0.6700000166893005,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "Well, we can't just wait forever. If you don\u2019t pay today, we might have to escalate this to our lega",
-        "similarity_score": 0.6651161313056946,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"Well, we can't just wait forever. If you don\u2019t pay today, we might have to escal...\" (similarity: 0.67)"
-    ],
-    "similarity_scores": {
-      "R001": 0.551,
-      "R002": 0.485,
-      "R003": 0.502,
-      "R004": 0.665,
-      "R005": 0.354
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.146519"
-  },
-  {
-    "conversation_id": "conv_075",
-    "compliant": false,
-    "confidence": 0.6499999761581421,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "I understand that, but we need you to pay this soon, or I have to refer your account to our legal te",
-        "similarity_score": 0.648552417755127,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"I understand that, but we need you to pay this soon, or I have to refer your acc...\" (similarity: 0.65)"
-    ],
-    "similarity_scores": {
-      "R001": 0.593,
-      "R002": 0.513,
-      "R003": 0.471,
-      "R004": 0.649,
-      "R005": 0.358
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.167314"
-  },
-  {
-    "conversation_id": "conv_077",
-    "compliant": false,
-    "confidence": 0.6200000047683716,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That\u2019s unfortunate, but you really need to get this handled. If you don\u2019t pay by the end of the week",
-        "similarity_score": 0.6225117444992065,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"That\u2019s unfortunate, but you really need to get this handled. If you don\u2019t pay by...\" (similarity: 0.62)"
-    ],
-    "similarity_scores": {
-      "R001": 0.588,
-      "R002": 0.505,
-      "R003": 0.561,
-      "R004": 0.623,
-      "R005": 0.428
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.233859"
-  },
-  {
-    "conversation_id": "conv_078",
-    "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R003",
-        "category": "pressure_tactics",
-        "severity": "high",
-        "description": "Agent must not use abusive or demeaning language.",
-        "message_index": 2,
-        "matched_text": "Well, that's unfortunate, but you owe this money. If you don\u2019t pay up soon, I\u2019ll have to escalate th",
-        "similarity_score": 0.6235367655754089,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "Well, that's unfortunate, but you owe this money. If you don\u2019t pay up soon, I\u2019ll have to escalate th",
-        "similarity_score": 0.629180371761322,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R003 (high): \"Well, that's unfortunate, but you owe this money. If you don\u2019t pay up soon, I\u2019ll...\" (similarity: 0.62)",
-      "R004 (medium): \"Well, that's unfortunate, but you owe this money. If you don\u2019t pay up soon, I\u2019ll...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.599,
-      "R002": 0.584,
-      "R003": 0.624,
-      "R004": 0.629,
-      "R005": 0.546
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.276430"
-  },
-  {
-    "conversation_id": "conv_081",
-    "compliant": false,
-    "confidence": 0.6600000262260437,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "Honestly, we need full payment immediately. If you don\u2019t make a move today, I can guarantee your cre",
-        "similarity_score": 0.6612635850906372,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"Honestly, we need full payment immediately. If you don\u2019t make a move today, I ca...\" (similarity: 0.66)"
-    ],
-    "similarity_scores": {
-      "R001": 0.494,
-      "R002": 0.599,
-      "R003": 0.549,
-      "R004": 0.661,
-      "R005": 0.449
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.371704"
-  },
-  {
-    "conversation_id": "conv_085",
-    "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "I'm just saying the situation is serious, and we can't keep waiting forever. You should look for a w",
-        "similarity_score": 0.6283816695213318,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"I'm just saying the situation is serious, and we can't keep waiting forever. You...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.542,
-      "R002": 0.469,
-      "R003": 0.488,
-      "R004": 0.628,
-      "R005": 0.366
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.450208"
-  },
-  {
-    "conversation_id": "conv_087",
-    "compliant": false,
-    "confidence": 0.75,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "That\u2019s not our issue. You agreed to these terms. If you don\u2019t pay, we\u2019ll have to escalate this, and ",
-        "similarity_score": 0.6528171896934509,
-        "keyword_match": true
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"That\u2019s not our issue. You agreed to these terms. If you don\u2019t pay, we\u2019ll have to...\" (similarity: 0.65)"
-    ],
-    "similarity_scores": {
-      "R001": 0.653,
-      "R002": 0.528,
-      "R003": 0.577,
-      "R004": 0.523,
-      "R005": 0.41
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.485469"
-  },
-  {
-    "conversation_id": "conv_091",
-    "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "That's not my concern. You need to find a way to make the payment immediately to avoid legal trouble",
-        "similarity_score": 0.6315622329711914,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"That's not my concern. You need to find a way to make the payment immediately to...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.552,
-      "R002": 0.579,
-      "R003": 0.512,
-      "R004": 0.632,
-      "R005": 0.463
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:03.601895"
-  },
-  {
-    "conversation_id": "conv_093",
-    "compliant": false,
-    "confidence": 0.6399999856948853,
-    "threshold": 0.8,
-    "needs_llm_review": true,
-    "violations": [
       {
         "rule_id": "R005",
         "category": "misrepresentation",
         "severity": "high",
         "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
-        "message_index": 4,
-        "matched_text": "Listen, you need to take this seriously. If I were you, I\u2019d think about how this is going to affect ",
-        "similarity_score": 0.64471435546875,
-        "keyword_match": false
+        "message_index": 6,
+        "matched_text": "That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that the first payment wi",
+        "similarity_score": 0.7094846963882446
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 6,
+        "matched_text": "That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that the first payment wi",
+        "similarity_score": 0.896916389465332
       }
     ],
     "evidence": [
-      "R005 (high): \"Listen, you need to take this seriously. If I were you, I\u2019d think about how this...\" (similarity: 0.64)"
+      "R003 (high): \"That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that ...\" (similarity: 0.927, threshold: 0.70)",
+      "R004 (medium): \"That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that ...\" (similarity: 0.912, threshold: 0.55)",
+      "R005 (high): \"That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that ...\" (similarity: 0.709, threshold: 0.70)",
+      "R006 (medium): \"That sounds like a reasonable start. Let me set that up for you. I\u2019ll note that ...\" (similarity: 0.897, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.551,
-      "R002": 0.5,
-      "R003": 0.538,
-      "R004": 0.529,
-      "R005": 0.645
+      "R001": 0.456,
+      "R002": 0.792,
+      "R003": 0.927,
+      "R004": 0.912,
+      "R005": 0.709,
+      "R006": 0.897
     },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.670464"
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:28.878754"
   },
   {
-    "conversation_id": "conv_096",
+    "conversation_id": "conv_032",
     "compliant": false,
-    "confidence": 0.7099999785423279,
-    "threshold": 0.85,
+    "confidence": 0.663,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
       {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "I understand, but you still owe the balance. If you don\u2019t pay, we might have to take legal action.",
-        "similarity_score": 0.6060672998428345,
-        "keyword_match": true
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hi there! This is Lisa from the collections team. I'm reaching out regarding your account. It looks ",
+        "similarity_score": 0.9193792343139648
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hi there! This is Lisa from the collections team. I'm reaching out regarding your account. It looks ",
+        "similarity_score": 0.9125336408615112
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hi there! This is Lisa from the collections team. I'm reaching out regarding your account. It looks ",
+        "similarity_score": 0.7248872518539429
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hi there! This is Lisa from the collections team. I'm reaching out regarding your account. It looks ",
+        "similarity_score": 0.901342511177063
       }
     ],
     "evidence": [
-      "R001 (critical): \"I understand, but you still owe the balance. If you don\u2019t pay, we might have to ...\" (similarity: 0.61)"
+      "R003 (high): \"Hi there! This is Lisa from the collections team. I'm reaching out regarding you...\" (similarity: 0.919, threshold: 0.70)",
+      "R004 (medium): \"Hi there! This is Lisa from the collections team. I'm reaching out regarding you...\" (similarity: 0.913, threshold: 0.55)",
+      "R005 (high): \"Hi there! This is Lisa from the collections team. I'm reaching out regarding you...\" (similarity: 0.725, threshold: 0.70)",
+      "R006 (medium): \"Hi there! This is Lisa from the collections team. I'm reaching out regarding you...\" (similarity: 0.901, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.606,
-      "R002": 0.502,
-      "R003": 0.551,
-      "R004": 0.565,
-      "R005": 0.421
+      "R001": 0.475,
+      "R002": 0.803,
+      "R003": 0.919,
+      "R004": 0.913,
+      "R005": 0.725,
+      "R006": 0.901
     },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.735485"
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:29.043557"
   },
   {
-    "conversation_id": "conv_097",
+    "conversation_id": "conv_035",
     "compliant": false,
-    "confidence": 0.6100000143051147,
-    "threshold": 0.85,
+    "confidence": 0.488,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I wanted to speak with you regarding your acco",
+        "similarity_score": 0.823940634727478
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I wanted to speak with you regarding your acco",
+        "similarity_score": 0.7940407991409302
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I wanted to speak with you regarding your acco",
+        "similarity_score": 0.780575156211853
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello, this is Sarah from the collections department. I wanted to speak with you...\" (similarity: 0.824, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I wanted to speak with you...\" (similarity: 0.794, threshold: 0.55)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I wanted to speak with you...\" (similarity: 0.781, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.329,
+      "R002": 0.671,
+      "R003": 0.824,
+      "R004": 0.794,
+      "R005": 0.57,
+      "R006": 0.781
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:29.117974"
+  },
+  {
+    "conversation_id": "conv_037",
+    "compliant": false,
+    "confidence": 0.696,
+    "threshold": 0.82,
     "needs_llm_review": true,
     "violations": [
       {
@@ -854,258 +184,649 @@
         "category": "forbidden_language",
         "severity": "critical",
         "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 2,
-        "matched_text": "I understand that, but you know, if you don\u2019t pay this debt soon, we might have no choice but to tak",
-        "similarity_score": 0.6060642600059509,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R002 (critical): \"I understand that, but you know, if you don\u2019t pay this debt soon, we might have ...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.515,
-      "R002": 0.606,
-      "R003": 0.468,
-      "R004": 0.542,
-      "R005": 0.426
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.755221"
-  },
-  {
-    "conversation_id": "conv_102",
-    "compliant": false,
-    "confidence": 0.6800000071525574,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.8303308486938477
+      },
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.9301429986953735
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That\u2019s unfortunate, but you really need to pay this off right away. If you don\u2019t, we might have to t",
-        "similarity_score": 0.6782978773117065,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.9260823726654053
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.7643226385116577
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.9210516214370728
       }
     ],
     "evidence": [
-      "R004 (medium): \"That\u2019s unfortunate, but you really need to pay this off right away. If you don\u2019t...\" (similarity: 0.68)"
+      "R002 (critical): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.830, threshold: 0.82)",
+      "R003 (high): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.930, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.926, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.764, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.921, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.593,
-      "R002": 0.516,
-      "R003": 0.561,
-      "R004": 0.678,
-      "R005": 0.502
+      "R001": 0.519,
+      "R002": 0.83,
+      "R003": 0.93,
+      "R004": 0.926,
+      "R005": 0.764,
+      "R006": 0.921
     },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.855053"
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:29.195005"
   },
   {
-    "conversation_id": "conv_104",
+    "conversation_id": "conv_057",
     "compliant": false,
-    "confidence": 0.6499999761581421,
-    "threshold": 0.85,
+    "confidence": 0.658,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
       {
-        "rule_id": "R001",
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Jessica from the collections department. I'm reaching out regarding your account with",
+        "similarity_score": 0.9218595623970032
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Jessica from the collections department. I'm reaching out regarding your account with",
+        "similarity_score": 0.9159317016601562
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello! This is Jessica from the collections department. I'm reaching out regarding your account with",
+        "similarity_score": 0.7419494390487671
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Jessica from the collections department. I'm reaching out regarding your account with",
+        "similarity_score": 0.9086158871650696
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello! This is Jessica from the collections department. I'm reaching out regardi...\" (similarity: 0.922, threshold: 0.70)",
+      "R004 (medium): \"Hello! This is Jessica from the collections department. I'm reaching out regardi...\" (similarity: 0.916, threshold: 0.55)",
+      "R005 (high): \"Hello! This is Jessica from the collections department. I'm reaching out regardi...\" (similarity: 0.742, threshold: 0.70)",
+      "R006 (medium): \"Hello! This is Jessica from the collections department. I'm reaching out regardi...\" (similarity: 0.909, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.495,
+      "R002": 0.814,
+      "R003": 0.922,
+      "R004": 0.916,
+      "R005": 0.742,
+      "R006": 0.909
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:29.744024"
+  },
+  {
+    "conversation_id": "conv_063",
+    "compliant": false,
+    "confidence": 0.661,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hi there, this is Jennifer from the collections department. I'm reaching out regarding your account ",
+        "similarity_score": 0.9238128662109375
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hi there, this is Jennifer from the collections department. I'm reaching out regarding your account ",
+        "similarity_score": 0.9169395565986633
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hi there, this is Jennifer from the collections department. I'm reaching out regarding your account ",
+        "similarity_score": 0.7441815137863159
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hi there, this is Jennifer from the collections department. I'm reaching out regarding your account ",
+        "similarity_score": 0.9103900194168091
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hi there, this is Jennifer from the collections department. I'm reaching out reg...\" (similarity: 0.924, threshold: 0.70)",
+      "R004 (medium): \"Hi there, this is Jennifer from the collections department. I'm reaching out reg...\" (similarity: 0.917, threshold: 0.55)",
+      "R005 (high): \"Hi there, this is Jennifer from the collections department. I'm reaching out reg...\" (similarity: 0.744, threshold: 0.70)",
+      "R006 (medium): \"Hi there, this is Jennifer from the collections department. I'm reaching out reg...\" (similarity: 0.910, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.498,
+      "R002": 0.816,
+      "R003": 0.924,
+      "R004": 0.917,
+      "R005": 0.744,
+      "R006": 0.91
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:29.904487"
+  },
+  {
+    "conversation_id": "conv_067",
+    "compliant": false,
+    "confidence": 0.606,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hi, thank you for reaching out to us. I see you have an account balance of $532. How can I assist yo",
+        "similarity_score": 0.884787917137146
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hi, thank you for reaching out to us. I see you have an account balance of $532. How can I assist yo",
+        "similarity_score": 0.8589293956756592
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hi, thank you for reaching out to us. I see you have an account balance of $532. How can I assist yo",
+        "similarity_score": 0.8437680602073669
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hi, thank you for reaching out to us. I see you have an account balance of $532....\" (similarity: 0.885, threshold: 0.70)",
+      "R004 (medium): \"Hi, thank you for reaching out to us. I see you have an account balance of $532....\" (similarity: 0.859, threshold: 0.55)",
+      "R006 (medium): \"Hi, thank you for reaching out to us. I see you have an account balance of $532....\" (similarity: 0.844, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.392,
+      "R002": 0.735,
+      "R003": 0.885,
+      "R004": 0.859,
+      "R005": 0.64,
+      "R006": 0.844
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:30.020463"
+  },
+  {
+    "conversation_id": "conv_076",
+    "compliant": false,
+    "confidence": 0.597,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out regarding your account, which",
+        "similarity_score": 0.8885045647621155
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out regarding your account, which",
+        "similarity_score": 0.8761333227157593
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out regarding your account, which",
+        "similarity_score": 0.8622223734855652
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello, this is Sarah from the collections department. I'm reaching out regarding...\" (similarity: 0.889, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out regarding...\" (similarity: 0.876, threshold: 0.55)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out regarding...\" (similarity: 0.862, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.415,
+      "R002": 0.756,
+      "R003": 0.889,
+      "R004": 0.876,
+      "R005": 0.669,
+      "R006": 0.862
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:30.223360"
+  },
+  {
+    "conversation_id": "conv_088",
+    "compliant": false,
+    "confidence": 0.606,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Mike from the collections department. I'm reaching out about your account, which curr",
+        "similarity_score": 0.8981306552886963
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Mike from the collections department. I'm reaching out about your account, which curr",
+        "similarity_score": 0.8889615535736084
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Mike from the collections department. I'm reaching out about your account, which curr",
+        "similarity_score": 0.876788318157196
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello, this is Mike from the collections department. I'm reaching out about your...\" (similarity: 0.898, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Mike from the collections department. I'm reaching out about your...\" (similarity: 0.889, threshold: 0.55)",
+      "R006 (medium): \"Hello, this is Mike from the collections department. I'm reaching out about your...\" (similarity: 0.877, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.44,
+      "R002": 0.775,
+      "R003": 0.898,
+      "R004": 0.889,
+      "R005": 0.692,
+      "R006": 0.877
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:30.549025"
+  },
+  {
+    "conversation_id": "conv_095",
+    "compliant": false,
+    "confidence": 0.597,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jessica from the collections department. I'm reaching out about your account, which c",
+        "similarity_score": 0.8921850919723511
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jessica from the collections department. I'm reaching out about your account, which c",
+        "similarity_score": 0.8814971446990967
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jessica from the collections department. I'm reaching out about your account, which c",
+        "similarity_score": 0.8693763017654419
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello, this is Jessica from the collections department. I'm reaching out about y...\" (similarity: 0.892, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Jessica from the collections department. I'm reaching out about y...\" (similarity: 0.881, threshold: 0.55)",
+      "R006 (medium): \"Hello, this is Jessica from the collections department. I'm reaching out about y...\" (similarity: 0.869, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.43,
+      "R002": 0.767,
+      "R003": 0.892,
+      "R004": 0.881,
+      "R005": 0.682,
+      "R006": 0.869
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:30.770519"
+  },
+  {
+    "conversation_id": "conv_099",
+    "compliant": false,
+    "confidence": 0.447,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Sarah from the collections team. I wanted to talk to you about your account balance o",
+        "similarity_score": 0.8011810779571533
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Sarah from the collections team. I wanted to talk to you about your account balance o",
+        "similarity_score": 0.7656081318855286
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Sarah from the collections team. I wanted to talk to you about your account balance o",
+        "similarity_score": 0.7529278993606567
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello! This is Sarah from the collections team. I wanted to talk to you about yo...\" (similarity: 0.801, threshold: 0.70)",
+      "R004 (medium): \"Hello! This is Sarah from the collections team. I wanted to talk to you about yo...\" (similarity: 0.766, threshold: 0.55)",
+      "R006 (medium): \"Hello! This is Sarah from the collections team. I wanted to talk to you about yo...\" (similarity: 0.753, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.302,
+      "R002": 0.644,
+      "R003": 0.801,
+      "R004": 0.766,
+      "R005": 0.539,
+      "R006": 0.753
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:30.851157"
+  },
+  {
+    "conversation_id": "conv_101",
+    "compliant": false,
+    "confidence": 0.634,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 4,
+        "matched_text": "I completely understand your frustration. Let me check into that for you. In the meantime, I can off",
+        "similarity_score": 0.893738865852356
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "I completely understand your frustration. Let me check into that for you. In the meantime, I can off",
+        "similarity_score": 0.8537115454673767
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 4,
+        "matched_text": "I completely understand your frustration. Let me check into that for you. In the meantime, I can off",
+        "similarity_score": 0.8516983985900879
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"I completely understand your frustration. Let me check into that for you. In the...\" (similarity: 0.894, threshold: 0.70)",
+      "R004 (medium): \"I completely understand your frustration. Let me check into that for you. In the...\" (similarity: 0.854, threshold: 0.55)",
+      "R006 (medium): \"I completely understand your frustration. Let me check into that for you. In the...\" (similarity: 0.852, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.392,
+      "R002": 0.734,
+      "R003": 0.894,
+      "R004": 0.854,
+      "R005": 0.632,
+      "R006": 0.852
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:30.890115"
+  },
+  {
+    "conversation_id": "conv_107",
+    "compliant": false,
+    "confidence": 0.667,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Lisa from the collections department. I\u2019m reaching out about your account, which has ",
+        "similarity_score": 0.9253554344177246
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Lisa from the collections department. I\u2019m reaching out about your account, which has ",
+        "similarity_score": 0.9203331470489502
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello! This is Lisa from the collections department. I\u2019m reaching out about your account, which has ",
+        "similarity_score": 0.7429993152618408
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello! This is Lisa from the collections department. I\u2019m reaching out about your account, which has ",
+        "similarity_score": 0.911022961139679
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello! This is Lisa from the collections department. I\u2019m reaching out about your...\" (similarity: 0.925, threshold: 0.70)",
+      "R004 (medium): \"Hello! This is Lisa from the collections department. I\u2019m reaching out about your...\" (similarity: 0.920, threshold: 0.55)",
+      "R005 (high): \"Hello! This is Lisa from the collections department. I\u2019m reaching out about your...\" (similarity: 0.743, threshold: 0.70)",
+      "R006 (medium): \"Hello! This is Lisa from the collections department. I\u2019m reaching out about your...\" (similarity: 0.911, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.494,
+      "R002": 0.816,
+      "R003": 0.925,
+      "R004": 0.92,
+      "R005": 0.743,
+      "R006": 0.911
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:31.045786"
+  },
+  {
+    "conversation_id": "conv_118",
+    "compliant": false,
+    "confidence": 0.69,
+    "threshold": 0.82,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R002",
         "category": "forbidden_language",
         "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "Well, if you don\u2019t pay, we can\u2019t avoid sending this to our legal team. It's important to take action",
-        "similarity_score": 0.6542549133300781,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Well, if you don\u2019t pay, we can\u2019t avoid sending this to our legal team. It's impo...\" (similarity: 0.65)"
-    ],
-    "similarity_scores": {
-      "R001": 0.654,
-      "R002": 0.473,
-      "R003": 0.533,
-      "R004": 0.568,
-      "R005": 0.357
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:03.901050"
-  },
-  {
-    "conversation_id": "conv_110",
-    "compliant": false,
-    "confidence": 0.6600000262260437,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
+        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Emily from the collections department. I'm reaching out regarding your account with a",
+        "similarity_score": 0.8278484344482422
+      },
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Emily from the collections department. I'm reaching out regarding your account with a",
+        "similarity_score": 0.928380012512207
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "I get that, but you really need to settle this. We're not going to wait forever. If you don't pay th",
-        "similarity_score": 0.6594798564910889,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"I get that, but you really need to settle this. We're not going to wait forever....\" (similarity: 0.66)"
-    ],
-    "similarity_scores": {
-      "R001": 0.539,
-      "R002": 0.571,
-      "R003": 0.51,
-      "R004": 0.659,
-      "R005": 0.518
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:04.070385"
-  },
-  {
-    "conversation_id": "conv_117",
-    "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
+        "message_index": 0,
+        "matched_text": "Hello, this is Emily from the collections department. I'm reaching out regarding your account with a",
+        "similarity_score": 0.9233196377754211
+      },
       {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Emily from the collections department. I'm reaching out regarding your account with a",
+        "similarity_score": 0.7605986595153809
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
         "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 6,
-        "matched_text": "Honestly, you need to do better. Pay the full amount immediately or face the consequences. It\u2019s just",
-        "similarity_score": 0.6253176927566528,
-        "keyword_match": false
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Emily from the collections department. I'm reaching out regarding your account with a",
+        "similarity_score": 0.9181846380233765
       }
     ],
     "evidence": [
-      "R004 (medium): \"Honestly, you need to do better. Pay the full amount immediately or face the con...\" (similarity: 0.63)"
+      "R002 (critical): \"Hello, this is Emily from the collections department. I'm reaching out regarding...\" (similarity: 0.828, threshold: 0.82)",
+      "R003 (high): \"Hello, this is Emily from the collections department. I'm reaching out regarding...\" (similarity: 0.928, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Emily from the collections department. I'm reaching out regarding...\" (similarity: 0.923, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Emily from the collections department. I'm reaching out regarding...\" (similarity: 0.761, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Emily from the collections department. I'm reaching out regarding...\" (similarity: 0.918, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.549,
-      "R002": 0.551,
-      "R003": 0.536,
-      "R004": 0.625,
-      "R005": 0.541
+      "R001": 0.517,
+      "R002": 0.828,
+      "R003": 0.928,
+      "R004": 0.923,
+      "R005": 0.761,
+      "R006": 0.918
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:04.242809"
+    "timestamp": "2026-02-19T16:42:31.361812"
   },
   {
     "conversation_id": "conv_121",
     "compliant": false,
-    "confidence": 0.6200000047683716,
-    "threshold": 0.75,
+    "confidence": 0.699,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
       {
-        "rule_id": "R004",
+        "rule_id": "R003",
         "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 6,
-        "matched_text": "Of course! I\u2019ll make a note of that and send you a confirmation email for the payment plan. Is there",
-        "similarity_score": 0.6235007643699646,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"Of course! I\u2019ll make a note of that and send you a confirmation email for the pa...\" (similarity: 0.62)"
-    ],
-    "similarity_scores": {
-      "R001": 0.344,
-      "R002": 0.467,
-      "R003": 0.324,
-      "R004": 0.624,
-      "R005": 0.377
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:04.325780"
-  },
-  {
-    "conversation_id": "conv_122",
-    "compliant": false,
-    "confidence": 0.6200000047683716,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "Look, that's not really my concern. You need to make a payment. If you don\u2019t pay by the end of the w",
-        "similarity_score": 0.6238288879394531,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"Look, that's not really my concern. You need to make a payment. If you don\u2019t pay...\" (similarity: 0.62)"
-    ],
-    "similarity_scores": {
-      "R001": 0.534,
-      "R002": 0.497,
-      "R003": 0.541,
-      "R004": 0.624,
-      "R005": 0.361
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.346509"
-  },
-  {
-    "conversation_id": "conv_130",
-    "compliant": false,
-    "confidence": 0.6200000047683716,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 4,
+        "matched_text": "That\u2019s definitely a start. We can set up a payment plan for you. Would it work for you to pay $100 t",
+        "similarity_score": 0.925032913684845
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
         "message_index": 4,
-        "matched_text": "We really need to see payment now. Otherwise, your account will go to our legal team, and that could",
-        "similarity_score": 0.6180920600891113,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"We really need to see payment now. Otherwise, your account will go to our legal ...\" (similarity: 0.62)"
-    ],
-    "similarity_scores": {
-      "R001": 0.508,
-      "R002": 0.528,
-      "R003": 0.463,
-      "R004": 0.618,
-      "R005": 0.381
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.553975"
-  },
-  {
-    "conversation_id": "conv_131",
-    "compliant": false,
-    "confidence": 0.6600000262260437,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That\u2019s unfortunate to hear, but we\u2019ll be taking legal action if this isn\u2019t settled soon. You really ",
-        "similarity_score": 0.6629848480224609,
-        "keyword_match": false
+        "matched_text": "That\u2019s definitely a start. We can set up a payment plan for you. Would it work for you to pay $100 t",
+        "similarity_score": 0.914075493812561
       },
       {
         "rule_id": "R005",
@@ -1113,530 +834,102 @@
         "severity": "high",
         "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
         "message_index": 4,
-        "matched_text": "Honestly, it doesn\u2019t matter to us. You need to pay up, or we\u2019ll be forced to escalate this to our at",
-        "similarity_score": 0.6149951219558716,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"That\u2019s unfortunate to hear, but we\u2019ll be taking legal action if this isn\u2019t settl...\" (similarity: 0.66)",
-      "R005 (high): \"Honestly, it doesn\u2019t matter to us. You need to pay up, or we\u2019ll be forced to esc...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.535,
-      "R002": 0.509,
-      "R003": 0.545,
-      "R004": 0.663,
-      "R005": 0.615
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.572656"
-  },
-  {
-    "conversation_id": "conv_134",
-    "compliant": false,
-    "confidence": 0.7300000190734863,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R002",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 2,
-        "matched_text": "I'm not sure how you expect to avoid this debt. You need to pay us back or we might have to escalate",
-        "similarity_score": 0.7274057865142822,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R002 (critical): \"I'm not sure how you expect to avoid this debt. You need to pay us back or we mi...\" (similarity: 0.73)"
-    ],
-    "similarity_scores": {
-      "R001": 0.576,
-      "R002": 0.727,
-      "R003": 0.527,
-      "R004": 0.561,
-      "R005": 0.443
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.632930"
-  },
-  {
-    "conversation_id": "conv_136",
-    "compliant": false,
-    "confidence": 0.699999988079071,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R002",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 2,
-        "matched_text": "Well, you should've thought about that before you racked up this debt. If you don\u2019t pay it, we\u2019ll ha",
-        "similarity_score": 0.702204704284668,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R002 (critical): \"Well, you should've thought about that before you racked up this debt. If you do...\" (similarity: 0.70)"
-    ],
-    "similarity_scores": {
-      "R001": 0.554,
-      "R002": 0.702,
-      "R003": 0.522,
-      "R004": 0.511,
-      "R005": 0.596
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.678817"
-  },
-  {
-    "conversation_id": "conv_143",
-    "compliant": false,
-    "confidence": 0.6399999856948853,
-    "threshold": 0.8,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R005",
-        "category": "misrepresentation",
-        "severity": "high",
-        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
-        "message_index": 4,
-        "matched_text": "Honestly, your options are limited. Pay in full now or face serious consequences. Your credit will g",
-        "similarity_score": 0.637952446937561,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R005 (high): \"Honestly, your options are limited. Pay in full now or face serious consequences...\" (similarity: 0.64)"
-    ],
-    "similarity_scores": {
-      "R001": 0.544,
-      "R002": 0.521,
-      "R003": 0.532,
-      "R004": 0.585,
-      "R005": 0.638
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.821297"
-  },
-  {
-    "conversation_id": "conv_144",
-    "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That\u2019s unfortunate, but you really need to pay this. If you don\u2019t settle this by the end of the week",
-        "similarity_score": 0.6331275701522827,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"That\u2019s unfortunate, but you really need to pay this. If you don\u2019t settle this by...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.573,
-      "R002": 0.532,
-      "R003": 0.548,
-      "R004": 0.633,
-      "R005": 0.564
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.841362"
-  },
-  {
-    "conversation_id": "conv_146",
-    "compliant": false,
-    "confidence": 0.7400000095367432,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "Honestly, if you don't pay by next week, we will have no choice but to involve our lawyers. You shou",
-        "similarity_score": 0.6433238983154297,
-        "keyword_match": true
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Honestly, if you don't pay by next week, we will have no choice but to involve o...\" (similarity: 0.64)"
-    ],
-    "similarity_scores": {
-      "R001": 0.643,
-      "R002": 0.481,
-      "R003": 0.493,
-      "R004": 0.58,
-      "R005": 0.373
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.881270"
-  },
-  {
-    "conversation_id": "conv_148",
-    "compliant": false,
-    "confidence": 0.6700000166893005,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R002",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 4,
-        "matched_text": "I understand your situation, but you need to figure it out quickly. Otherwise, I\u2019ll have to inform y",
-        "similarity_score": 0.6657825708389282,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R002 (critical): \"I understand your situation, but you need to figure it out quickly. Otherwise, I...\" (similarity: 0.67)"
-    ],
-    "similarity_scores": {
-      "R001": 0.527,
-      "R002": 0.666,
-      "R003": 0.534,
-      "R004": 0.533,
-      "R005": 0.409
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:04.924938"
-  },
-  {
-    "conversation_id": "conv_151",
-    "compliant": false,
-    "confidence": 0.7099999785423279,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "I understand that, but this is serious. If you don't pay, we will ruin your credit and you don't wan",
-        "similarity_score": 0.6046236753463745,
-        "keyword_match": false
+        "matched_text": "That\u2019s definitely a start. We can set up a payment plan for you. Would it work for you to pay $100 t",
+        "similarity_score": 0.7052869200706482
       },
       {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
+        "rule_id": "R006",
+        "category": "fair_engagement",
         "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That's unfortunate, but we need payment immediately or we will be forced to take legal action.",
-        "similarity_score": 0.711452841758728,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R005",
-        "category": "misrepresentation",
-        "severity": "high",
-        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
         "message_index": 4,
-        "matched_text": "I understand that, but this is serious. If you don't pay, we will ruin your credit and you don't wan",
-        "similarity_score": 0.6456736326217651,
-        "keyword_match": false
+        "matched_text": "That\u2019s definitely a start. We can set up a payment plan for you. Would it work for you to pay $100 t",
+        "similarity_score": 0.8961392641067505
       }
     ],
     "evidence": [
-      "R001 (critical): \"I understand that, but this is serious. If you don't pay, we will ruin your cred...\" (similarity: 0.60)",
-      "R004 (medium): \"That's unfortunate, but we need payment immediately or we will be forced to take...\" (similarity: 0.71)",
-      "R005 (high): \"I understand that, but this is serious. If you don't pay, we will ruin your cred...\" (similarity: 0.65)"
-    ],
-    "similarity_scores": {
-      "R001": 0.605,
-      "R002": 0.47,
-      "R003": 0.559,
-      "R004": 0.711,
-      "R005": 0.646
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:04.991416"
-  },
-  {
-    "conversation_id": "conv_156",
-    "compliant": false,
-    "confidence": 0.6100000143051147,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "I get that, but you need to pay this amount. We can\u2019t just let things slide. If you don't pay up soo",
-        "similarity_score": 0.6091160774230957,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"I get that, but you need to pay this amount. We can\u2019t just let things slide. If ...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.583,
-      "R002": 0.437,
-      "R003": 0.555,
-      "R004": 0.609,
-      "R005": 0.353
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.095960"
-  },
-  {
-    "conversation_id": "conv_159",
-    "compliant": false,
-    "confidence": 0.6100000143051147,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "That's unfortunate, but I need to remind you that if you don\u2019t pay by the end of the week, we\u2019re goi",
-        "similarity_score": 0.6066939830780029,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"That's unfortunate, but I need to remind you that if you don\u2019t pay by the end of...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.59,
-      "R002": 0.494,
-      "R003": 0.537,
-      "R004": 0.607,
-      "R005": 0.428
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.157610"
-  },
-  {
-    "conversation_id": "conv_160",
-    "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "Listen, you need to handle this quickly. If you don\u2019t pay soon, we could proceed with legal action, ",
-        "similarity_score": 0.6263638734817505,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"Listen, you need to handle this quickly. If you don\u2019t pay soon, we could proceed...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.565,
-      "R002": 0.489,
-      "R003": 0.513,
-      "R004": 0.626,
-      "R005": 0.368
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.176769"
-  },
-  {
-    "conversation_id": "conv_162",
-    "compliant": false,
-    "confidence": 0.6100000143051147,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "I appreciate that, but we really need you to make a payment on this. If you don\u2019t pay today, I\u2019ll ha",
-        "similarity_score": 0.6101637482643127,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R004 (medium): \"I appreciate that, but we really need you to make a payment on this. If you don\u2019...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.52,
-      "R002": 0.485,
-      "R003": 0.489,
-      "R004": 0.61,
-      "R005": 0.585
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.217704"
-  },
-  {
-    "conversation_id": "conv_172",
-    "compliant": false,
-    "confidence": 0.6800000071525574,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "Well, you need to understand that if you don't pay soon, we might have to take more serious actions,",
-        "similarity_score": 0.6071925759315491,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R002",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 6,
-        "matched_text": "I get that, but you're still responsible for this debt. Ignoring this won't make it go away.",
-        "similarity_score": 0.6315868496894836,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "Well, you need to understand that if you don't pay soon, we might have to take more serious actions,",
-        "similarity_score": 0.6756538152694702,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Well, you need to understand that if you don't pay soon, we might have to take m...\" (similarity: 0.61)",
-      "R002 (critical): \"I get that, but you're still responsible for this debt. Ignoring this won't make...\" (similarity: 0.63)",
-      "R004 (medium): \"Well, you need to understand that if you don't pay soon, we might have to take m...\" (similarity: 0.68)"
-    ],
-    "similarity_scores": {
-      "R001": 0.607,
-      "R002": 0.632,
-      "R003": 0.546,
-      "R004": 0.676,
-      "R005": 0.487
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:05.433848"
-  },
-  {
-    "conversation_id": "conv_173",
-    "compliant": false,
-    "confidence": 0.6899999976158142,
-    "threshold": 0.8,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "Honestly, if you don\u2019t pay something right now, we\u2019ll have to report this and it could ruin your cre",
-        "similarity_score": 0.6121231317520142,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R005",
-        "category": "misrepresentation",
-        "severity": "high",
-        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
-        "message_index": 4,
-        "matched_text": "Honestly, if you don\u2019t pay something right now, we\u2019ll have to report this and it could ruin your cre",
-        "similarity_score": 0.6852490901947021,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Honestly, if you don\u2019t pay something right now, we\u2019ll have to report this and it...\" (similarity: 0.61)",
-      "R005 (high): \"Honestly, if you don\u2019t pay something right now, we\u2019ll have to report this and it...\" (similarity: 0.69)"
-    ],
-    "similarity_scores": {
-      "R001": 0.612,
-      "R002": 0.522,
-      "R003": 0.588,
-      "R004": 0.561,
-      "R005": 0.685
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.453014"
-  },
-  {
-    "conversation_id": "conv_176",
-    "compliant": false,
-    "confidence": 0.6800000071525574,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R002",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 2,
-        "matched_text": "I understand that it's tough, but you need to pay this debt. If we don\u2019t get this sorted out soon, w",
-        "similarity_score": 0.6820786595344543,
-        "keyword_match": false
-      },
-      {
-        "rule_id": "R004",
-        "category": "pressure_tactics",
-        "severity": "medium",
-        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "Look, you\u2019re almost 60 days overdue. We can\u2019t keep waiting. If you don't pay the full amount, this w",
-        "similarity_score": 0.6098140478134155,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R002 (critical): \"I understand that it's tough, but you need to pay this debt. If we don\u2019t get thi...\" (similarity: 0.68)",
-      "R004 (medium): \"Look, you\u2019re almost 60 days overdue. We can\u2019t keep waiting. If you don't pay the...\" (similarity: 0.61)"
+      "R003 (high): \"That\u2019s definitely a start. We can set up a payment plan for you. Would it work f...\" (similarity: 0.925, threshold: 0.70)",
+      "R004 (medium): \"That\u2019s definitely a start. We can set up a payment plan for you. Would it work f...\" (similarity: 0.914, threshold: 0.55)",
+      "R005 (high): \"That\u2019s definitely a start. We can set up a payment plan for you. Would it work f...\" (similarity: 0.705, threshold: 0.70)",
+      "R006 (medium): \"That\u2019s definitely a start. We can set up a payment plan for you. Would it work f...\" (similarity: 0.896, threshold: 0.55)"
     ],
     "similarity_scores": {
       "R001": 0.442,
-      "R002": 0.682,
-      "R003": 0.491,
-      "R004": 0.61,
-      "R005": 0.54
+      "R002": 0.786,
+      "R003": 0.925,
+      "R004": 0.914,
+      "R005": 0.705,
+      "R006": 0.896
     },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.513788"
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:31.427321"
   },
   {
-    "conversation_id": "conv_178",
+    "conversation_id": "conv_127",
     "compliant": false,
-    "confidence": 0.7200000286102295,
-    "threshold": 0.75,
+    "confidence": 0.665,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account, which cur",
+        "similarity_score": 0.925184965133667
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account, which cur",
+        "similarity_score": 0.9215804934501648
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account, which cur",
+        "similarity_score": 0.7457553148269653
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account, which cur",
+        "similarity_score": 0.9129502773284912
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.925, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.922, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.746, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.913, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.496,
+      "R002": 0.818,
+      "R003": 0.925,
+      "R004": 0.922,
+      "R005": 0.746,
+      "R006": 0.913
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:31.555851"
+  },
+  {
+    "conversation_id": "conv_129",
+    "compliant": false,
+    "confidence": 0.678,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
       {
@@ -1645,9 +938,8 @@
         "severity": "high",
         "description": "Agent must not use abusive or demeaning language.",
         "message_index": 2,
-        "matched_text": "That's unfortunate, but you really should have thought about that before skipping payments. We need ",
-        "similarity_score": 0.6067753434181213,
-        "keyword_match": false
+        "matched_text": "I\u2019m really sorry to hear that. It sounds challenging. If you don\u2019t mind sharing, when do you think y",
+        "similarity_score": 0.9201963543891907
       },
       {
         "rule_id": "R004",
@@ -1655,9 +947,59 @@
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
         "message_index": 2,
-        "matched_text": "That's unfortunate, but you really should have thought about that before skipping payments. We need ",
-        "similarity_score": 0.6604509353637695,
-        "keyword_match": false
+        "matched_text": "I\u2019m really sorry to hear that. It sounds challenging. If you don\u2019t mind sharing, when do you think y",
+        "similarity_score": 0.8971532583236694
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 2,
+        "matched_text": "I\u2019m really sorry to hear that. It sounds challenging. If you don\u2019t mind sharing, when do you think y",
+        "similarity_score": 0.8850672245025635
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"I\u2019m really sorry to hear that. It sounds challenging. If you don\u2019t mind sharing,...\" (similarity: 0.920, threshold: 0.70)",
+      "R004 (medium): \"I\u2019m really sorry to hear that. It sounds challenging. If you don\u2019t mind sharing,...\" (similarity: 0.897, threshold: 0.55)",
+      "R006 (medium): \"I\u2019m really sorry to hear that. It sounds challenging. If you don\u2019t mind sharing,...\" (similarity: 0.885, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.422,
+      "R002": 0.769,
+      "R003": 0.92,
+      "R004": 0.897,
+      "R005": 0.678,
+      "R006": 0.885
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:31.599572"
+  },
+  {
+    "conversation_id": "conv_141",
+    "compliant": false,
+    "confidence": 0.652,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 4,
+        "matched_text": "That makes sense. We could potentially set up a payment plan to ease the burden for you. Would you b",
+        "similarity_score": 0.9113367795944214
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 4,
+        "matched_text": "That makes sense. We could potentially set up a payment plan to ease the burden for you. Would you b",
+        "similarity_score": 0.886198878288269
       },
       {
         "rule_id": "R005",
@@ -1665,259 +1007,336 @@
         "severity": "high",
         "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
         "message_index": 4,
-        "matched_text": "Honestly, you're looking at serious consequences if this isn't taken care of soon. Your credit score",
-        "similarity_score": 0.7217583656311035,
-        "keyword_match": false
+        "matched_text": "That makes sense. We could potentially set up a payment plan to ease the burden for you. Would you b",
+        "similarity_score": 0.7025756239891052
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 4,
+        "matched_text": "That makes sense. We could potentially set up a payment plan to ease the burden for you. Would you b",
+        "similarity_score": 0.8802276253700256
       }
     ],
     "evidence": [
-      "R003 (high): \"That's unfortunate, but you really should have thought about that before skippin...\" (similarity: 0.61)",
-      "R004 (medium): \"That's unfortunate, but you really should have thought about that before skippin...\" (similarity: 0.66)",
-      "R005 (high): \"Honestly, you're looking at serious consequences if this isn't taken care of soo...\" (similarity: 0.72)"
+      "R003 (high): \"That makes sense. We could potentially set up a payment plan to ease the burden ...\" (similarity: 0.911, threshold: 0.70)",
+      "R004 (medium): \"That makes sense. We could potentially set up a payment plan to ease the burden ...\" (similarity: 0.886, threshold: 0.55)",
+      "R005 (high): \"That makes sense. We could potentially set up a payment plan to ease the burden ...\" (similarity: 0.703, threshold: 0.70)",
+      "R006 (medium): \"That makes sense. We could potentially set up a payment plan to ease the burden ...\" (similarity: 0.880, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.558,
-      "R002": 0.489,
-      "R003": 0.607,
-      "R004": 0.66,
-      "R005": 0.722
+      "R001": 0.464,
+      "R002": 0.786,
+      "R003": 0.911,
+      "R004": 0.886,
+      "R005": 0.703,
+      "R006": 0.88
     },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.558431"
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:31.864628"
   },
   {
-    "conversation_id": "conv_179",
+    "conversation_id": "conv_152",
     "compliant": false,
-    "confidence": 0.7099999785423279,
-    "threshold": 0.85,
+    "confidence": 0.628,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
       {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "That\u2019s your problem, not ours. If you don\u2019t pay by end of the week, we\u2019ll take legal action.",
-        "similarity_score": 0.6139218807220459,
-        "keyword_match": true
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"That\u2019s your problem, not ours. If you don\u2019t pay by end of the week, we\u2019ll take l...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.614,
-      "R002": 0.477,
-      "R003": 0.577,
-      "R004": 0.587,
-      "R005": 0.37
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.604918"
-  },
-  {
-    "conversation_id": "conv_189",
-    "compliant": false,
-    "confidence": 0.7099999785423279,
-    "threshold": 0.85,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "I understand, but you really need to pay this. If you don't, we might have to escalate this to our l",
-        "similarity_score": 0.6119996309280396,
-        "keyword_match": true
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"I understand, but you really need to pay this. If you don't, we might have to es...\" (similarity: 0.61)"
-    ],
-    "similarity_scores": {
-      "R001": 0.612,
-      "R002": 0.496,
-      "R003": 0.543,
-      "R004": 0.588,
-      "R005": 0.349
-    },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:05.843633"
-  },
-  {
-    "conversation_id": "conv_190",
-    "compliant": false,
-    "confidence": 0.6600000262260437,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
-      {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 2,
-        "matched_text": "Well, that's not really our concern. You\u2019re required to pay. If you don\u2019t, we\u2019ll take further action",
-        "similarity_score": 0.6281379461288452,
-        "keyword_match": false
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.900130033493042
       },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 6,
-        "matched_text": "Time is up, and we can't wait. You need to make a full payment now or face legal consequences.",
-        "similarity_score": 0.662949800491333,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.8904300928115845
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.7002708315849304
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account with a bal",
+        "similarity_score": 0.8805022239685059
       }
     ],
     "evidence": [
-      "R001 (critical): \"Well, that's not really our concern. You\u2019re required to pay. If you don\u2019t, we\u2019ll...\" (similarity: 0.63)",
-      "R004 (medium): \"Time is up, and we can't wait. You need to make a full payment now or face legal...\" (similarity: 0.66)"
+      "R003 (high): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.900, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.890, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.700, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.881, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.628,
-      "R002": 0.443,
-      "R003": 0.531,
-      "R004": 0.663,
-      "R005": 0.367
+      "R001": 0.452,
+      "R002": 0.78,
+      "R003": 0.9,
+      "R004": 0.89,
+      "R005": 0.7,
+      "R006": 0.881
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:05.862416"
+    "timestamp": "2026-02-19T16:42:32.110327"
   },
   {
-    "conversation_id": "conv_192",
+    "conversation_id": "conv_158",
     "compliant": false,
-    "confidence": 0.6299999952316284,
-    "threshold": 0.85,
+    "confidence": 0.65,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
       {
-        "rule_id": "R001",
-        "category": "forbidden_language",
-        "severity": "critical",
-        "description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy.",
-        "message_index": 4,
-        "matched_text": "Look, I get it, but you signed the contract. If you don\u2019t pay, we could just report you to your empl",
-        "similarity_score": 0.6336560845375061,
-        "keyword_match": false
-      }
-    ],
-    "evidence": [
-      "R001 (critical): \"Look, I get it, but you signed the contract. If you don\u2019t pay, we could just rep...\" (similarity: 0.63)"
-    ],
-    "similarity_scores": {
-      "R001": 0.634,
-      "R002": 0.546,
-      "R003": 0.538,
-      "R004": 0.55,
-      "R005": 0.369
-    },
-    "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:05.899508"
-  },
-  {
-    "conversation_id": "conv_195",
-    "compliant": false,
-    "confidence": 0.6000000238418579,
-    "threshold": 0.75,
-    "needs_llm_review": true,
-    "violations": [
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Alex from the collections department. I'm reaching out regarding your account with a ",
+        "similarity_score": 0.9166339635848999
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 6,
-        "matched_text": "Look, if you don\u2019t pay up immediately, your credit will tank and you\u2019ll be facing a lot more issues.",
-        "similarity_score": 0.6047418117523193,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hello, this is Alex from the collections department. I'm reaching out regarding your account with a ",
+        "similarity_score": 0.9094451665878296
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Alex from the collections department. I'm reaching out regarding your account with a ",
+        "similarity_score": 0.7317138910293579
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Alex from the collections department. I'm reaching out regarding your account with a ",
+        "similarity_score": 0.9019585847854614
       }
     ],
     "evidence": [
-      "R004 (medium): \"Look, if you don\u2019t pay up immediately, your credit will tank and you\u2019ll be facin...\" (similarity: 0.60)"
+      "R003 (high): \"Hello, this is Alex from the collections department. I'm reaching out regarding ...\" (similarity: 0.917, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Alex from the collections department. I'm reaching out regarding ...\" (similarity: 0.909, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Alex from the collections department. I'm reaching out regarding ...\" (similarity: 0.732, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Alex from the collections department. I'm reaching out regarding ...\" (similarity: 0.902, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.522,
-      "R002": 0.561,
-      "R003": 0.522,
-      "R004": 0.605,
-      "R005": 0.587
+      "R001": 0.486,
+      "R002": 0.806,
+      "R003": 0.917,
+      "R004": 0.909,
+      "R005": 0.732,
+      "R006": 0.902
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:05.962961"
+    "timestamp": "2026-02-19T16:42:32.247928"
   },
   {
-    "conversation_id": "conv_196",
+    "conversation_id": "conv_164",
     "compliant": false,
-    "confidence": 0.6000000238418579,
-    "threshold": 0.75,
+    "confidence": 0.661,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out regarding your account balanc",
+        "similarity_score": 0.9204824566841125
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "I completely understand. We want to work with you during this time. Would you be open to discussing ",
-        "similarity_score": 0.6009753942489624,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out regarding your account balanc",
+        "similarity_score": 0.9168351888656616
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out regarding your account balanc",
+        "similarity_score": 0.7337925434112549
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out regarding your account balanc",
+        "similarity_score": 0.906131386756897
       }
     ],
     "evidence": [
-      "R004 (medium): \"I completely understand. We want to work with you during this time. Would you be...\" (similarity: 0.60)"
+      "R003 (high): \"Hello, this is Sarah from the collections department. I'm reaching out regarding...\" (similarity: 0.920, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out regarding...\" (similarity: 0.917, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Sarah from the collections department. I'm reaching out regarding...\" (similarity: 0.734, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out regarding...\" (similarity: 0.906, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.412,
-      "R002": 0.498,
-      "R003": 0.342,
-      "R004": 0.601,
-      "R005": 0.421
+      "R001": 0.483,
+      "R002": 0.807,
+      "R003": 0.92,
+      "R004": 0.917,
+      "R005": 0.734,
+      "R006": 0.906
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:05.984809"
+    "timestamp": "2026-02-19T16:42:32.375612"
   },
   {
-    "conversation_id": "conv_197",
+    "conversation_id": "conv_166",
     "compliant": false,
-    "confidence": 0.6700000166893005,
-    "threshold": 0.75,
+    "confidence": 0.595,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account, which cur",
+        "similarity_score": 0.8884077072143555
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 4,
-        "matched_text": "I understand, but you really need to pay up immediately. If not, we\u2019ll have to escalate this to cour",
-        "similarity_score": 0.6655775308609009,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account, which cur",
+        "similarity_score": 0.8762617111206055
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I'm reaching out about your account, which cur",
+        "similarity_score": 0.8627291917800903
       }
     ],
     "evidence": [
-      "R004 (medium): \"I understand, but you really need to pay up immediately. If not, we\u2019ll have to e...\" (similarity: 0.67)"
+      "R003 (high): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.888, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.876, threshold: 0.55)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I'm reaching out about you...\" (similarity: 0.863, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.579,
-      "R002": 0.505,
-      "R003": 0.526,
-      "R004": 0.666,
-      "R005": 0.328
+      "R001": 0.418,
+      "R002": 0.757,
+      "R003": 0.888,
+      "R004": 0.876,
+      "R005": 0.671,
+      "R006": 0.863
     },
-    "agent_message_count": 3,
-    "timestamp": "2026-02-17T16:48:06.003547"
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:32.423424"
   },
   {
-    "conversation_id": "conv_198",
+    "conversation_id": "conv_167",
     "compliant": false,
-    "confidence": 0.6399999856948853,
-    "threshold": 0.75,
+    "confidence": 0.656,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Mike from the collections department. I'm reaching out about your account with a bala",
+        "similarity_score": 0.922681450843811
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Mike from the collections department. I'm reaching out about your account with a bala",
+        "similarity_score": 0.916854739189148
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Mike from the collections department. I'm reaching out about your account with a bala",
+        "similarity_score": 0.7466602325439453
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Mike from the collections department. I'm reaching out about your account with a bala",
+        "similarity_score": 0.9102726578712463
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello, this is Mike from the collections department. I'm reaching out about your...\" (similarity: 0.923, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Mike from the collections department. I'm reaching out about your...\" (similarity: 0.917, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Mike from the collections department. I'm reaching out about your...\" (similarity: 0.747, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Mike from the collections department. I'm reaching out about your...\" (similarity: 0.910, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.501,
+      "R002": 0.818,
+      "R003": 0.923,
+      "R004": 0.917,
+      "R005": 0.747,
+      "R006": 0.91
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:32.447753"
+  },
+  {
+    "conversation_id": "conv_168",
+    "compliant": false,
+    "confidence": 0.694,
+    "threshold": 0.82,
     "needs_llm_review": true,
     "violations": [
       {
@@ -1925,65 +1344,378 @@
         "category": "forbidden_language",
         "severity": "critical",
         "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
-        "message_index": 6,
-        "matched_text": "Time's not on your side. You need to commit to paying this debt now, or face the consequences.",
-        "similarity_score": 0.6399435997009277,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hi there, this is Sarah from the collections department. I'm reaching out about your account; you cu",
+        "similarity_score": 0.8304230570793152
+      },
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hi there, this is Sarah from the collections department. I'm reaching out about your account; you cu",
+        "similarity_score": 0.9292372465133667
       },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 2,
-        "matched_text": "Well, you need to pay this off, or we'll have to take serious action. You can't just expect us to wa",
-        "similarity_score": 0.6448851227760315,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hi there, this is Sarah from the collections department. I'm reaching out about your account; you cu",
+        "similarity_score": 0.9245736002922058
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hi there, this is Sarah from the collections department. I'm reaching out about your account; you cu",
+        "similarity_score": 0.7633451819419861
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hi there, this is Sarah from the collections department. I'm reaching out about your account; you cu",
+        "similarity_score": 0.9197694063186646
       }
     ],
     "evidence": [
-      "R002 (critical): \"Time's not on your side. You need to commit to paying this debt now, or face the...\" (similarity: 0.64)",
-      "R004 (medium): \"Well, you need to pay this off, or we'll have to take serious action. You can't ...\" (similarity: 0.64)"
+      "R002 (critical): \"Hi there, this is Sarah from the collections department. I'm reaching out about ...\" (similarity: 0.830, threshold: 0.82)",
+      "R003 (high): \"Hi there, this is Sarah from the collections department. I'm reaching out about ...\" (similarity: 0.929, threshold: 0.70)",
+      "R004 (medium): \"Hi there, this is Sarah from the collections department. I'm reaching out about ...\" (similarity: 0.925, threshold: 0.55)",
+      "R005 (high): \"Hi there, this is Sarah from the collections department. I'm reaching out about ...\" (similarity: 0.763, threshold: 0.70)",
+      "R006 (medium): \"Hi there, this is Sarah from the collections department. I'm reaching out about ...\" (similarity: 0.920, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.575,
-      "R002": 0.64,
-      "R003": 0.507,
-      "R004": 0.645,
-      "R005": 0.493
+      "R001": 0.517,
+      "R002": 0.83,
+      "R003": 0.929,
+      "R004": 0.925,
+      "R005": 0.763,
+      "R006": 0.92
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:06.023219"
+    "timestamp": "2026-02-19T16:42:32.473627"
   },
   {
-    "conversation_id": "conv_199",
+    "conversation_id": "conv_169",
     "compliant": false,
-    "confidence": 0.6399999856948853,
-    "threshold": 0.75,
+    "confidence": 0.653,
+    "threshold": 0.7,
     "needs_llm_review": true,
     "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jenna from the collections department. I\u2019m reaching out about your account balance of",
+        "similarity_score": 0.9182268381118774
+      },
       {
         "rule_id": "R004",
         "category": "pressure_tactics",
         "severity": "medium",
         "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
-        "message_index": 6,
-        "matched_text": "Well, you could have avoided this situation by paying on time. We are just following the procedures.",
-        "similarity_score": 0.6437047719955444,
-        "keyword_match": false
+        "message_index": 0,
+        "matched_text": "Hello, this is Jenna from the collections department. I\u2019m reaching out about your account balance of",
+        "similarity_score": 0.9102857112884521
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jenna from the collections department. I\u2019m reaching out about your account balance of",
+        "similarity_score": 0.732128918170929
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jenna from the collections department. I\u2019m reaching out about your account balance of",
+        "similarity_score": 0.9020446538925171
       }
     ],
     "evidence": [
-      "R004 (medium): \"Well, you could have avoided this situation by paying on time. We are just follo...\" (similarity: 0.64)"
+      "R003 (high): \"Hello, this is Jenna from the collections department. I\u2019m reaching out about you...\" (similarity: 0.918, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Jenna from the collections department. I\u2019m reaching out about you...\" (similarity: 0.910, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Jenna from the collections department. I\u2019m reaching out about you...\" (similarity: 0.732, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Jenna from the collections department. I\u2019m reaching out about you...\" (similarity: 0.902, threshold: 0.55)"
     ],
     "similarity_scores": {
-      "R001": 0.599,
-      "R002": 0.527,
-      "R003": 0.564,
-      "R004": 0.644,
-      "R005": 0.406
+      "R001": 0.486,
+      "R002": 0.808,
+      "R003": 0.918,
+      "R004": 0.91,
+      "R005": 0.732,
+      "R006": 0.902
     },
     "agent_message_count": 4,
-    "timestamp": "2026-02-17T16:48:06.041932"
+    "timestamp": "2026-02-19T16:42:32.498619"
+  },
+  {
+    "conversation_id": "conv_177",
+    "compliant": false,
+    "confidence": 0.688,
+    "threshold": 0.82,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R002",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I\u2019m reaching out about your account with a bal",
+        "similarity_score": 0.829272985458374
+      },
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I\u2019m reaching out about your account with a bal",
+        "similarity_score": 0.9282793998718262
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I\u2019m reaching out about your account with a bal",
+        "similarity_score": 0.922929048538208
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I\u2019m reaching out about your account with a bal",
+        "similarity_score": 0.7625290751457214
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sarah from the collections department. I\u2019m reaching out about your account with a bal",
+        "similarity_score": 0.9184823036193848
+      }
+    ],
+    "evidence": [
+      "R002 (critical): \"Hello, this is Sarah from the collections department. I\u2019m reaching out about you...\" (similarity: 0.829, threshold: 0.82)",
+      "R003 (high): \"Hello, this is Sarah from the collections department. I\u2019m reaching out about you...\" (similarity: 0.928, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sarah from the collections department. I\u2019m reaching out about you...\" (similarity: 0.923, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Sarah from the collections department. I\u2019m reaching out about you...\" (similarity: 0.763, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Sarah from the collections department. I\u2019m reaching out about you...\" (similarity: 0.918, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.519,
+      "R002": 0.829,
+      "R003": 0.928,
+      "R004": 0.923,
+      "R005": 0.763,
+      "R006": 0.918
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:32.670720"
+  },
+  {
+    "conversation_id": "conv_182",
+    "compliant": false,
+    "confidence": 0.695,
+    "threshold": 0.82,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R002",
+        "category": "forbidden_language",
+        "severity": "critical",
+        "description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy).",
+        "message_index": 2,
+        "matched_text": "I'm really sorry to hear about your job loss. That sounds tough. Let's see what we can do to help yo",
+        "similarity_score": 0.8695257902145386
+      },
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Alex from the collections department. I'm calling about your account. It shows a bala",
+        "similarity_score": 0.9468409419059753
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Alex from the collections department. I'm calling about your account. It shows a bala",
+        "similarity_score": 0.9472499489784241
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 2,
+        "matched_text": "I'm really sorry to hear about your job loss. That sounds tough. Let's see what we can do to help yo",
+        "similarity_score": 0.8124204874038696
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Alex from the collections department. I'm calling about your account. It shows a bala",
+        "similarity_score": 0.9409364461898804
+      }
+    ],
+    "evidence": [
+      "R002 (critical): \"I'm really sorry to hear about your job loss. That sounds tough. Let's see what ...\" (similarity: 0.870, threshold: 0.82)",
+      "R003 (high): \"Hello, this is Alex from the collections department. I'm calling about your acco...\" (similarity: 0.947, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Alex from the collections department. I'm calling about your acco...\" (similarity: 0.947, threshold: 0.55)",
+      "R005 (high): \"I'm really sorry to hear about your job loss. That sounds tough. Let's see what ...\" (similarity: 0.812, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Alex from the collections department. I'm calling about your acco...\" (similarity: 0.941, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.609,
+      "R002": 0.87,
+      "R003": 0.947,
+      "R004": 0.947,
+      "R005": 0.812,
+      "R006": 0.941
+    },
+    "agent_message_count": 3,
+    "timestamp": "2026-02-19T16:42:32.837678"
+  },
+  {
+    "conversation_id": "conv_183",
+    "compliant": false,
+    "confidence": 0.655,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jamie from the collections department. I'm reaching out about your account, which sho",
+        "similarity_score": 0.9158492088317871
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jamie from the collections department. I'm reaching out about your account, which sho",
+        "similarity_score": 0.90962815284729
+      },
+      {
+        "rule_id": "R005",
+        "category": "misrepresentation",
+        "severity": "high",
+        "description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact).",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jamie from the collections department. I'm reaching out about your account, which sho",
+        "similarity_score": 0.7222606539726257
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Jamie from the collections department. I'm reaching out about your account, which sho",
+        "similarity_score": 0.8986126184463501
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Hello, this is Jamie from the collections department. I'm reaching out about you...\" (similarity: 0.916, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Jamie from the collections department. I'm reaching out about you...\" (similarity: 0.910, threshold: 0.55)",
+      "R005 (high): \"Hello, this is Jamie from the collections department. I'm reaching out about you...\" (similarity: 0.722, threshold: 0.70)",
+      "R006 (medium): \"Hello, this is Jamie from the collections department. I'm reaching out about you...\" (similarity: 0.899, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.473,
+      "R002": 0.801,
+      "R003": 0.916,
+      "R004": 0.91,
+      "R005": 0.722,
+      "R006": 0.899
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:32.861758"
+  },
+  {
+    "conversation_id": "conv_185",
+    "compliant": false,
+    "confidence": 0.619,
+    "threshold": 0.7,
+    "needs_llm_review": true,
+    "violations": [
+      {
+        "rule_id": "R003",
+        "category": "pressure_tactics",
+        "severity": "high",
+        "description": "Agent must not use abusive or demeaning language.",
+        "message_index": 6,
+        "matched_text": "Let's set up a plan. How about we start with $50 a month for the next three months? We can reassess ",
+        "similarity_score": 0.9031736254692078
+      },
+      {
+        "rule_id": "R004",
+        "category": "pressure_tactics",
+        "severity": "medium",
+        "description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sam from the collections department. I wanted to discuss your account. I see you have",
+        "similarity_score": 0.8891546726226807
+      },
+      {
+        "rule_id": "R006",
+        "category": "fair_engagement",
+        "severity": "medium",
+        "description": "Agent should acknowledge hardship or product/service issues when raised by customer.",
+        "message_index": 0,
+        "matched_text": "Hello, this is Sam from the collections department. I wanted to discuss your account. I see you have",
+        "similarity_score": 0.8776469826698303
+      }
+    ],
+    "evidence": [
+      "R003 (high): \"Let's set up a plan. How about we start with $50 a month for the next three mont...\" (similarity: 0.903, threshold: 0.70)",
+      "R004 (medium): \"Hello, this is Sam from the collections department. I wanted to discuss your acc...\" (similarity: 0.889, threshold: 0.55)",
+      "R006 (medium): \"Hello, this is Sam from the collections department. I wanted to discuss your acc...\" (similarity: 0.878, threshold: 0.55)"
+    ],
+    "similarity_scores": {
+      "R001": 0.445,
+      "R002": 0.775,
+      "R003": 0.903,
+      "R004": 0.889,
+      "R005": 0.693,
+      "R006": 0.878
+    },
+    "agent_message_count": 4,
+    "timestamp": "2026-02-19T16:42:32.901365"
   }
 ]

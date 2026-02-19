@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-02-17T16:48:06.222446",
+  "timestamp": "2026-02-19T16:42:33.442335",
   "total_conversations": 200,
   "auto_decided": {
-    "count": 143,
-    "percentage": 71.5,
-    "compliant": 125,
-    "violations": 18
+    "count": 171,
+    "percentage": 85.5,
+    "compliant": 0,
+    "violations": 171
   },
   "llm_review_needed": {
-    "count": 57,
-    "percentage": 28.5
+    "count": 29,
+    "percentage": 14.5
   },
   "violations_by_severity": {
-    "critical": 13,
-    "medium": 17,
-    "high": 5
+    "critical": 272,
+    "high": 342,
+    "medium": 342
   },
-  "automation_rate": 71.5
+  "automation_rate": 85.5
 }

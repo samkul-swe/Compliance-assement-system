@@ -1,14 +1,12 @@
 """
-Layer 1: Semantic Compliance Checker
+Layer 1: Semantic Compliance Checker (Fine Tuned)
 
-Uses sentence embeddings (SBERT) to detect violations based on semantic similarity.
-Simple severity-based confidence thresholds from JSON.
-
-Features:
-- Semantic matching (catches paraphrased violations)
-- Configurable confidence thresholds by severity
-- Outputs to JSON and Excel
-- Separates high-confidence decisions from low-confidence (needs LLM review)
+Changes from original:
+- Uses fine tuned compliance SBERT model
+- Removed flat semantic threshold (0.60 gate)
+- Removed keyword matching entirely
+- Confidence derived from boundary distance + score separation
+- Severity thresholds now directly on cosine similarity (0.0-1.0 scale)
 """
 
 import json
@@ -16,14 +14,13 @@ import logging
 import numpy as np
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 from dataclasses import dataclass
 from collections import defaultdict
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 
-# Setup logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -34,7 +31,6 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class ComplianceViolation:
-    """Single violation detected."""
     rule_id: str
     category: str
     severity: str
@@ -42,12 +38,10 @@ class ComplianceViolation:
     message_index: int
     matched_text: str
     similarity_score: float
-    keyword_match: bool
 
 
 @dataclass
 class ComplianceResult:
-    """Complete result for one conversation."""
     conversation_id: str
     compliant: bool
     confidence: float
@@ -58,9 +52,8 @@ class ComplianceResult:
     similarity_scores: Dict[str, float]
     agent_message_count: int
     timestamp: str
-    
+
     def to_dict(self) -> Dict:
-        """Convert to dictionary for JSON serialization."""
         return {
             'conversation_id': self.conversation_id,
             'compliant': bool(self.compliant),
@@ -76,7 +69,6 @@ class ComplianceResult:
                     'message_index': v.message_index,
                     'matched_text': v.matched_text,
                     'similarity_score': float(v.similarity_score),
-                    'keyword_match': v.keyword_match
                 }
                 for v in self.violations
             ],
@@ -88,89 +80,79 @@ class ComplianceResult:
 
 
 class ConfigLoader:
-    """Load configuration from JSON files."""
-    
+
     @staticmethod
     def load_compliance_rules(rules_file: str = "data/compliance_rules.json") -> Dict:
-        """Load compliance rules."""
         path = Path(rules_file)
         if not path.exists():
             raise FileNotFoundError(f"Compliance rules not found: {rules_file}")
-        
-        with open(path, 'r', encoding='utf-8') as f:
-            rules_data = json.load(f)
-        
-        # Validate against schema if available
-        schema_path = Path("docs/api/compliance_rules_schema.json")
-        if schema_path.exists():
-            with open(schema_path, 'r') as f:
-                schema = json.load(f)
-            # Basic validation that required fields exist
-            if 'rules' not in rules_data:
-                raise ValueError("Rules data doesn't match schema")
-        
-        return rules_data
-    
-    @staticmethod
-    def load_confidence_config(config_file: str = "config/severity_confidence.json") -> Dict:
-        """Load confidence threshold configuration."""
-        path = Path(config_file)
-        if not path.exists():
-            logger.warning(f"Config file not found: {config_file}, using defaults")
-            return ConfigLoader._default_config()
-        
         with open(path, 'r', encoding='utf-8') as f:
             return json.load(f)
-    
+
+    @staticmethod
+    def load_confidence_config(config_file: str = "config/severity_confidence.json") -> Dict:
+        path = Path(config_file)
+        if not path.exists():
+            logger.warning(f"Config not found: {config_file}, using defaults")
+            return ConfigLoader._default_config()
+        with open(path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+
     @staticmethod
     def _default_config() -> Dict:
-        """Default configuration if file doesn't exist."""
         return {
-            "semantic_threshold": 0.60,
-            "confidence_thresholds": {
-                "compliant": 0.70,
-                "low": 0.70,
-                "medium": 0.75,
-                "high": 0.80,
-                "critical": 0.85
-            }
+            "severity_thresholds": {
+                "compliant": 0.20,
+                "low":       0.35,
+                "medium":    0.55,
+                "high":      0.70,
+                "critical":  0.82
+            },
+            "escalation_confidence_cutoff": 0.70
         }
 
 
 class SemanticComplianceChecker:
     """
-    Layer 1: Semantic compliance checker with simple severity-based thresholds.
+    Layer 1: Semantic compliance checker using fine tuned compliance SBERT.
+
+    How it works:
+    1. Load fine tuned model (trained on compliance severity spectrum 0.0-1.0)
+    2. Embed all violation examples per rule (done once at startup)
+    3. For each agent message, compute cosine similarity against all rule examples
+    4. Take max similarity per rule - this score lives on your severity spectrum
+    5. Compare directly against severity threshold - no flat gate, no keywords
+    6. Confidence = how far the score sits from the threshold boundary
+    7. Low confidence → escalate to Layer 2
     """
-    
-    def __init__(self, 
+
+    def __init__(self,
                  rules_file: str = "data/compliance_rules.json",
-                 config_file: str = "config/severity_confidence.json"):
-        """Initialize checker with rules and configuration."""
-        logger.info("Initializing Semantic Compliance Checker...")
-        
-        # Load configuration
+                 config_file: str = "config/severity_confidence.json",
+                 model_path: str = "models/compliance_sbert"):
+        logger.info("Initializing Semantic Compliance Checker (Fine Tuned)...")
+
         self.rules_data = ConfigLoader.load_compliance_rules(rules_file)
         self.config = ConfigLoader.load_confidence_config(config_file)
-        
         self.rules = {rule['id']: rule for rule in self.rules_data['rules']}
+
         logger.info(f"Loaded {len(self.rules)} compliance rules")
-        
-        # Load embedding model
-        logger.info("Loading sentence embedding model (this may take a moment)...")
-        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-        logger.info("Model loaded successfully")
-        
-        # Build violation examples
+
+        # Use fine tuned model if available, fall back to base
+        if Path(model_path).exists():
+            logger.info(f"Loading fine tuned model from {model_path}...")
+            self.embedding_model = SentenceTransformer(model_path)
+            logger.info("Fine tuned model loaded ✓")
+        else:
+            logger.warning(f"Fine tuned model not found at {model_path}")
+            logger.warning("Falling back to base model — run fine_tune.py first")
+            self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+
         self._build_examples()
-        
-        # Build keyword patterns
-        self._build_keyword_patterns()
-        
-        logger.info("✅ Semantic checker initialized\n")
-    
+        logger.info("✅ Checker initialized\n")
+
     def _build_examples(self):
-        """Build example sentences for semantic matching."""
-        # Violation examples for each rule
+        """Build and embed violation examples per rule."""
         self.violation_examples = {
             'R001': [
                 "We're going to sue you if you don't pay",
@@ -178,78 +160,96 @@ class SemanticComplianceChecker:
                 "We're sending this to our lawyers",
                 "You'll be taken to court over this",
                 "Legal action will be taken against you",
-                "We can have you arrested for non-payment"
+                "We can have you arrested for non-payment",
+                "Our legal department will be in touch shortly",
+                "This will be passed to our litigation team",
+                "You'll be hearing from our solicitors",
+                "A county court judgment will be filed against you"
             ],
             'R002': [
                 "We'll contact your family about this debt",
                 "Your employer will be notified",
                 "We're going to call your boss",
                 "Your family will find out about this",
-                "We'll tell everyone you know"
+                "We'll tell everyone you know",
+                "Your workplace will receive a letter from us",
+                "We'll be speaking to your next of kin",
+                "Everyone on your application will be contacted",
+                "Your spouse will be informed about this debt",
+                "We have your employer's details and will be in touch"
             ],
             'R003': [
                 "That's not our problem, figure it out yourself",
                 "This is your fault for not paying",
                 "I don't care about your excuses",
                 "That's not my problem, deal with it",
-                "You have to find a way, that's on you"
+                "You have to find a way, that's on you",
+                "Stop wasting my time with these stories",
+                "Everyone has problems, you still owe the money",
+                "You're being deliberately difficult about this",
+                "I find your attitude quite unacceptable",
+                "Other customers manage to pay, why can't you"
             ],
             'R004': [
                 "You need to pay immediately",
                 "Pay right now or face consequences",
                 "We need payment in full by tomorrow",
                 "You must pay this today",
-                "Pay immediately, no exceptions"
+                "Pay immediately, no exceptions",
+                "The full balance must be cleared today",
+                "Payment in full is required before this call ends",
+                "We cannot accept anything less than full payment now",
+                "You have to clear this immediately, no options",
+                "We require same-day payment of the full amount"
             ],
             'R005': [
                 "Your credit will be ruined forever",
                 "You'll never get a loan again",
                 "We're going to destroy your credit rating",
                 "This will ruin your financial future",
-                "You'll never be able to buy a house"
+                "You'll never be able to buy a house",
+                "No bank will ever lend to you after this",
+                "Your credit file will be permanently damaged",
+                "You'll be blacklisted from every financial institution",
+                "This debt means you'll never get approved for anything",
+                "Your financial life is essentially over if this isn't paid"
+            ],
+            'R006': [
+                "That's not relevant to what we're discussing",
+                "Your personal circumstances don't change what you owe",
+                "We can't consider personal situations, the debt is the debt",
+                "That's unfortunate but it doesn't affect the balance",
+                "Personal issues aren't something we can factor in",
+                "We deal with the account, not personal circumstances",
+                "Whatever is happening in your life, the debt still stands",
+                "That doesn't affect our position on this account",
+                "I can't make decisions based on personal circumstances",
+                "Regardless of your situation, the amount remains outstanding"
             ]
         }
-        
-        # Embed all examples
+
         logger.info("Computing embeddings for violation examples...")
         self.violation_embeddings = {}
         for rule_id, examples in self.violation_examples.items():
             self.violation_embeddings[rule_id] = self.embedding_model.encode(
-                examples,
-                convert_to_numpy=True
+                examples, convert_to_numpy=True
             )
-        
-        logger.info(f"Embedded {sum(len(e) for e in self.violation_examples.values())} violation examples")
-    
-    def _build_keyword_patterns(self):
-        """Build keyword sets for exact matching."""
-        self.rule_keywords = {}
-        for rule_id, rule in self.rules.items():
-            if rule.get('keywords'):
-                self.rule_keywords[rule_id] = set(
-                    kw.lower() for kw in rule['keywords']
-                )
-    
+        logger.info(f"Embedded {sum(len(e) for e in self.violation_examples.values())} examples")
+
     def check_conversation(self, conversation: Dict) -> ComplianceResult:
-        """
-        Analyze a conversation for compliance violations.
-        
-        Returns ComplianceResult with all details.
-        """
         conv_id = conversation['conversation_id']
-        
-        # Extract agent messages
+
         agent_messages = [
-            (i, msg['text']) for i, msg in enumerate(conversation['messages']) 
+            (i, msg['text']) for i, msg in enumerate(conversation['messages'])
             if msg['role'] == 'agent'
         ]
-        
+
         if not agent_messages:
             return ComplianceResult(
                 conversation_id=conv_id,
                 compliant=True,
                 confidence=1.0,
-                threshold=0.70,
+                threshold=self.config['severity_thresholds']['compliant'],
                 needs_llm_review=False,
                 violations=[],
                 evidence=[],
@@ -257,78 +257,61 @@ class SemanticComplianceChecker:
                 agent_message_count=0,
                 timestamp=datetime.now().isoformat()
             )
-        
-        # Embed agent messages
+
         agent_texts = [text for _, text in agent_messages]
-        agent_embeddings = self.embedding_model.encode(
-            agent_texts,
-            convert_to_numpy=True
-        )
-        
-        # Check for violations
+        agent_embeddings = self.embedding_model.encode(agent_texts, convert_to_numpy=True)
+
         violations = []
         evidence_list = []
         similarity_scores = {}
-        
-        semantic_threshold = self.config['semantic_threshold']
-        
+
         for rule_id, rule_embeddings in self.violation_embeddings.items():
             if rule_id not in self.rules:
                 continue
-            
+
             max_similarity = 0.0
-            best_match_msg_idx = None
+            best_match_idx = None
             best_match_text = None
-            
+
             for (orig_idx, msg_text), agent_emb in zip(agent_messages, agent_embeddings):
-                # Compare to all examples of this violation
-                similarities = cosine_similarity(
-                    agent_emb.reshape(1, -1),
-                    rule_embeddings
-                )[0]
-                
-                msg_max_sim = similarities.max()
-                if msg_max_sim > max_similarity:
-                    max_similarity = msg_max_sim
-                    best_match_msg_idx = orig_idx
+                sims = cosine_similarity(agent_emb.reshape(1, -1), rule_embeddings)[0]
+                msg_max = sims.max()
+                if msg_max > max_similarity:
+                    max_similarity = msg_max
+                    best_match_idx = orig_idx
                     best_match_text = msg_text
-            
+
             similarity_scores[rule_id] = round(float(max_similarity), 3)
-            
-            # Check if exceeds threshold
-            if max_similarity >= semantic_threshold:
-                # Check keywords for confirmation
-                keyword_match = False
-                if rule_id in self.rule_keywords:
-                    for keyword in self.rule_keywords[rule_id]:
-                        if keyword in best_match_text.lower():
-                            keyword_match = True
-                            break
-                
-                rule = self.rules[rule_id]
+
+            rule = self.rules[rule_id]
+            severity = rule['severity']
+            threshold = self.config['severity_thresholds'].get(
+                severity,
+                self.config['severity_thresholds']['medium']
+            )
+
+            # Direct comparison — no flat gate, no keyword confirmation
+            if max_similarity >= threshold:
                 violations.append(ComplianceViolation(
                     rule_id=rule_id,
                     category=rule['category'],
-                    severity=rule['severity'],
+                    severity=severity,
                     description=rule['description'],
-                    message_index=best_match_msg_idx,
-                    matched_text=best_match_text[:100],
+                    message_index=best_match_idx,
+                    matched_text=best_match_text[:100] if best_match_text else "",
                     similarity_score=max_similarity,
-                    keyword_match=keyword_match
                 ))
-                
+
                 evidence_list.append(
-                    f"{rule_id} ({rule['severity']}): \"{best_match_text[:80]}...\" "
-                    f"(similarity: {max_similarity:.2f})"
+                    f"{rule_id} ({severity}): \"{best_match_text[:80]}...\" "
+                    f"(similarity: {max_similarity:.3f}, threshold: {threshold:.2f})"
                 )
-        
-        # Calculate confidence (simple: based on max similarity)
+
         confidence = self._calculate_confidence(violations, similarity_scores)
-        
         compliant = len(violations) == 0
         threshold = self._get_threshold(violations)
-        needs_review = confidence < threshold
-        
+        needs_review = confidence < self.config['escalation_confidence_cutoff']
+
         return ComplianceResult(
             conversation_id=conv_id,
             compliant=compliant,
@@ -341,246 +324,192 @@ class SemanticComplianceChecker:
             agent_message_count=len(agent_messages),
             timestamp=datetime.now().isoformat()
         )
-    
-    def _calculate_confidence(self,
-                            violations: List[ComplianceViolation],
-                            similarity_scores: Dict[str, float]) -> float:
+
+    def _calculate_confidence(
+        self,
+        violations: List[ComplianceViolation],
+        similarity_scores: Dict[str, float]
+    ) -> float:
         """
-        Calculate confidence score simply based on similarity.
+        Confidence derived from two factors:
+
+        1. Boundary distance (60% weight)
+           How far is the score from its severity threshold?
+           Score 0.95 vs critical threshold 0.82 → distance 0.13 → confident
+           Score 0.83 vs critical threshold 0.82 → distance 0.01 → uncertain
+
+        2. Separation (40% weight)
+           How much higher is the triggered rule vs everything else?
+           One rule at 0.91, others at 0.15 → clear signal → confident
+           Multiple rules clustering near 0.75 → ambiguous → uncertain
         """
-        if len(violations) == 0:
-            # No violations - confidence based on how dissimilar to violations
-            avg_similarity = np.mean(list(similarity_scores.values()))
-            # Inverse relationship: lower similarity = higher confidence it's compliant
-            confidence = 1.0 - (avg_similarity * 0.5)  # Scale down the impact
+        scores = list(similarity_scores.values())
+
+        if not violations:
+            max_score = max(scores) if scores else 0.0
+            highest_rule = max(similarity_scores, key=similarity_scores.get)
+            severity = self.rules.get(highest_rule, {}).get('severity', 'medium')
+            threshold = self.config['severity_thresholds'].get(severity, 0.55)
+            distance = threshold - max_score
+            confidence = min(distance / threshold, 1.0)
+
         else:
-            # Violations detected - confidence based on max similarity
-            max_similarity = max(v.similarity_score for v in violations)
-            # Direct relationship: higher similarity = higher confidence it's a violation
-            confidence = max_similarity
-            
-            # Boost if keyword match
-            has_keyword = any(v.keyword_match for v in violations)
-            if has_keyword:
-                confidence = min(1.0, confidence + 0.10)
-        
-        return round(confidence, 2)
-    
+            max_triggered = max(v.similarity_score for v in violations)
+            threshold = self._get_threshold(violations)
+
+            # Factor 1: boundary distance
+            boundary_distance = max_triggered - threshold
+            boundary_confidence = min(boundary_distance / (1.0 - threshold + 1e-6), 1.0)
+
+            # Factor 2: separation from non-triggered rules
+            triggered_ids = {v.rule_id for v in violations}
+            non_triggered = [s for rid, s in similarity_scores.items() if rid not in triggered_ids]
+            avg_other = np.mean(non_triggered) if non_triggered else 0.0
+            separation = max_triggered - avg_other
+            separation_confidence = min(separation / 0.5, 1.0)
+
+            confidence = (boundary_confidence * 0.6) + (separation_confidence * 0.4)
+
+        return round(float(np.clip(confidence, 0.0, 1.0)), 3)
+
     def _get_threshold(self, violations: List[ComplianceViolation]) -> float:
-        """Get confidence threshold based on severity."""
-        thresholds = self.config['confidence_thresholds']
-        
+        severity_order = ['low', 'medium', 'high', 'critical']
+        thresholds = self.config['severity_thresholds']
         if not violations:
             return thresholds['compliant']
-        
-        max_severity = max(v.severity for v in violations)
-        return thresholds.get(max_severity, thresholds['medium'])
-    
+        highest = max(
+            (v.severity for v in violations),
+            key=lambda s: severity_order.index(s) if s in severity_order else -1
+        )
+        return thresholds.get(highest, thresholds['medium'])
+
     def check_multiple(self, conversations: List[Dict]) -> List[ComplianceResult]:
-        """Check multiple conversations."""
         results = []
-        
         for i, conv in enumerate(conversations, 1):
             if i % 20 == 0:
                 logger.info(f"Processed {i}/{len(conversations)} conversations...")
-            
             try:
-                result = self.check_conversation(conv)
-                results.append(result)
+                results.append(self.check_conversation(conv))
             except Exception as e:
                 logger.error(f"Error checking {conv.get('conversation_id')}: {e}")
-        
         return results
 
 
 class OutputGenerator:
-    """Generate outputs in JSON and Excel formats."""
-    
+
     def __init__(self, output_dir: str = "data/layer1_output"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     def save_all(self, results: List[ComplianceResult]):
-        """Save all outputs."""
         logger.info("\nGenerating outputs...")
-        
-        # 1. Auto-decided (high confidence) - JSON
-        auto_decided = [r for r in results if not r.needs_llm_review]
-        self._save_json(auto_decided, "auto_decided.json")
-        
-        # 2. LLM review queue - JSON
-        llm_queue = [r for r in results if r.needs_llm_review]
-        self._save_json(llm_queue, "llm_review_queue.json")
-        
-        # 3. Excel for human review (all results)
+        auto = [r for r in results if not r.needs_llm_review]
+        review = [r for r in results if r.needs_llm_review]
+        self._save_json(auto, "auto_decided.json")
+        self._save_json(review, "llm_review_queue.json")
         self._save_excel(results, "compliance_results.xlsx")
-        
-        # 4. Statistics
         self._save_statistics(results)
-        
         logger.info("✅ All outputs generated")
-    
-    def _save_json(self, results: List[ComplianceResult], filename: str):
-        """Save results to JSON."""
-        filepath = self.output_dir / filename
-        
-        data = [r.to_dict() for r in results]
-        
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2)
-        
-        logger.info(f"  ✓ {filepath} ({len(results)} records)")
-    
-    def _save_excel(self, results: List[ComplianceResult], filename: str):
-        """Save results to Excel for human review."""
-        filepath = self.output_dir / filename
-        
-        # Prepare data
-        rows = []
-        for r in results:
-            rows.append({
-                'Conversation ID': r.conversation_id,
-                'Compliant': 'YES' if r.compliant else 'NO',
-                'Confidence': f"{r.confidence:.2%}",
-                'Threshold': f"{r.threshold:.2%}",
-                'Violations': ', '.join([v.rule_id for v in r.violations]) if r.violations else '-',
-                'Max Severity': max([v.severity for v in r.violations], default='-'),
-                'Agent Messages': r.agent_message_count,
-                'Evidence': '; '.join(r.evidence) if r.evidence else '-'
-            })
-        
+
+    def _save_json(self, results, filename):
+        fp = self.output_dir / filename
+        with open(fp, 'w', encoding='utf-8') as f:
+            json.dump([r.to_dict() for r in results], f, indent=2)
+        logger.info(f"  ✓ {fp} ({len(results)} records)")
+
+    def _save_excel(self, results, filename):
+        fp = self.output_dir / filename
+        rows = [{
+            'Conversation ID': r.conversation_id,
+            'Compliant': 'YES' if r.compliant else 'NO',
+            'Confidence': f"{r.confidence:.3f}",
+            'Threshold': f"{r.threshold:.2f}",
+            'Needs LLM Review': 'YES' if r.needs_llm_review else 'NO',
+            'Violations': ', '.join(v.rule_id for v in r.violations) or '-',
+            'Max Severity': max((v.severity for v in r.violations), default='-'),
+            'Similarity Scores': str(r.similarity_scores),
+            'Agent Messages': r.agent_message_count,
+            'Evidence': '; '.join(r.evidence) or '-'
+        } for r in results]
+
         df = pd.DataFrame(rows)
-        
-        # Save with formatting
-        with pd.ExcelWriter(filepath, engine='openpyxl') as writer:
+        with pd.ExcelWriter(fp, engine='openpyxl') as writer:
             df.to_excel(writer, sheet_name='Compliance Results', index=False)
-            
-            # Auto-adjust column widths
-            worksheet = writer.sheets['Compliance Results']
-            for column in worksheet.columns:
-                max_length = 0
-                column = [cell for cell in column]
-                for cell in column:
-                    try:
-                        if len(str(cell.value)) > max_length:
-                            max_length = len(str(cell.value))
-                    except:
-                        pass
-                adjusted_width = min(max_length + 2, 50)
-                worksheet.column_dimensions[column[0].column_letter].width = adjusted_width
-        
-        logger.info(f"  ✓ {filepath} (Excel)")
-    
-    def _save_statistics(self, results: List[ComplianceResult]):
-        """Save statistics."""
+            ws = writer.sheets['Compliance Results']
+            for col in ws.columns:
+                col = list(col)
+                width = min(max(len(str(c.value or '')) for c in col) + 2, 50)
+                ws.column_dimensions[col[0].column_letter].width = width
+        logger.info(f"  ✓ {fp} (Excel)")
+
+    def _save_statistics(self, results):
         total = len(results)
-        auto_decided = sum(1 for r in results if not r.needs_llm_review)
-        llm_needed = sum(1 for r in results if r.needs_llm_review)
-        
+        auto = sum(1 for r in results if not r.needs_llm_review)
+        review = sum(1 for r in results if r.needs_llm_review)
         compliant = sum(1 for r in results if r.compliant and not r.needs_llm_review)
-        violations = sum(1 for r in results if not r.compliant and not r.needs_llm_review)
-        
-        # Violations by severity
+        violations_count = sum(1 for r in results if not r.compliant and not r.needs_llm_review)
+
         severity_counts = defaultdict(int)
         for r in results:
             if not r.needs_llm_review:
                 for v in r.violations:
                     severity_counts[v.severity] += 1
-        
+
         stats = {
             'timestamp': datetime.now().isoformat(),
             'total_conversations': total,
             'auto_decided': {
-                'count': auto_decided,
-                'percentage': round(auto_decided / total * 100, 1),
+                'count': auto,
+                'percentage': round(auto / total * 100, 1) if total > 0 else 0,
                 'compliant': compliant,
-                'violations': violations
+                'violations': violations_count
             },
             'llm_review_needed': {
-                'count': llm_needed,
-                'percentage': round(llm_needed / total * 100, 1)
+                'count': review,
+                'percentage': round(review / total * 100, 1) if total > 0 else 0
             },
             'violations_by_severity': dict(severity_counts),
-            'automation_rate': round(auto_decided / total * 100, 1)
+            'automation_rate': round(auto / total * 100, 1)
         }
-        
-        filepath = self.output_dir / "statistics.json"
-        with open(filepath, 'w', encoding='utf-8') as f:
+
+        fp = self.output_dir / "statistics.json"
+        with open(fp, 'w', encoding='utf-8') as f:
             json.dump(stats, f, indent=2)
-        
-        logger.info(f"  ✓ {filepath}")
+        logger.info(f"  ✓ {fp}")
 
 
 def main():
-    """Run Layer 1 compliance checker."""
     print("="*70)
-    print("LAYER 1: SEMANTIC COMPLIANCE CHECKER")
+    print("LAYER 1: SEMANTIC COMPLIANCE CHECKER (FINE TUNED)")
     print("="*70 + "\n")
-    
-    # Check dependencies
-    try:
-        from sentence_transformers import SentenceTransformer
-        import pandas as pd
-    except ImportError:
-        print("❌ Missing dependencies. Install with:")
-        print("   pip install sentence-transformers pandas openpyxl scikit-learn")
-        return
-    
-    # Check data files
+
     if not Path("data/conversations.json").exists():
         print("❌ data/conversations.json not found")
-        print("   Run generate_conversations.py first")
         return
-    
-    # Load conversations
-    print("Loading conversations...")
+
     with open("data/conversations.json", 'r') as f:
         conversations = json.load(f)
     print(f"Loaded {len(conversations)} conversations\n")
-    
-    # Initialize checker
+
     checker = SemanticComplianceChecker()
-    
-    # Check all conversations
-    print("="*70)
-    print("ANALYZING CONVERSATIONS")
-    print("="*70 + "\n")
-    
     results = checker.check_multiple(conversations)
-    
-    # Generate outputs
-    output_gen = OutputGenerator()
-    output_gen.save_all(results)
-    
-    # Print summary
-    print("\n" + "="*70)
-    print("SUMMARY")
-    print("="*70)
-    
+    OutputGenerator().save_all(results)
+
     total = len(results)
-    auto_decided = sum(1 for r in results if not r.needs_llm_review)
-    llm_needed = sum(1 for r in results if r.needs_llm_review)
-    
-    print(f"\n📊 Results:")
-    print(f"  Total: {total}")
-    print(f"  Auto-decided: {auto_decided} ({auto_decided/total*100:.1f}%)")
-    print(f"  Needs LLM review: {llm_needed} ({llm_needed/total*100:.1f}%)")
-    
+    auto = sum(1 for r in results if not r.needs_llm_review)
+    review = sum(1 for r in results if r.needs_llm_review)
     compliant = sum(1 for r in results if r.compliant and not r.needs_llm_review)
-    violations = sum(1 for r in results if not r.compliant and not r.needs_llm_review)
-    
-    print(f"\n✅ Auto-decided breakdown:")
-    print(f"  Compliant: {compliant}")
-    print(f"  Violations: {violations}")
-    
-    print(f"\n📁 Outputs:")
-    print(f"  data/layer1_output/")
-    print(f"    ├─ auto_decided.json ({auto_decided} conversations) → JSON")
-    print(f"    ├─ llm_review_queue.json ({llm_needed} conversations) → JSON for Layer 2")
-    print(f"    ├─ layer1_results.xlsx (all {total} conversations) → Excel ⭐")
-    print(f"    └─ statistics.json (metrics) → JSON")
-    
-    print("\n" + "="*70)
+    violations_count = sum(1 for r in results if not r.compliant and not r.needs_llm_review)
+
+    print(f"\n{'='*70}\nSUMMARY\n{'='*70}")
+    print(f"\n📊 Results:")
+    print(f"  Total:         {total}")
+    print(f"  Auto-decided:  {auto} ({auto/total*100:.1f}%)")
+    print(f"  LLM review:    {review} ({review/total*100:.1f}%)")
+    print(f"\n✅ Auto-decided:")
+    print(f"  Compliant:     {compliant}")
+    print(f"  Violations:    {violations_count}")
+    print(f"\n📁 Outputs in data/layer1_output/\n{'='*70}")
 
 
 if __name__ == "__main__":
