@@ -318,27 +318,33 @@ Respond with valid JSON only:
         layer1_result: Dict
     ) -> SeverityValidationResult:
         """
-        Run both judges on the severity question.
+        Layer 1 confirmed a violation exists but did not classify severity.
+        Layer 2's job: determine medium / high / critical.
         """
-        conv_id = layer1_result['conversation_id']
-        detected = layer1_result.get('detected_severity', 'medium')
+        conv_id         = layer1_result['conversation_id']
         sitting_between = layer1_result.get('sitting_between')
 
-        # Determine which two severities to adjudicate between
-        if sitting_between:
-            # Layer 1 told us exactly which boundary
-            # e.g. "high and critical" → ['high', 'critical']
-            parts = sitting_between.split(' and ')
-            severity_a, severity_b = parts[0].strip(), parts[1].strip()
+        # Layer 1 no longer provides detected_severity
+        # Always ask: is this medium, high, or critical?
+        # Start at medium/high boundary as default question
+        if sitting_between and sitting_between != 'no_action and medium':
+            parts      = sitting_between.split(' and ')
+            severity_a = parts[0].strip()
+            severity_b = parts[1].strip()
         else:
-            # Not on a boundary — adjudicate between detected and one level down
-            detected_idx = SEVERITY_ORDER.index(detected)
-            lower_idx = max(1, detected_idx - 1)  # don't go below 'low'
-            severity_a = SEVERITY_ORDER[lower_idx]
-            severity_b = detected
+            # Default: ask medium vs high vs critical
+            # Use compliance_score to pick starting point if available
+            violations     = layer1_result.get('violations', [])
+            max_score      = max(
+                (v.get('compliance_score', 0) for v in violations), default=0
+            )
+            # Higher score → more likely high/critical
+            if max_score > 0.25:
+                severity_a, severity_b = 'high', 'critical'
+            else:
+                severity_a, severity_b = 'medium', 'high'
 
         valid_severities = [severity_a, severity_b]
-
         logger.info(f"  Adjudicating {conv_id}: {severity_a} vs {severity_b}")
 
         prompt = self._build_prompt(
@@ -355,6 +361,8 @@ Respond with valid JSON only:
         j2 = self._call_judge(self.judge2, prompt, valid_severities)
         if j2:
             logger.info(f"    Judge 2 (Contextual): {j2.severity} ({j2.confidence:.2f})")
+
+        return self._make_decision(conv_id, severity_b, sitting_between, j1, j2)
 
         return self._make_decision(conv_id, detected, sitting_between, j1, j2)
 

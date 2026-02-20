@@ -56,7 +56,12 @@ def load_system_results():
 
 
 def severity_to_binary(label):
-    return 'compliant' if label == 'compliant' else 'non_compliant'
+    """
+    Map ground truth label to expected system outcome.
+    compliant + low → no_action (system should NOT flag)
+    medium + high + critical → violation (system SHOULD flag)
+    """
+    return 'compliant' if label in ('compliant', 'low') else 'non_compliant'
 
 
 def empty_severity_dict():
@@ -74,11 +79,16 @@ def evaluate():
     print(f"EVALUATION RESULTS ({len(ground_truth)} Conversations)")
     print("=" * 70)
 
-    # ── Counters ──
+    # ── Counters — medium+ only for accuracy ──
     binary_correct = binary_incorrect = not_decided = 0
     l1_correct = l1_incorrect = l1_total = 0
     l2_correct = l2_incorrect = l2_total = 0
     severity_correct = severity_incorrect = 0
+
+    # Separate tracking for compliant/low (informational only)
+    no_action_flagged   = 0   # compliant/low wrongly flagged
+    no_action_passed    = 0   # compliant/low correctly not flagged
+    no_action_undecided = 0   # compliant/low sent to human
 
     severity_binary = empty_severity_dict()
     severity_exact  = empty_severity_dict()
@@ -90,13 +100,17 @@ def evaluate():
     results = []
 
     for conv_id, gt in ground_truth.items():
-        true_label   = gt['label']
-        true_binary  = severity_to_binary(true_label)
+        true_label    = gt['label']
+        true_binary   = severity_to_binary(true_label)
         violated_rule = gt.get('violated_rule_id')
         violated_desc = gt.get('violated_rule_description')
 
+        is_no_action = true_label in ('compliant', 'low')
+
         if conv_id not in system:
             not_decided += 1
+            if is_no_action:
+                no_action_undecided += 1
             continue
 
         result    = system[conv_id]
@@ -104,7 +118,28 @@ def evaluate():
         layer     = result['layer']
         severity  = result.get('severity', '-')
 
-        # ── Binary accuracy ──
+        # ── Handle no_action cases separately ──
+        if is_no_action:
+            if decision == 'needs_human_review':
+                no_action_undecided += 1
+            elif decision == 'compliant':
+                no_action_passed += 1
+            else:
+                no_action_flagged += 1
+
+            results.append({
+                'conv_id':         conv_id,
+                'true_label':      true_label,
+                'true_binary':     true_binary,
+                'decision':        decision,
+                'severity':        severity,
+                'layer':           layer,
+                'binary_status':   'ℹ️  NO_ACTION_TERRITORY',
+                'severity_status': '-'
+            })
+            continue
+
+        # ── Medium+ accuracy evaluation ──
         if decision == 'needs_human_review':
             binary_status = "⚠️  NO DECISION"
             not_decided += 1
@@ -129,7 +164,7 @@ def evaluate():
                 l2_incorrect += 1
                 l2_total += 1
 
-        # ── Severity accuracy ──
+        # ── Severity accuracy (medium+ only) ──
         severity_status = "-"
         if decision != 'needs_human_review' and true_label in SEVERITY_LEVELS:
             severity_exact[true_label]['total'] += 1
@@ -141,26 +176,21 @@ def evaluate():
                 severity_incorrect += 1
                 severity_status = f"❌ GOT {severity}"
 
-        # ── Per layer per severity ──
-        if decision != 'needs_human_review' and true_label in SEVERITY_LEVELS:
-            layer_severity[layer][true_label]['total'] += 1
-            if decision == true_binary:
-                layer_severity[layer][true_label]['correct'] += 1
-
-        # ── Per severity binary ──
         if decision != 'needs_human_review' and true_label in SEVERITY_LEVELS:
             severity_binary[true_label]['total'] += 1
+            layer_severity[layer][true_label]['total'] += 1
             if decision == true_binary:
                 severity_binary[true_label]['correct'] += 1
+                layer_severity[layer][true_label]['correct'] += 1
 
         results.append({
-            'conv_id':       conv_id,
-            'true_label':    true_label,
-            'true_binary':   true_binary,
-            'decision':      decision,
-            'severity':      severity,
-            'layer':         layer,
-            'binary_status': binary_status,
+            'conv_id':         conv_id,
+            'true_label':      true_label,
+            'true_binary':     true_binary,
+            'decision':        decision,
+            'severity':        severity,
+            'layer':           layer,
+            'binary_status':   binary_status,
             'severity_status': severity_status
         })
 
@@ -175,24 +205,41 @@ def evaluate():
             print(f"  Severity: {severity_status}")
 
     decided = binary_correct + binary_incorrect
+    medium_plus_total = sum(
+        1 for _, gt in ground_truth.items()
+        if gt['label'] not in ('compliant', 'low')
+    )
 
     # ── Overall summary ──
     print("\n" + "=" * 70)
     print("OVERALL SUMMARY")
     print("=" * 70)
-    print(f"\n  Total conversations: {len(ground_truth)}")
-    print(f"  ✅ Correct:          {binary_correct}")
-    print(f"  ❌ Incorrect:        {binary_incorrect}")
-    print(f"  ⚠️  Sent to human:   {not_decided}")
+    print(f"\n  Total conversations:   {len(ground_truth)}")
+    print(f"\n  📊 Medium+ Accuracy (what matters):")
+    print(f"     Total medium+:     {medium_plus_total}")
+    print(f"     Decided:           {decided}")
+    print(f"     ✅ Correct:        {binary_correct}")
+    print(f"     ❌ Incorrect:      {binary_incorrect}")
+    print(f"     ⚠️  Undecided:     {not_decided}")
     if decided > 0:
-        print(f"\n  📊 Binary Accuracy:   {binary_correct}/{decided} = {binary_correct/decided*100:.1f}%")
+        print(f"     Accuracy:          {binary_correct}/{decided} = {binary_correct/decided*100:.1f}%")
+
     sev_decided = severity_correct + severity_incorrect
     if sev_decided > 0:
-        print(f"  🎯 Severity Accuracy: {severity_correct}/{sev_decided} = {severity_correct/sev_decided*100:.1f}%")
+        print(f"     Severity Accuracy: {severity_correct}/{sev_decided} = {severity_correct/sev_decided*100:.1f}%")
 
-    # ── Layer breakdown ──
+    print(f"\n  ℹ️  No-action territory (compliant + low — informational only):")
+    no_action_total = no_action_passed + no_action_flagged + no_action_undecided
+    print(f"     Total:             {no_action_total}")
+    print(f"     Correctly ignored: {no_action_passed}")
+    print(f"     Wrongly flagged:   {no_action_flagged}  ← false positives")
+    print(f"     Sent to human:     {no_action_undecided}")
+    if no_action_total > 0:
+        print(f"     False positive rate: {no_action_flagged/no_action_total*100:.1f}%")
+
+    # ── Layer breakdown (medium+ only) ──
     print("\n" + "=" * 70)
-    print("LAYER-SPECIFIC PERFORMANCE")
+    print("LAYER-SPECIFIC PERFORMANCE (Medium+ only)")
     print("=" * 70)
     if l1_total > 0:
         print(f"\n  🔷 Layer 1 (Centroid SBERT):")
@@ -207,41 +254,41 @@ def evaluate():
         print(f"     Incorrect: {l2_incorrect}")
         print(f"     Accuracy:  {l2_correct/l2_total*100:.1f}%")
 
-    # ── Binary accuracy per severity ──
+    # ── Accuracy per severity (medium+ only) ──
     print("\n" + "=" * 70)
-    print("BINARY ACCURACY BY SEVERITY LEVEL")
+    print("BINARY ACCURACY BY SEVERITY (Medium+ only)")
     print("=" * 70)
     print(f"\n  {'Severity':10}  {'Correct':>7}  {'Total':>5}  {'Accuracy':>8}")
     print(f"  {'-'*40}")
-    for sev in SEVERITY_LEVELS:
+    for sev in ['medium', 'high', 'critical']:
         d = severity_binary[sev]
         if d['total'] > 0:
             acc = d['correct'] / d['total'] * 100
             print(f"  {sev:10}  {d['correct']:>7}  {d['total']:>5}  {acc:>7.1f}%")
 
-    # ── Severity detection accuracy ──
+    # ── Severity detection (medium+ only) ──
     print("\n" + "=" * 70)
-    print("SEVERITY DETECTION ACCURACY")
+    print("SEVERITY DETECTION ACCURACY (Medium+ only)")
     print("=" * 70)
     print(f"\n  {'Severity':10}  {'Matched':>7}  {'Total':>5}  {'Accuracy':>8}")
     print(f"  {'-'*40}")
-    for sev in SEVERITY_LEVELS:
+    for sev in ['medium', 'high', 'critical']:
         d = severity_exact[sev]
         if d['total'] > 0:
             acc = d['correct'] / d['total'] * 100
             print(f"  {sev:10}  {d['correct']:>7}  {d['total']:>5}  {acc:>7.1f}%")
 
-    # ── Per layer per severity ──
+    # ── Per layer per severity (medium+ only) ──
     print("\n" + "=" * 70)
-    print("BINARY ACCURACY BY LAYER AND SEVERITY")
+    print("BINARY ACCURACY BY LAYER AND SEVERITY (Medium+ only)")
     print("=" * 70)
-    for layer_name, label in [('layer1', '🔷 Layer 1 (Centroid SBERT)'),
-                               ('layer2', '🔶 Layer 2 (Severity Adjudication)')]:
+    for layer_name, label in [('layer1', '🔷 Layer 1'),
+                               ('layer2', '🔶 Layer 2')]:
         print(f"\n  {label}:")
         print(f"  {'Severity':10}  {'Correct':>7}  {'Total':>5}  {'Accuracy':>8}")
         print(f"  {'-'*40}")
         has_data = False
-        for sev in SEVERITY_LEVELS:
+        for sev in ['medium', 'high', 'critical']:
             d = layer_severity[layer_name][sev]
             if d['total'] > 0:
                 has_data = True
