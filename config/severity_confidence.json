@@ -1,12 +1,12 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "last_updated": "2026-02-19",
-  "severity_thresholds": {
-    "compliant": 0.20,
-    "low":       0.35,
-    "medium":    0.55,
-    "high":      0.70,
-    "critical":  0.82
+  "notes": {
+    "violation_threshold": "Minimum cosine similarity to the combined violation centroid for a message to be considered a violation at all. Below this = compliant.",
+    "severity_gap_threshold": "Minimum gap between top and second centroid similarity to auto-decide severity. Below this gap = ambiguous = Layer 2.",
+    "boundary_margin": "If top two centroid similarities are within this margin AND adjacent severity levels = sitting on boundary = Layer 2."
   },
-  "escalation_confidence_cutoff": 0.70
+  "violation_threshold": 0.55,
+  "severity_gap_threshold": 0.08,
+  "boundary_margin": 0.04
 }

@@ -1,19 +1,307 @@
 {
-  "timestamp": "2026-02-17T16:38:53.484048",
-  "conversations_processed": 45,
-  "judge1": {
-    "model": "gpt-4o-mini",
-    "tokens": 88900,
-    "cost_usd": 0.0293
-  },
-  "judge2": {
-    "model": "gpt-4o-mini",
-    "tokens": 89568,
-    "cost_usd": 0.0296
-  },
-  "total": {
-    "tokens": 178468,
-    "cost_usd": 0.0589
-  },
-  "cost_per_conversation": 0.0013
+  "total_tokens": 100557,
+  "total_cost_usd": 0.0332,
+  "cost_per_conversation": 0.00055,
+  "per_conversation": [
+    {
+      "conversation_id": "conv_006",
+      "tokens": 1721,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_009",
+      "tokens": 1793,
+      "cost": 0.00059
+    },
+    {
+      "conversation_id": "conv_014",
+      "tokens": 1573,
+      "cost": 0.00052
+    },
+    {
+      "conversation_id": "conv_016",
+      "tokens": 1573,
+      "cost": 0.00052
+    },
+    {
+      "conversation_id": "conv_017",
+      "tokens": 1591,
+      "cost": 0.00053
+    },
+    {
+      "conversation_id": "conv_022",
+      "tokens": 1698,
+      "cost": 0.00056
+    },
+    {
+      "conversation_id": "conv_023",
+      "tokens": 1870,
+      "cost": 0.00062
+    },
+    {
+      "conversation_id": "conv_024",
+      "tokens": 1656,
+      "cost": 0.00055
+    },
+    {
+      "conversation_id": "conv_026",
+      "tokens": 1771,
+      "cost": 0.00058
+    },
+    {
+      "conversation_id": "conv_027",
+      "tokens": 1532,
+      "cost": 0.00051
+    },
+    {
+      "conversation_id": "conv_029",
+      "tokens": 1727,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_035",
+      "tokens": 1748,
+      "cost": 0.00058
+    },
+    {
+      "conversation_id": "conv_038",
+      "tokens": 1715,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_043",
+      "tokens": 1914,
+      "cost": 0.00063
+    },
+    {
+      "conversation_id": "conv_048",
+      "tokens": 1765,
+      "cost": 0.00058
+    },
+    {
+      "conversation_id": "conv_049",
+      "tokens": 1785,
+      "cost": 0.00059
+    },
+    {
+      "conversation_id": "conv_050",
+      "tokens": 1875,
+      "cost": 0.00062
+    },
+    {
+      "conversation_id": "conv_058",
+      "tokens": 1635,
+      "cost": 0.00054
+    },
+    {
+      "conversation_id": "conv_061",
+      "tokens": 1736,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_064",
+      "tokens": 1741,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_070",
+      "tokens": 1693,
+      "cost": 0.00056
+    },
+    {
+      "conversation_id": "conv_073",
+      "tokens": 1675,
+      "cost": 0.00055
+    },
+    {
+      "conversation_id": "conv_075",
+      "tokens": 1696,
+      "cost": 0.00056
+    },
+    {
+      "conversation_id": "conv_076",
+      "tokens": 1653,
+      "cost": 0.00055
+    },
+    {
+      "conversation_id": "conv_078",
+      "tokens": 1680,
+      "cost": 0.00055
+    },
+    {
+      "conversation_id": "conv_081",
+      "tokens": 1554,
+      "cost": 0.00051
+    },
+    {
+      "conversation_id": "conv_082",
+      "tokens": 1494,
+      "cost": 0.00049
+    },
+    {
+      "conversation_id": "conv_086",
+      "tokens": 1598,
+      "cost": 0.00053
+    },
+    {
+      "conversation_id": "conv_088",
+      "tokens": 1766,
+      "cost": 0.00058
+    },
+    {
+      "conversation_id": "conv_099",
+      "tokens": 1737,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_104",
+      "tokens": 1710,
+      "cost": 0.00056
+    },
+    {
+      "conversation_id": "conv_105",
+      "tokens": 1748,
+      "cost": 0.00058
+    },
+    {
+      "conversation_id": "conv_106",
+      "tokens": 1562,
+      "cost": 0.00052
+    },
+    {
+      "conversation_id": "conv_125",
+      "tokens": 1477,
+      "cost": 0.00049
+    },
+    {
+      "conversation_id": "conv_127",
+      "tokens": 1706,
+      "cost": 0.00056
+    },
+    {
+      "conversation_id": "conv_130",
+      "tokens": 1535,
+      "cost": 0.00051
+    },
+    {
+      "conversation_id": "conv_131",
+      "tokens": 1566,
+      "cost": 0.00052
+    },
+    {
+      "conversation_id": "conv_133",
+      "tokens": 1701,
+      "cost": 0.00056
+    },
+    {
+      "conversation_id": "conv_144",
+      "tokens": 1819,
+      "cost": 0.0006
+    },
+    {
+      "conversation_id": "conv_145",
+      "tokens": 1509,
+      "cost": 0.0005
+    },
+    {
+      "conversation_id": "conv_146",
+      "tokens": 1633,
+      "cost": 0.00054
+    },
+    {
+      "conversation_id": "conv_150",
+      "tokens": 1533,
+      "cost": 0.00051
+    },
+    {
+      "conversation_id": "conv_151",
+      "tokens": 1561,
+      "cost": 0.00052
+    },
+    {
+      "conversation_id": "conv_153",
+      "tokens": 1755,
+      "cost": 0.00058
+    },
+    {
+      "conversation_id": "conv_155",
+      "tokens": 1568,
+      "cost": 0.00052
+    },
+    {
+      "conversation_id": "conv_156",
+      "tokens": 1734,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_158",
+      "tokens": 1774,
+      "cost": 0.00059
+    },
+    {
+      "conversation_id": "conv_161",
+      "tokens": 1610,
+      "cost": 0.00053
+    },
+    {
+      "conversation_id": "conv_164",
+      "tokens": 1558,
+      "cost": 0.00051
+    },
+    {
+      "conversation_id": "conv_166",
+      "tokens": 1536,
+      "cost": 0.00051
+    },
+    {
+      "conversation_id": "conv_169",
+      "tokens": 1574,
+      "cost": 0.00052
+    },
+    {
+      "conversation_id": "conv_170",
+      "tokens": 1855,
+      "cost": 0.00061
+    },
+    {
+      "conversation_id": "conv_174",
+      "tokens": 1764,
+      "cost": 0.00058
+    },
+    {
+      "conversation_id": "conv_175",
+      "tokens": 1725,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_183",
+      "tokens": 1715,
+      "cost": 0.00057
+    },
+    {
+      "conversation_id": "conv_185",
+      "tokens": 1621,
+      "cost": 0.00053
+    },
+    {
+      "conversation_id": "conv_191",
+      "tokens": 1556,
+      "cost": 0.00051
+    },
+    {
+      "conversation_id": "conv_192",
+      "tokens": 1833,
+      "cost": 0.0006
+    },
+    {
+      "conversation_id": "conv_195",
+      "tokens": 1702,
+      "cost": 0.00056
+    },
+    {
+      "conversation_id": "conv_198",
+      "tokens": 1652,
+      "cost": 0.00055
+    }
+  ]
 }

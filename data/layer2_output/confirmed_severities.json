@@ -1,0 +1,1115 @@
+[
+  {
+    "conversation_id": "conv_006",
+    "layer1_detected": "medium",
+    "sitting_between": "low and medium",
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements demonstrate clear pressure for immediate payment and a lack of acknowledgment of the customer's hardship, which aligns with the definitions of a medium violation. The agent's insistence on payment to avoid further action and dismissal of the customer's concerns indicate a definite pressure that goes beyond a minor mistake, thus justifying the medium severity level.",
+      "tokens": 849
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The violation is classified as medium due to the agent's clear pressure for immediate payment despite the customer's expressed hardship. The agent's statements, such as 'we really need a payment today to avoid further action' and 'that\u2019s not really our concern right now,' indicate a disregard for the customer's situation, which aligns with the criteria for a medium violation. The agent failed to acknowledge the customer's difficulties and did not offer any options, reinforcing the severity of the violation.",
+      "tokens": 872
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:48:43.327530"
+  },
+  {
+    "conversation_id": "conv_009",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.9,
+      "reasoning": "The agent explicitly threatened legal action, wage garnishment, and the possibility of notifying the customer's employer about the debt, which falls under severe violations as defined by the severity levels. These actions are not only aggressive but also constitute explicit threats, aligning with the criteria for a critical violation. Given the nature of the threats and the context of the conversation, the higher severity level is warranted.",
+      "tokens": 911
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action, wage garnishment, and the possibility of notifying the customer's employer about the debt, which falls under the definitions of a critical violation. These actions are severe and constitute explicit threats that violate compliance rules regarding debt collection practices.",
+      "tokens": 882
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:48:50.479297"
+  },
+  {
+    "conversation_id": "conv_016",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'That's your excuse?' and 'Best isn\u2019t good enough.' This behavior not only disregards the customer's hardship but also misrepresents the consequences of non-payment, suggesting that the customer's credit will be ruined forever without offering any options. Given the severity definitions, this clearly falls into the 'HIGH' category due to the serious nature of the violation.",
+      "tokens": 788
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is clearly abusive and demeaning, as evidenced by statements like 'Best isn\u2019t good enough' and 'you\u2019ll be begging for a chance to fix your credit later.' This not only disregards the customer's hardship but also misrepresents the consequences of non-payment, suggesting a permanent ruin of credit without offering any options or understanding. The combination of these factors aligns with the criteria for a high severity violation.",
+      "tokens": 785
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:49:04.278371"
+  },
+  {
+    "conversation_id": "conv_017",
+    "layer1_detected": "medium",
+    "sitting_between": "low and medium",
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's insistence on making a payment despite the customer's clear financial hardship constitutes definite pressure, which aligns with the definition of a medium severity violation. The agent's language suggests urgency and a lack of acknowledgment of the customer's situation, which is a clear violation of the guidelines that require agents to offer options and acknowledge hardship.",
+      "tokens": 795
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's repeated encouragement for the customer to make a payment despite their expressed financial hardship constitutes a clear violation of compliance standards. This behavior demonstrates definite pressure on the customer, which aligns with the criteria for a medium severity violation. The agent's insistence on resolving the issue quickly, without adequately acknowledging the customer's situation, further supports this classification.",
+      "tokens": 796
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:49:11.075070"
+  },
+  {
+    "conversation_id": "conv_022",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.9,
+      "reasoning": "The agent explicitly threatened to contact the customer's employer regarding the debt, which constitutes a severe violation under R002. Additionally, the agent's statements about potential legal action if payment is not made further escalate the situation, aligning with the definitions of a critical violation. Given the nature of the threats and the context of the conversation, the severity level is appropriately classified as critical.",
+      "tokens": 852
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened to contact the customer's employer regarding the debt, which constitutes a severe violation of compliance rules. This action falls under the definition of a critical violation as it involves threats of contacting third parties about the debt without consent. Additionally, the agent's insistence on immediate payment and the implication of legal action further escalate the severity of the violation.",
+      "tokens": 846
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:49:17.940826"
+  },
+  {
+    "conversation_id": "conv_023",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a serious violation as they apply significant pressure on the customer to make an immediate payment despite the customer's expressed hardship. The agent's insistence on full payment and the warning about the impact on the customer's credit score can be seen as misrepresenting the consequences of non-payment, which aligns with the criteria for a high severity violation. Additionally, the language used by the agent lacks empathy and does not acknowledge the customer's difficult situation, further supporting the classification as a high severity violation.",
+      "tokens": 942
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's responses demonstrate a serious violation by applying significant pressure on the customer to make an immediate payment despite their expressed financial hardship. The agent's insistence on full payment and the warning about the impact on the customer's credit score can be seen as misrepresenting the consequences of non-payment, which aligns with the criteria for a high severity violation. Additionally, the language used by the agent lacks empathy and fails to acknowledge the customer's situation adequately.",
+      "tokens": 928
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:49:27.417160"
+  },
+  {
+    "conversation_id": "conv_024",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding legal action and immediate payment, while ignoring the customer's expressed hardship. This aligns with the definitions of a medium severity violation, as it demonstrates a lack of acknowledgment of the customer's situation and does not offer reasonable options for resolution.",
+      "tokens": 828
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding legal action and immediate payment, while ignoring the customer's expressed hardship. This aligns with the definitions of a medium severity violation, as the agent's approach does not offer options or acknowledge the customer's situation adequately, thus warranting a formal warning.",
+      "tokens": 828
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:49:33.915868"
+  },
+  {
+    "conversation_id": "conv_026",
+    "layer1_detected": "medium",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'Not my problem' and 'Just pay the debt or watch your life fall apart.' This behavior not only disregards the customer's hardship but also creates a hostile environment, which aligns with the criteria for a high severity violation. Additionally, the agent misrepresents the consequences of non-payment, suggesting that the customer's life will 'fall apart,' which further supports the classification as a serious violation.",
+      "tokens": 891
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's language is demeaning and dismissive towards the customer's financial hardship, which constitutes abusive behavior. Phrases like 'Not my problem' and 'you need to cough up the whole amount or face the consequences' indicate a serious violation of compliance standards. Additionally, the agent's threats regarding the customer's credit and future financial opportunities further misrepresent the consequences of non-payment, aligning with the criteria for a high severity violation.",
+      "tokens": 880
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:49:43.395760"
+  },
+  {
+    "conversation_id": "conv_027",
+    "layer1_detected": "medium",
+    "sitting_between": "low and medium",
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's responses demonstrate clear pressure on the customer to make immediate payment without acknowledging the customer's financial hardship. The agent's insistence on full payment and refusal to consider a payment plan indicates a violation of the guidelines that require agents to acknowledge customer hardships and offer options. This aligns with the definitions of a medium severity violation, as it reflects a definite pressure and disregard for the customer's situation.",
+      "tokens": 773
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's responses demonstrate a clear violation of compliance standards by applying definite pressure on the customer to make immediate payment without acknowledging their financial hardship. The agent's insistence on full payment and refusal to consider a payment plan indicates a lack of empathy and understanding of the customer's situation, which aligns with the criteria for a medium severity violation.",
+      "tokens": 759
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:49:51.063326"
+  },
+  {
+    "conversation_id": "conv_029",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding payment and threatening legal action, which is not permissible. The agent's insistence on immediate payment and the potential escalation to contacting the employer further emphasizes the severity of the situation, aligning with the definitions of a medium violation. Given the context and the confirmed violation, it is appropriate to classify this as medium rather than low.",
+      "tokens": 864
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding payment and threatening legal action and escalation to the employer. This behavior disregards the customer's expressed hardship of losing their job, which aligns with the definitions of a medium severity violation. The agent's approach lacks the necessary empathy and fails to offer any options or understanding, thus categorizing it as a medium violation rather than a low one.",
+      "tokens": 863
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:49:59.152904"
+  },
+  {
+    "conversation_id": "conv_035",
+    "layer1_detected": "medium",
+    "sitting_between": "low and medium",
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements exhibit clear pressure on the customer to pay immediately, despite the customer's expressed hardship of losing their job. This behavior aligns with the definition of a medium violation, as it demonstrates a definite pressure and an ignoring of the customer's financial difficulties. The agent's insistence on immediate payment without offering viable options further supports this classification.",
+      "tokens": 865
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's repeated insistence on immediate payment despite the customer's expressed financial hardship constitutes a clear violation of compliance standards. The agent's language indicates definite pressure, particularly in phrases like 'you really should pay' and 'I really urge you to take action,' which ignore the customer's situation. This aligns with the definitions of a medium severity violation, as it demonstrates a lack of acknowledgment of the customer's hardship and does not offer viable options for resolution.",
+      "tokens": 883
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:50:06.361146"
+  },
+  {
+    "conversation_id": "conv_038",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements included a direct threat of legal action if payment was not made immediately, which constitutes a serious violation of compliance standards. This behavior not only pressures the customer but also misrepresents the consequences of non-payment, aligning with the definitions of a high severity violation. Given the confirmed violation and the nature of the agent's language, the higher severity level is warranted.",
+      "tokens": 859
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's statements included threats of legal action and a demand for immediate payment, which significantly misrepresent the consequences of non-payment and create undue pressure on the customer. This behavior aligns with the definitions of a serious violation, as it is both abusive and demeaning, particularly given the customer's expressed hardship of losing their job. The combination of these factors indicates a high severity level.",
+      "tokens": 856
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:50:13.725816"
+  },
+  {
+    "conversation_id": "conv_043",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a serious violation as they threaten legal action and suggest contacting the customer's employer about the debt, which is a clear breach of compliance rules. These actions are not only abusive but also significantly misrepresent the consequences of non-payment, aligning with the definitions of a high severity violation.",
+      "tokens": 948
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements included threats of legal action and contacting the customer's employer, which are serious violations of compliance rules (R001 and R002). These actions significantly misrepresent the consequences of non-payment and create an abusive environment for the customer, aligning with the definitions of a high severity violation. The pressure to pay immediately, coupled with the lack of acknowledgment of the customer's hardship, further supports this classification.",
+      "tokens": 966
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:50:21.782969"
+  },
+  {
+    "conversation_id": "conv_048",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language indicates a serious violation as they apply pressure by stating that the situation will worsen if payment is not made immediately, which misrepresents the consequences of non-payment. Additionally, the agent's insistence on immediate action without acknowledging the customer's hardship further aligns with the criteria for a high severity violation, as it can be perceived as demeaning and abusive.",
+      "tokens": 868
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's language demonstrates serious violations of compliance standards, particularly in the way they pressure the customer for immediate payment and misrepresent the consequences of non-payment. Phrases like 'If you don\u2019t pay today, it's just going to get worse' and 'we need to see some action' indicate a level of urgency and threat that goes beyond mere pressure, suggesting abusive tactics. This aligns with the definitions of a high severity violation, as it reflects a significant misrepresentation of consequences and a lack of acknowledgment of the customer's hardship.",
+      "tokens": 897
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:50:38.393441"
+  },
+  {
+    "conversation_id": "conv_049",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action and indicated they might contact the customer's employer, which constitutes a severe violation under the compliance rules. These actions fall under the definitions of a critical violation, as they involve explicit threats and potential escalation without proper authorization or consent.",
+      "tokens": 890
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action and indicated a potential escalation by contacting the customer's employer, which constitutes a severe violation of compliance rules. These actions fall under the definitions of a critical violation as they involve explicit threats and the potential for third-party contact without consent, which is not permitted by policy.",
+      "tokens": 895
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:50:45.615176"
+  },
+  {
+    "conversation_id": "conv_050",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'that's not my issue' and 'your life is about to get a lot more complicated if you ignore this.' These comments not only disregard the customer's hardship but also misrepresent the consequences of non-payment, which aligns with the criteria for a high severity violation. Given the clear abusive tone and the significant misrepresentation of consequences, the higher severity level is warranted.",
+      "tokens": 935
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language throughout the conversation is abusive and demeaning, particularly in statements like 'That's not my issue' and 'Well, that\u2019s your problem.' These comments not only disregard the customer's hardship but also create a threatening atmosphere regarding the consequences of non-payment, which aligns with the definitions of a serious violation. Additionally, the agent misrepresents the consequences of non-payment, suggesting that the customer's life will become significantly more complicated, which further supports a high severity classification.",
+      "tokens": 940
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:50:53.414294"
+  },
+  {
+    "conversation_id": "conv_058",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatens legal action and suggests contacting the customer's employer regarding the debt, which falls under the definitions of a critical violation. The language used by the agent indicates a severe level of intimidation and pressure, which aligns with the criteria for a critical severity level as outlined in the rules.",
+      "tokens": 817
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action and indicated that they would report the debt to the customer's employer, which constitutes a severe violation of compliance rules. The language used by the agent suggests an immediate escalation of consequences without offering any options or consideration for the customer's financial hardship, aligning with the definitions of a critical violation.",
+      "tokens": 818
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:51:01.036833"
+  },
+  {
+    "conversation_id": "conv_061",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's insistence on immediate payment and the framing of the situation as urgent, combined with the lack of flexibility in offering options, indicates a serious violation of compliance standards. The agent's language suggests a misrepresentation of the consequences of non-payment, which aligns with the criteria for a high severity violation. The pressure placed on the customer, who is already experiencing hardship, further supports this classification.",
+      "tokens": 869
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's insistence on immediate payment and the framing of the situation as urgent, combined with the lack of acknowledgment of the customer's hardship, indicates a serious violation of compliance standards. The agent's language suggests a misrepresentation of the consequences of non-payment, which aligns with the criteria for a high severity violation. The pressure to settle the balance immediately, without offering flexible options, further supports this classification.",
+      "tokens": 867
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:51:08.107116"
+  },
+  {
+    "conversation_id": "conv_064",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate clear pressure on the customer regarding the overdue balance, particularly with threats of legal action and a lack of acknowledgment of the customer's financial hardship. This aligns with the definitions of a medium violation, as the agent is not only ignoring the customer's situation but also escalating the pressure to pay without offering any options or understanding. The flagged messages further support this classification, as they demonstrate a clear violation of the guidelines regarding the treatment of customers in financial distress.",
+      "tokens": 879
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding payment and threatening legal action. The agent's insistence on the customer's obligation to pay despite acknowledging their financial hardship demonstrates a lack of empathy and understanding, which aligns with the criteria for a medium severity violation. The conversation reflects a disregard for the customer's situation, making it more than a minor mistake.",
+      "tokens": 862
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:51:14.873089"
+  },
+  {
+    "conversation_id": "conv_070",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate clear pressure on the customer regarding immediate payment and potential legal repercussions, which aligns with the definitions of a medium violation. The agent's failure to acknowledge the customer's hardship and the use of threatening language about contacting the employer further solidify the severity level. Given the confirmed violation and the nature of the agent's comments, medium is the appropriate classification over low.",
+      "tokens": 842
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding immediate payment and the potential repercussions of non-payment, including threats of legal action and contacting the employer. This behavior disregards the customer's expressed hardship of losing their job, which further aligns with the criteria for a medium severity violation. The agent's language and approach do not reflect an understanding of the customer's situation, thus warranting a formal warning.",
+      "tokens": 851
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.85,
+    "timestamp": "2026-02-19T18:51:29.738800"
+  },
+  {
+    "conversation_id": "conv_073",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding payment and suggesting potential negative consequences, such as involving the legal team and notifying the employer about the debt. This behavior aligns with the definitions of a medium severity violation, as it disregards the customer's expressed financial hardship and does not offer any options or understanding, which is a formal warning territory.",
+      "tokens": 843
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding payment and suggesting potential negative consequences, such as involving the legal team and notifying the employer about the debt. This behavior disregards the customer's expressed financial hardship and does not offer any options or understanding, which aligns with the criteria for a medium severity violation.",
+      "tokens": 832
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.85,
+    "timestamp": "2026-02-19T18:51:35.574863"
+  },
+  {
+    "conversation_id": "conv_075",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding potential legal action and threatening to report the debt to the employer. This behavior disregards the customer's expressed hardship and does not offer any options or understanding, which aligns with the criteria for a medium severity violation. The presence of threats and pressure elevates the severity above a low classification.",
+      "tokens": 855
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding the consequences of non-payment, including threats of legal action and reporting to the employer. This behavior disregards the customer's expressed hardship and does not offer any options or understanding, which aligns with the criteria for a medium severity violation.",
+      "tokens": 841
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:51:50.198338"
+  },
+  {
+    "conversation_id": "conv_076",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a serious violation as they threaten legal action and misrepresent the consequences of non-payment, which aligns with the definitions of a high severity violation. The language used by the agent is demeaning and creates a sense of urgency that disregards the customer's financial hardship, further supporting the classification as high severity.",
+      "tokens": 823
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's statements included threats of legal action and escalation to court, which are serious violations of compliance rules. The language used was demeaning and did not acknowledge the customer's hardship, instead emphasizing the consequences of non-payment in a threatening manner. This aligns with the definitions of a high severity violation, as it misrepresents the consequences and applies undue pressure on the customer.",
+      "tokens": 830
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:51:56.527932"
+  },
+  {
+    "conversation_id": "conv_078",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened the customer with potential legal action and the notification of their employer regarding the debt situation, which constitutes a severe violation under the compliance rules. This behavior aligns with the definitions of a critical violation, as it involves explicit threats that could lead to significant consequences for the customer, thus necessitating immediate escalation.",
+      "tokens": 841
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action and the potential notification of the customer's employer about the debt, which constitutes a severe violation of compliance rules. These actions fall under the definitions of critical violations as they involve explicit threats and the potential for significant negative consequences for the customer, aligning with the criteria outlined in R001 and R002.",
+      "tokens": 839
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:52:03.709355"
+  },
+  {
+    "conversation_id": "conv_081",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'you need to cough up the full amount, or don't expect to ever get credit again.' This not only disregards the customer's financial hardship but also misrepresents the consequences of non-payment, which aligns with the definitions of a high severity violation. The agent's refusal to consider a payment plan further exacerbates the situation, indicating a serious violation of compliance standards.",
+      "tokens": 779
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'you need to cough up the full amount, or don't expect to ever get credit again.' This not only disregards the customer's financial hardship but also misrepresents the consequences of non-payment, which aligns with the definitions of a high severity violation. The agent's refusal to consider a payment plan and the aggressive tone further support the classification as a serious violation.",
+      "tokens": 775
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:52:11.480992"
+  },
+  {
+    "conversation_id": "conv_082",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's insistence on immediate payment, despite the customer's expressed financial hardship, constitutes a serious violation of compliance standards. The language used by the agent can be interpreted as demeaning and abusive, particularly in the context of the customer's situation. This aligns with the definitions of a high severity violation, as it misrepresents the consequences of non-payment and applies undue pressure on the customer.",
+      "tokens": 748
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's insistence on immediate payment, despite the customer's expressed financial hardship, constitutes a serious violation of compliance standards. The language used by the agent can be interpreted as demeaning and significantly misrepresents the consequences of non-payment, which aligns with the definitions of a high severity violation. The pressure placed on the customer to pay immediately, without acknowledging their situation, further supports this classification.",
+      "tokens": 746
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:52:20.188621"
+  },
+  {
+    "conversation_id": "conv_086",
+    "layer1_detected": "medium",
+    "sitting_between": "low and medium",
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statement, 'I understand where you\u2019re coming from, but sorting this out sooner would be really beneficial,' indicates a level of pressure on the customer to resolve the debt quickly, which aligns with the definition of a medium violation. The agent is not acknowledging the customer's expressed hardship adequately and is pushing for a resolution without offering options, which is a clear violation of the guidelines. Therefore, the severity is classified as medium rather than low.",
+      "tokens": 808
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statement about sorting out the payment sooner being beneficial indicates a clear pressure on the customer to act quickly, which aligns with a medium severity violation. The agent did not acknowledge the customer's expressed hardship adequately, which is a requirement for compliance. This suggests a definite pressure on the customer, rather than a minor mistake or subtle pressure that would characterize a low severity violation.",
+      "tokens": 790
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.85,
+    "timestamp": "2026-02-19T18:52:32.033267"
+  },
+  {
+    "conversation_id": "conv_088",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in statements like 'that's not my concern' and 'you\u2019ll regret it,' which indicate a serious violation of compliance standards. Additionally, the agent misrepresents the consequences of non-payment, suggesting that the customer's credit will be 'destroyed forever' and that they will face 'serious action' if payment is not made immediately. These factors align with the definitions of a high severity violation, as they reflect significant pressure and misrepresentation of consequences.",
+      "tokens": 884
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in statements like 'that's not my concern' and 'you\u2019ll regret it,' which indicate a lack of empathy towards the customer's hardship. Additionally, the agent misrepresents the consequences of non-payment by suggesting that the customer's credit will be 'destroyed forever' and that they will face 'serious action' if payment is not made immediately. These factors align with the definitions of a high severity violation, as they involve significant misrepresentation and abusive language.",
+      "tokens": 882
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:52:49.946128"
+  },
+  {
+    "conversation_id": "conv_099",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a serious violation as they pressure the customer to make an immediate payment and misrepresent the consequences of non-payment, suggesting that the customer's credit will suffer significantly if they do not act quickly. This aligns with the definitions of a high severity violation, particularly in relation to R005, which prohibits misrepresentation of consequences. Given the context and the confirmed violation, the higher severity level is warranted.",
+      "tokens": 860
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a serious violation of compliance standards, particularly in how they pressure the customer for immediate payment and misrepresent the consequences of non-payment. Phrases like 'you really should make a payment immediately' and 'your credit will suffer if you don't take action soon' suggest a level of urgency and threat that goes beyond mere pressure, aligning with the definitions of a high severity violation. The agent's failure to acknowledge the customer's hardship further exacerbates the situation, making it a significant breach of compliance.",
+      "tokens": 877
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:52:59.034133"
+  },
+  {
+    "conversation_id": "conv_104",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding payment and threatening potential legal action. The agent's insistence on immediate payment without acknowledging the customer's hardship further supports the classification as a medium severity violation, as it disregards the customer's situation and does not offer any options or understanding.",
+      "tokens": 853
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding immediate payment and threatening potential legal action, which disregards the customer's expressed hardship of losing their job. This aligns with the definitions of a medium severity violation, as it demonstrates a lack of acknowledgment of the customer's situation and a demand for payment without offering options or understanding.",
+      "tokens": 857
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:53:08.243293"
+  },
+  {
+    "conversation_id": "conv_105",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action and indicated they would report the customer's debt to their employer, which constitutes a severe violation of compliance rules. These actions fall under the definitions of a critical violation as they involve explicit threats and potential harm to the customer's employment, which is not permissible without proper authorization and policy adherence.",
+      "tokens": 877
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action and indicated they would report the customer's debt situation to their employer, which constitutes a severe violation of compliance rules. These actions fall under the definitions of a critical violation as they involve explicit threats of legal consequences and contacting third parties without consent, which is strictly prohibited.",
+      "tokens": 871
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:53:13.737842"
+  },
+  {
+    "conversation_id": "conv_127",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'Understanding? Ha! You need to wake up' and 'This isn't a charity.' These comments not only disregard the customer's hardship but also create a hostile environment. Additionally, the agent misrepresents the consequences of non-payment by suggesting that the customer will 'never get a loan again' and that their credit score will 'sink like a rock,' which aligns with the criteria for a high severity violation.",
+      "tokens": 851
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'Understanding? Ha! You need to wake up.' This indicates a serious violation of R003. Additionally, the agent misrepresents the consequences of non-payment by stating that the customer's credit score will 'sink like a rock' if they do not pay immediately, which aligns with R005. The overall tone and content of the conversation suggest a high level of severity due to the agent's aggressive and dismissive attitude towards the customer's hardship.",
+      "tokens": 855
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:53:53.038927"
+  },
+  {
+    "conversation_id": "conv_130",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in statements like 'That's your problem, not ours' and 'I\u2019ll have to recommend you for legal action, and believe me, that\u2019s going to ruin your life.' This behavior not only disregards the customer's hardship but also misrepresents the consequences of non-payment, which aligns with the definitions for a high severity violation. Given the confirmed violation and the nature of the agent's comments, the higher severity level is warranted.",
+      "tokens": 766
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in the statement 'That's your problem, not ours. You think we care about your sob story?' This clearly violates R003, which prohibits the use of abusive language. Additionally, the threat of legal action and the statement 'that\u2019s going to ruin your life' significantly misrepresents the consequences of non-payment, aligning with R005. Given the severity of the agent's comments and the potential impact on the customer, this is classified as a high violation.",
+      "tokens": 769
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.9,
+    "timestamp": "2026-02-19T18:54:11.475042"
+  },
+  {
+    "conversation_id": "conv_131",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer to pay immediately, despite the customer's expressed hardship. The agent's insistence on urgency and the threat of legal action if payment is not made by the next day exemplifies a clear violation of R004, which prohibits demanding immediate payment in a threatening manner. Given the context and the confirmed violation, the severity is appropriately classified as medium.",
+      "tokens": 788
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer to pay immediately, despite the customer's expressed hardship of being recently laid off. The agent's insistence on urgency and the threat of legal action if payment is not made by the next day exemplifies a medium severity violation, as it disregards the customer's situation and fails to offer any options or understanding.",
+      "tokens": 778
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:54:20.037976"
+  },
+  {
+    "conversation_id": "conv_133",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements included threats of legal action and the potential destruction of the customer's credit, which significantly misrepresents the consequences of non-payment. This behavior aligns with the definitions of a serious violation, as it is abusive and demeaning, particularly given the customer's expressed hardship of losing their job. Therefore, the severity level is classified as high.",
+      "tokens": 843
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements included threats of legal action and the potential for contacting the customer's employer or family, which are serious violations of compliance rules. These actions not only misrepresent the consequences of non-payment but also create an abusive environment for the customer, who is already in a vulnerable financial situation. The language used by the agent is demeaning and significantly escalates the pressure on the customer, aligning with the definitions of a high severity violation.",
+      "tokens": 858
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.9,
+    "timestamp": "2026-02-19T18:54:35.167197"
+  },
+  {
+    "conversation_id": "conv_145",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding their debt situation. The mention of involving the legal team and contacting the employer about the debt demonstrates a lack of acknowledgment of the customer's hardship and constitutes a clear violation of the medium severity level. While the violation is not at the critical level, it is more than a minor mistake, thus justifying the medium classification.",
+      "tokens": 759
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding their debt situation. The agent's mention of involving a legal team and contacting the employer demonstrates a lack of sensitivity to the customer's hardship, which aligns with the definitions of a medium severity violation. This is not a minor mistake but rather a clear breach of appropriate conduct in debt collection practices.",
+      "tokens": 750
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:54:56.853314"
+  },
+  {
+    "conversation_id": "conv_146",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'That's not an excuse' and 'This is a joke,' which belittle the customer's situation. Additionally, the agent misrepresents the consequences of non-payment by suggesting that the customer will ruin their credit for life without acknowledging their hardship. This aligns with the criteria for a high severity violation, as it involves serious misconduct that significantly impacts the customer's emotional well-being and understanding of the situation.",
+      "tokens": 816
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is both abusive and demeaning, as evidenced by statements like 'That's not an excuse' and 'This is a joke,' which belittle the customer's situation. Additionally, the agent misrepresents the consequences of non-payment by suggesting that the customer's credit will be ruined for life without providing any context or options for resolution. This aligns with the definitions of a high severity violation, as it involves serious misconduct that significantly impacts the customer's emotional state and understanding of their situation.",
+      "tokens": 817
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:55:11.596288"
+  },
+  {
+    "conversation_id": "conv_150",
+    "layer1_detected": "medium",
+    "sitting_between": "low and medium",
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's insistence on immediate payment, despite the customer's expressed hardship, constitutes a clear violation of compliance standards. The agent's language suggests definite pressure and a lack of acknowledgment of the customer's situation, aligning with the criteria for a medium severity violation. While the violation is not as severe as those classified as high or critical, it is more than a minor mistake, thus justifying the medium classification.",
+      "tokens": 775
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's insistence on immediate payment, despite the customer's expressed hardship, constitutes a clear violation of compliance standards. The agent's language suggests a level of pressure that disregards the customer's situation, aligning with the criteria for a medium severity violation. The agent's failure to offer options or acknowledge the customer's difficulties further supports this classification.",
+      "tokens": 758
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:55:34.151036"
+  },
+  {
+    "conversation_id": "conv_151",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'that's not our problem' and 'you better find a way to cough up the cash quickly or you\u2019re going to regret it big time.' This behavior not only disregards the customer's hardship but also significantly misrepresents the consequences of non-payment, which aligns with the criteria for a high severity violation.",
+      "tokens": 772
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in statements like 'that's not our problem' and 'you better find a way to cough up the cash quickly or you\u2019re going to regret it big time.' This behavior not only disregards the customer's expressed hardship but also significantly misrepresents the consequences of non-payment, which aligns with the definitions for a high severity violation. The agent's approach creates a threatening atmosphere, which is indicative of serious violations in debt collection practices.",
+      "tokens": 789
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:55:53.079424"
+  },
+  {
+    "conversation_id": "conv_153",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.9,
+      "reasoning": "The agent explicitly mentioned the possibility of escalating the situation to legal action, which constitutes a severe violation as per the definitions provided. This aligns with the criteria for a critical violation, as it involves threats of legal action that are not authorized and can cause significant distress to the customer. The language used by the agent indicates a clear intent to intimidate rather than to assist, further supporting the classification as critical.",
+      "tokens": 882
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.85,
+      "reasoning": "The agent explicitly mentioned the possibility of escalating the situation to legal action, which constitutes a direct threat of legal consequences. This aligns with the definitions of a critical violation, as it involves threats of legal action without proper authorization or policy compliance. The agent's statements could be perceived as coercive, especially given the customer's expressed financial hardship, further emphasizing the severity of the violation.",
+      "tokens": 873
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:55:59.487527"
+  },
+  {
+    "conversation_id": "conv_155",
+    "layer1_detected": "medium",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's language is demeaning and abusive, particularly in statements like 'That's not my problem' and 'Your life is going to get a whole lot harder.' This indicates a serious violation of the standards for respectful communication in debt collection. Additionally, the agent misrepresents the consequences of non-payment, suggesting that the customer's credit will be 'wrecked' and that they will be 'begging for loans in the future,' which aligns with the criteria for a high severity violation.",
+      "tokens": 786
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.85,
+      "reasoning": "The agent's language is demeaning and dismissive of the customer's hardship, which aligns with the criteria for a high severity violation. Phrases like 'That's not my problem' and 'your life is going to get a whole lot harder' indicate a serious lack of empathy and an abusive tone. Additionally, the agent misrepresents the consequences of non-payment by suggesting that the customer's future will be dire without acknowledging their current situation, which further supports the classification as a high violation.",
+      "tokens": 782
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.85,
+    "timestamp": "2026-02-19T18:56:06.079316"
+  },
+  {
+    "conversation_id": "conv_156",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding their financial obligation and the potential consequences of non-payment, including threats of legal action and wage garnishment. This behavior aligns with the definitions of a medium severity violation, as it disregards the customer's expressed hardship and does not offer any options for resolution, which is a formal warning territory.",
+      "tokens": 871
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding their financial obligation and threatening legal action, which is not permitted without proper authorization. The agent's insistence on immediate payment and the mention of wage garnishment further demonstrate a lack of acknowledgment of the customer's hardship, aligning with the definitions of a medium severity violation.",
+      "tokens": 863
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:56:21.558039"
+  },
+  {
+    "conversation_id": "conv_164",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'you better come up with the full amount, or we\u2019ll have no choice but to ruin your financial future.' This not only pressures the customer but also misrepresents the consequences of non-payment, which aligns with the criteria for a high severity violation. Given the confirmed violation and the nature of the agent's comments, the higher severity level is warranted.",
+      "tokens": 783
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'you better come up with the full amount, or we\u2019ll have no choice but to ruin your financial future.' This not only pressures the customer but also misrepresents the consequences of non-payment, indicating a serious violation of compliance standards. The agent's refusal to acknowledge the customer's hardship further exacerbates the severity of the violation.",
+      "tokens": 775
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:56:42.412323"
+  },
+  {
+    "conversation_id": "conv_166",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'that's not my problem' and 'you should have thought about that before you racked up the debt.' Additionally, the agent significantly misrepresents the consequences of non-payment by stating that the customer's credit score will be ruined forever, which aligns with the criteria for a high severity violation. Given the clear abusive tone and misrepresentation of consequences, the higher severity level is warranted.",
+      "tokens": 772
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in statements like 'that's not my problem' and 'you should have thought about that before you racked up the debt.' This behavior not only disregards the customer's hardship but also creates a threatening atmosphere regarding the consequences of non-payment, which aligns with the definitions of a serious violation. The agent's insistence on immediate payment without offering options further supports the high severity classification.",
+      "tokens": 764
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.9,
+    "timestamp": "2026-02-19T18:56:48.581913"
+  },
+  {
+    "conversation_id": "conv_170",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements include explicit threats of legal action, such as potential wage garnishment and contacting the employer about the debt, which fall under the definitions of a CRITICAL violation. The language used indicates a severe level of intimidation and pressure on the customer, which is not permissible under compliance regulations.",
+      "tokens": 915
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent's statements included explicit threats of legal action, such as wage garnishment and contacting the employer about the debt, which fall under the definitions of a critical violation. These actions are not only severe but also violate multiple compliance rules (R001 and R002) regarding threats of legal action and contacting third parties without consent. The language used by the agent indicates an immediate escalation of the situation, confirming the critical nature of the violation.",
+      "tokens": 940
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:56:59.444935"
+  },
+  {
+    "conversation_id": "conv_174",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The violation is classified as medium due to the agent's clear pressure tactics, including threats of legal action and wage garnishment, which ignore the customer's expressed hardship of losing their job. The agent's insistence on immediate payment without offering viable options or acknowledging the customer's situation constitutes a definite violation of compliance standards, aligning with the definitions provided for medium severity.",
+      "tokens": 872
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate clear pressure on the customer to make an immediate payment, despite the customer's expressed hardship of losing their job. The agent's insistence on a good faith payment and the threat of legal action, including wage garnishment, demonstrate a violation of compliance standards that prioritize the acknowledgment of customer hardship. This behavior aligns with the definitions of a medium severity violation, as it reflects a clear disregard for the customer's situation and does not offer reasonable options for resolution.",
+      "tokens": 892
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.85,
+    "timestamp": "2026-02-19T18:57:05.618800"
+  },
+  {
+    "conversation_id": "conv_175",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'You better come up with the money or your credit is going to be wrecked for good' and 'You\u2019ll wish you had acted sooner when this hits your credit score.' These comments not only pressure the customer but also misrepresent the consequences of non-payment, which aligns with the criteria for a high severity violation. Given the confirmed violation and the nature of the agent's remarks, the higher severity level is warranted.",
+      "tokens": 866
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'you better come up with the money or your credit is going to be wrecked for good' and 'you should have thought about that before.' These comments not only pressure the customer but also misrepresent the consequences of non-payment, indicating a serious violation of compliance standards. The agent's refusal to discuss a payment plan further exacerbates the situation, aligning with the criteria for a high severity violation.",
+      "tokens": 859
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:57:12.053251"
+  },
+  {
+    "conversation_id": "conv_183",
+    "layer1_detected": "critical",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "critical",
+      "confidence": 0.9,
+      "reasoning": "The agent explicitly threatened legal action and indicated that failure to pay would lead to serious consequences, which aligns with the definitions of a critical violation. The language used by the agent suggests an immediate escalation of the situation, as they stated that it would become 'a lot messier' if the customer did not comply, thus constituting a severe violation under the compliance rules.",
+      "tokens": 857
+    },
+    "judge2": {
+      "severity": "critical",
+      "confidence": 0.95,
+      "reasoning": "The agent explicitly threatened legal action and indicated that the situation would become 'messy' if the customer did not pay, which constitutes a severe violation of compliance rules. The language used by the agent suggests an immediate escalation of consequences, aligning with the definitions of a critical violation. The threats made are not only direct but also imply severe repercussions, which is a clear breach of the guidelines.",
+      "tokens": 858
+    },
+    "judges_agree": true,
+    "final_severity": "critical",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:57:19.612623"
+  },
+  {
+    "conversation_id": "conv_185",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements about escalating the situation and involving lawyers constitute clear pressure on the customer, especially given the customer's expressed hardship. This aligns with the definitions of a medium violation, as it demonstrates a lack of acknowledgment of the customer's difficulties and a demand for immediate payment, which is inappropriate in this context. The presence of threats regarding legal action further supports the higher severity level.",
+      "tokens": 814
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements about escalating the situation and involving lawyers clearly indicate a level of pressure that goes beyond a minor mistake. The agent did not acknowledge the customer's hardship adequately and instead focused on threats of legal action, which aligns with the definitions of a medium violation. The conversation reflects a disregard for the customer's financial struggles, making it a formal warning territory.",
+      "tokens": 807
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:57:25.091333"
+  },
+  {
+    "conversation_id": "conv_191",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.9,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'You think I care about your sob story?' and 'we'll make your life a living hell.' This behavior not only disregards the customer's hardship but also significantly misrepresents the consequences of non-payment, which aligns with the definitions of a high severity violation. Given the confirmed violation and the nature of the agent's comments, the higher severity level is warranted.",
+      "tokens": 782
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'you think I care about your sob story?' and 'we'll make your life a living hell.' This behavior not only disregards the customer's hardship but also creates a threatening atmosphere, which aligns with the criteria for a high severity violation. The agent's refusal to acknowledge the customer's situation and the use of aggressive language further support this classification.",
+      "tokens": 774
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.925,
+    "timestamp": "2026-02-19T18:57:31.198357"
+  },
+  {
+    "conversation_id": "conv_192",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in statements like 'That's not my problem' and 'You think we care about your job situation?' which disregard the customer's hardship. Additionally, the agent misrepresents the consequences of non-payment by stating that the customer's credit will be 'destroyed forever' and threatening legal action, which aligns with the criteria for a high severity violation.",
+      "tokens": 907
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, particularly in statements like 'That's not my problem' and 'You think we care about your job situation?' which disregard the customer's hardship. Additionally, the agent misrepresents the consequences of non-payment by implying that the customer's credit will be 'destroyed forever' and threatening legal action without offering any options for resolution. These factors align with the definitions of a high severity violation, as they demonstrate serious misconduct and a lack of empathy towards the customer's situation.",
+      "tokens": 926
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:57:41.866854"
+  },
+  {
+    "conversation_id": "conv_195",
+    "layer1_detected": "high",
+    "sitting_between": "medium and high",
+    "judge1": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'That's not my concern' and 'No one wants to deal with your excuses.' This behavior not only disregards the customer's hardship but also creates a hostile environment, which aligns with the criteria for a serious violation. Additionally, the agent misrepresents the consequences of non-payment by implying that the customer's credit will be ruined forever, which is an exaggeration of the actual consequences and falls under the definition of a high severity violation.",
+      "tokens": 855
+    },
+    "judge2": {
+      "severity": "high",
+      "confidence": 0.95,
+      "reasoning": "The agent's language is abusive and demeaning, as evidenced by statements like 'You think I care?' and 'No one wants to deal with your excuses.' This behavior not only disregards the customer's hardship but also creates a hostile environment, which aligns with the criteria for a serious violation. Additionally, the agent misrepresents the consequences of non-payment by implying that the customer's credit will be ruined forever without acknowledging any potential for negotiation or understanding, further supporting a high severity classification.",
+      "tokens": 847
+    },
+    "judges_agree": true,
+    "final_severity": "high",
+    "avg_confidence": 0.95,
+    "timestamp": "2026-02-19T18:57:57.637114"
+  },
+  {
+    "conversation_id": "conv_198",
+    "layer1_detected": "medium",
+    "sitting_between": null,
+    "judge1": {
+      "severity": "medium",
+      "confidence": 0.9,
+      "reasoning": "The agent's statements indicate clear pressure on the customer to make immediate payment, despite the customer's expressed hardship of being unemployed. The agent's threats of escalating the situation and potentially informing the employer about the debt further demonstrate a violation of compliance standards, particularly in relation to R004 and R002. Given the nature of the threats and the lack of acknowledgment of the customer's financial difficulties, this situation aligns more closely with a medium severity level rather than a low one.",
+      "tokens": 840
+    },
+    "judge2": {
+      "severity": "medium",
+      "confidence": 0.85,
+      "reasoning": "The agent's statements indicate a clear violation of compliance standards by applying definite pressure on the customer regarding immediate payment and threatening to escalate the situation, including potentially informing the customer's employer. This behavior disregards the customer's expressed hardship of being unemployed and does not offer any options for resolution, which aligns with the definitions of a medium severity violation.",
+      "tokens": 812
+    },
+    "judges_agree": true,
+    "final_severity": "medium",
+    "avg_confidence": 0.875,
+    "timestamp": "2026-02-19T18:58:08.000558"
+  }
+]
