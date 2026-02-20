@@ -124,20 +124,59 @@ def format_rules_for_prompt(rules_data: Dict) -> str:
     )
 
 
+def pick_rule_for_severity(rules_data: Dict, severity: str) -> Optional[Dict]:
+    """
+    Pick a random rule matching the target severity level.
+    For compliant conversations, no specific rule is violated.
+    """
+    if severity == 'compliant':
+        return None
+
+    # Map severity labels to rule severities
+    severity_map = {
+        'low':      ['medium'],       # low violations often bend medium rules slightly
+        'medium':   ['medium'],
+        'high':     ['high'],
+        'critical': ['critical']
+    }
+
+    target_severities = severity_map.get(severity, [severity])
+    matching_rules = [
+        r for r in rules_data.get('rules', [])
+        if r['severity'] in target_severities
+    ]
+
+    if not matching_rules:
+        # Fall back to any rule
+        matching_rules = rules_data.get('rules', [])
+
+    return random.choice(matching_rules) if matching_rules else None
+
+
 def generate_conversation(
     client,
     model: str,
     prompt_template: str,
     rules_text: str,
     severity: str,
-    conv_id: str
+    conv_id: str,
+    target_rule: Optional[Dict] = None
 ) -> Optional[Dict]:
     """Generate one conversation at a specific severity level."""
     cfg = SEVERITY_INSTRUCTIONS[severity]
 
+    # Add specific rule context to the instruction if a target rule was provided
+    rule_context = ""
+    if target_rule:
+        rule_context = (
+            f"\n\nSpecifically violate this rule:\n"
+            f"**{target_rule['id']}** ({target_rule['severity'].upper()}): "
+            f"{target_rule['description']}"
+        )
+
     prompt = prompt_template.replace("{{RULES}}", rules_text)
     prompt = prompt.replace("{{TYPE}}", severity)
-    prompt = prompt.replace("{{TYPE_INSTRUCTIONS}}", cfg["instruction"])
+    prompt = prompt.replace("{{TYPE_INSTRUCTIONS}}", cfg["instruction"] + rule_context)
 
     try:
         response = client.chat.completions.create(
@@ -195,6 +234,7 @@ def generate_all(
     model: str,
     prompt_template: str,
     rules_text: str,
+    rules_data: Dict,
     total: int = 200
 ) -> Tuple[List[Dict], List[Dict], int]:
     """
@@ -221,8 +261,13 @@ def generate_all(
 
         for i in range(count):
             conv_id = f"conv_{conv_counter:03d}"
+
+            # Pick a specific rule to violate for non-compliant conversations
+            target_rule = pick_rule_for_severity(rules_data, severity)
+
             conv = generate_conversation(
-                client, model, prompt_template, rules_text, severity, conv_id
+                client, model, prompt_template, rules_text,
+                severity, conv_id, target_rule
             )
 
             if conv and validate_conversation(conv):
@@ -230,7 +275,8 @@ def generate_all(
                 ground_truth.append({
                     "conversation_id": conv_id,
                     "label": SEVERITY_INSTRUCTIONS[severity]["label"],
-                    "generation_type": severity
+                    "violated_rule_id": target_rule['id'] if target_rule else None,
+                    "violated_rule_description": target_rule['description'] if target_rule else None
                 })
                 conv_counter += 1
 
@@ -271,10 +317,19 @@ def save_ground_truth(ground_truth: List[Dict]):
 
     # Print label distribution
     from collections import Counter
-    counts = Counter(gt['label'] for gt in ground_truth)
+    label_counts = Counter(gt['label'] for gt in ground_truth)
+    rule_counts  = Counter(
+        gt['violated_rule_id'] for gt in ground_truth
+        if gt.get('violated_rule_id')
+    )
+
     print("\n   Label distribution:")
-    for label, count in sorted(counts.items()):
+    for label, count in sorted(label_counts.items()):
         print(f"   {label:10}: {count}")
+
+    print("\n   Rule distribution (violated rules):")
+    for rule_id, count in sorted(rule_counts.items()):
+        print(f"   {rule_id:10}: {count}")
 
     print("\n   ⚠️  Use ground_truth.json for evaluation ONLY — not for training")
 
@@ -303,7 +358,7 @@ def main():
         return
 
     conversations, ground_truth, tokens = generate_all(
-        client, model, prompt_template, rules_text, total=total
+        client, model, prompt_template, rules_text, rules_data, total=total
     )
 
     save_conversations(conversations)

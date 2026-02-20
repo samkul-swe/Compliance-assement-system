@@ -1,25 +1,17 @@
 """
-Layer 1: Semantic Compliance Checker (Centroid Based)
+Layer 1: Semantic Compliance Checker (Centroid + Learned Boundaries)
 
 Architecture:
-    Step 1 — Binary check: is this sentence in violation space?
-             Cosine similarity against compliant centroid vs violation centroid
-             Below threshold → compliant, done
+    Step 1 — Binary check: is this message in violation space?
+             Compare against combined violation centroid vs compliant centroid
 
-    Step 2 — Severity: which severity level is this closest to?
-             Compare against critical/high/medium/low centroids
-             Clear winner → auto flag with severity
-             Ambiguous (close scores, near boundary) → Layer 2
+    Step 2 — Severity classification via ThresholdLearner:
+             Learned min/max boundaries per severity from training examples
+             Score falls in a range → that severity
+             Score near boundary → Layer 2
 
-Why centroids:
-    Stays entirely in SBERT's vector space
-    Respects the geometry SBERT already learned
-    No training needed — just averaging known example vectors
-    Severity classification emerges from proximity, not imposed boundaries
-
-Uses base SBERT model (not fine tuned) — general English embeddings
-are well suited for centroid proximity. The fine tuned model collapsed
-because cross-rule same-severity pairs pulled unrelated violations together.
+Uses base SBERT model (all-MiniLM-L6-v2)
+ThresholdLearner learns boundaries from SEVERITY_EXAMPLES at startup
 """
 
 import json
@@ -34,6 +26,8 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 
+from threshold_learner import ThresholdLearner
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -42,14 +36,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# ─────────────────────────────────────────────
-# Severity examples — grouped by severity level
-# Used to compute centroids at startup
-# ─────────────────────────────────────────────
-
 SEVERITY_EXAMPLES = {
     'critical': [
-        # R001 — Legal threats
         "We're going to sue you if you don't pay",
         "I'll have your wages garnished",
         "We're sending this to our lawyers",
@@ -62,7 +50,6 @@ SEVERITY_EXAMPLES = {
         "A county court judgment will be filed against you",
         "We will begin legal proceedings immediately",
         "You can be imprisoned for ignoring this debt",
-        # R002 — Third party threats
         "We'll contact your family about this debt",
         "Your employer will be notified",
         "We're going to call your boss",
@@ -75,7 +62,6 @@ SEVERITY_EXAMPLES = {
         "We have your employer's details and will be in touch",
     ],
     'high': [
-        # R003 — Abusive / demeaning
         "That's not our problem, figure it out yourself",
         "This is your fault for not paying",
         "I don't care about your excuses",
@@ -86,7 +72,6 @@ SEVERITY_EXAMPLES = {
         "You're being deliberately difficult about this",
         "I find your attitude quite unacceptable",
         "Other customers manage to pay, why can't you",
-        # R005 — Misrepresenting consequences
         "Your credit will be ruined forever",
         "You'll never get a loan again",
         "We're going to destroy your credit rating",
@@ -99,7 +84,6 @@ SEVERITY_EXAMPLES = {
         "Your financial life is essentially over if this isn't paid",
     ],
     'medium': [
-        # R004 — Demanding immediate payment
         "You need to pay immediately",
         "Pay right now or face consequences",
         "We need payment in full by tomorrow",
@@ -110,7 +94,6 @@ SEVERITY_EXAMPLES = {
         "We cannot accept anything less than full payment now",
         "You have to clear this immediately, no options",
         "We require same-day payment of the full amount",
-        # R006 — Ignoring hardship
         "That's not relevant to what we're discussing",
         "Your personal circumstances don't change what you owe",
         "We can't consider personal situations, the debt is the debt",
@@ -175,22 +158,21 @@ SEVERITY_ORDER = ['compliant', 'low', 'medium', 'high', 'critical']
 class ComplianceViolation:
     rule_id: str
     category: str
-    severity: str                    # severity from nearest centroid
+    severity: str
     description: str
     message_index: int
     matched_text: str
-    similarity_score: float          # similarity to nearest violation centroid
-    centroid_similarities: Dict      # similarity to ALL centroids — for transparency
+    similarity_score: float
 
 
 @dataclass
 class ComplianceResult:
     conversation_id: str
     compliant: bool
-    detected_severity: Optional[str] # None if compliant
-    severity_confidence: float        # gap between top and second centroid
+    detected_severity: Optional[str]
+    severity_confidence: float
     needs_llm_review: bool
-    sitting_between: Optional[str]    # e.g. "high and critical" if near boundary
+    sitting_between: Optional[str]
     violations: List[ComplianceViolation]
     evidence: List[str]
     agent_message_count: int
@@ -213,9 +195,6 @@ class ComplianceResult:
                     'message_index': v.message_index,
                     'matched_text': v.matched_text,
                     'similarity_score': float(v.similarity_score),
-                    'centroid_similarities': {
-                        k: float(val) for k, val in v.centroid_similarities.items()
-                    }
                 }
                 for v in self.violations
             ],
@@ -239,158 +218,42 @@ class ConfigLoader:
     def load_config(config_file: str = "config/severity_confidence.json") -> Dict:
         path = Path(config_file)
         if not path.exists():
-            logger.warning(f"Config not found, using defaults")
-            return ConfigLoader._defaults()
+            return {'boundary_margin': 0.04}
         with open(path, 'r', encoding='utf-8') as f:
             return json.load(f)
 
-    @staticmethod
-    def _defaults() -> Dict:
-        return {
-            # Minimum similarity to nearest violation centroid
-            # to be considered a violation at all
-            "violation_threshold": 0.55,
-
-            # Minimum gap between top and second centroid similarity
-            # Below this → ambiguous severity → Layer 2
-            "severity_gap_threshold": 0.08,
-
-            # If score sits within this margin of a severity boundary
-            # → Layer 2 to confirm severity
-            "boundary_margin": 0.04
-        }
-
 
 class SemanticComplianceChecker:
-    """
-    Layer 1: Centroid based compliance checker.
-
-    Step 1 — Binary violation check:
-        Compare each agent message against the violation centroid
-        and compliant centroid. If closer to compliant → pass.
-
-    Step 2 — Severity classification:
-        Compare against all severity centroids.
-        Closest centroid = detected severity.
-        Gap between top two = confidence in that severity.
-        Narrow gap → ambiguous → Layer 2.
-    """
 
     def __init__(self,
                  rules_file: str = "data/compliance_rules.json",
                  config_file: str = "config/severity_confidence.json"):
 
-        logger.info("Initializing Centroid Based Compliance Checker...")
+        logger.info("Initializing Compliance Checker...")
 
         self.rules_data = ConfigLoader.load_compliance_rules(rules_file)
         self.config = ConfigLoader.load_config(config_file)
         self.rules = {r['id']: r for r in self.rules_data['rules']}
+        self.severity_rank = {s: i for i, s in enumerate(SEVERITY_ORDER)}
 
-        # Always use base model — centroid approach leverages
-        # SBERT's existing geometry without forcing new boundaries
-        logger.info("Loading base SBERT model...")
+        logger.info("Loading SBERT model...")
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         logger.info("Model loaded ✓")
 
-        self._build_centroids()
+        # Learn severity ranges from training examples
+        # Each phrase gets scored against violation pool
+        # Min/max per severity = learned range on compliance spectrum
+        self.threshold_learner = ThresholdLearner(
+            model=self.model,
+            severity_examples=SEVERITY_EXAMPLES
+        )
+        self.threshold_learner.save_ranges()
+
         logger.info("✅ Checker initialized\n")
-
-    def _build_centroids(self):
-        """
-        Compute one centroid vector per severity level.
-        Centroid = mean of all example vectors for that severity.
-
-        This is done once at startup. No training required.
-        The centroid represents the average position of that
-        severity level in SBERT's vector space.
-        """
-        logger.info("Computing severity centroids...")
-        self.centroids = {}
-
-        for severity, phrases in SEVERITY_EXAMPLES.items():
-            embeddings = self.model.encode(phrases, convert_to_numpy=True)
-            # Mean across all phrase vectors → one centroid vector
-            self.centroids[severity] = np.mean(embeddings, axis=0)
-            logger.info(f"  {severity}: centroid from {len(phrases)} examples")
-
-        # Also compute a combined violation centroid
-        # (all non-compliant examples averaged together)
-        # Used for Step 1 binary check
-        all_violation_phrases = [
-            p for sev, phrases in SEVERITY_EXAMPLES.items()
-            if sev != 'compliant'
-            for p in phrases
-        ]
-        all_violation_embeddings = self.model.encode(
-            all_violation_phrases, convert_to_numpy=True
-        )
-        self.violation_centroid = np.mean(all_violation_embeddings, axis=0)
-        self.compliant_centroid = self.centroids['compliant']
-
-        logger.info("Centroids computed ✓")
-
-    def _get_centroid_similarities(self, embedding: np.ndarray) -> Dict[str, float]:
-        """
-        Compute cosine similarity between a sentence embedding
-        and every severity centroid.
-
-        Returns dict: severity → similarity score
-        """
-        sims = {}
-        for severity, centroid in self.centroids.items():
-            sim = cosine_similarity(
-                embedding.reshape(1, -1),
-                centroid.reshape(1, -1)
-            )[0][0]
-            sims[severity] = round(float(sim), 3)
-        return sims
-
-    def _classify_severity(
-        self,
-        centroid_sims: Dict[str, float]
-    ) -> Tuple[str, float, Optional[str]]:
-        """
-        Classify severity from centroid similarities.
-
-        Returns:
-            detected_severity: the closest severity level
-            confidence: gap between top and second similarity
-            sitting_between: string if near a boundary, else None
-
-        The confidence gap tells you how decisive the classification is:
-            Large gap  → clear winner → confident auto-decide
-            Small gap  → two severities very close → ambiguous → Layer 2
-        """
-        # Sort severities by similarity (highest first)
-        sorted_sims = sorted(
-            centroid_sims.items(),
-            key=lambda x: x[1],
-            reverse=True
-        )
-
-        best_severity, best_score = sorted_sims[0]
-        second_severity, second_score = sorted_sims[1]
-
-        # Confidence = gap between top two
-        confidence_gap = best_score - second_score
-
-        # Check if sitting near a boundary between two adjacent severities
-        sitting_between = None
-        margin = self.config.get('boundary_margin', 0.04)
-
-        best_idx = SEVERITY_ORDER.index(best_severity)
-        second_idx = SEVERITY_ORDER.index(second_severity)
-
-        # Are these two adjacent severity levels?
-        if abs(best_idx - second_idx) == 1 and confidence_gap < margin * 2:
-            lower = SEVERITY_ORDER[min(best_idx, second_idx)]
-            upper = SEVERITY_ORDER[max(best_idx, second_idx)]
-            sitting_between = f"{lower} and {upper}"
-
-        return best_severity, confidence_gap, sitting_between
 
     def check_conversation(self, conversation: Dict) -> ComplianceResult:
         conv_id = conversation['conversation_id']
+        boundary_margin = self.config.get('boundary_margin', 0.04)
 
         agent_messages = [
             (i, msg['text'])
@@ -415,55 +278,27 @@ class SemanticComplianceChecker:
         agent_texts = [text for _, text in agent_messages]
         agent_embeddings = self.model.encode(agent_texts, convert_to_numpy=True)
 
-        violation_threshold = self.config.get('violation_threshold', 0.55)
-        severity_gap_threshold = self.config.get('severity_gap_threshold', 0.08)
-
         violations = []
         evidence_list = []
 
         for (orig_idx, msg_text), agent_emb in zip(agent_messages, agent_embeddings):
 
-            # ── Step 1: Binary check ──
-            # Is this message closer to violation space or compliant space?
-            violation_sim = cosine_similarity(
-                agent_emb.reshape(1, -1),
-                self.violation_centroid.reshape(1, -1)
-            )[0][0]
+            # ── Step 1 + Step 2 combined via ThresholdLearner ──
+            # classify() finds the closest severity centroid directly
+            # If closest is compliant → not a violation → skip
+            detected_severity, best_score, sitting_between = \
+                self.threshold_learner.classify(agent_emb, boundary_margin)
 
-            compliant_sim = cosine_similarity(
-                agent_emb.reshape(1, -1),
-                self.compliant_centroid.reshape(1, -1)
-            )[0][0]
-
-            # Not in violation space at all → skip
-            if violation_sim < violation_threshold:
+            if detected_severity == 'compliant':
                 continue
 
-            # Closer to compliant than violation → skip
-            if compliant_sim > violation_sim:
-                continue
-
-            # ── Step 2: Severity classification ──
-            centroid_sims = self._get_centroid_similarities(agent_emb)
-
-            # Exclude compliant from severity classification
-            # (we already know it's a violation from Step 1)
-            violation_sims = {
-                k: v for k, v in centroid_sims.items()
-                if k != 'compliant'
-            }
-
-            detected_severity, confidence_gap, sitting_between = \
-                self._classify_severity(violation_sims)
-
-            # Find which rule this violation most likely relates to
-            # Match detected severity to rules of that severity
+            # Match rule to detected severity
             matching_rules = [
                 r for r in self.rules.values()
                 if r['severity'] == detected_severity
             ]
-            # If no exact match use first rule as placeholder
-            matched_rule = matching_rules[0] if matching_rules else list(self.rules.values())[0]
+            matched_rule = matching_rules[0] if matching_rules \
+                else list(self.rules.values())[0]
 
             violations.append(ComplianceViolation(
                 rule_id=matched_rule['id'],
@@ -472,22 +307,17 @@ class SemanticComplianceChecker:
                 description=matched_rule['description'],
                 message_index=orig_idx,
                 matched_text=msg_text[:100],
-                similarity_score=float(violation_sim),
-                centroid_similarities=centroid_sims
+                similarity_score=float(best_score),
             ))
 
             evidence_list.append(
                 f"{detected_severity.upper()}: \"{msg_text[:80]}...\" "
-                f"(violation_sim: {violation_sim:.3f}, "
-                f"severity_gap: {confidence_gap:.3f}"
+                f"(score: {best_score:.3f}"
                 + (f", near boundary: {sitting_between}" if sitting_between else "")
                 + ")"
             )
 
-        # Overall result
-        compliant = len(violations) == 0
-
-        if compliant:
+        if not violations:
             return ComplianceResult(
                 conversation_id=conv_id,
                 compliant=True,
@@ -501,17 +331,13 @@ class SemanticComplianceChecker:
                 timestamp=datetime.now().isoformat()
             )
 
-        # Escalate if sitting on a boundary between severity levels
-        worst_violation = max(
-            violations,
-            key=lambda v: severity_rank.get(v.severity, 0)
-        )
+        # Take worst violation
+        worst = max(violations, key=lambda v: self.severity_rank.get(v.severity, 0))
 
-        # Re-classify worst violation to get its sitting_between
+        # Re-classify worst to get sitting_between for escalation decision
+        worst_emb = self.model.encode([worst.matched_text], convert_to_numpy=True)[0]
         _, _, sitting_between = self.threshold_learner.classify(
-            self.model.encode([worst_violation.matched_text],
-                              convert_to_numpy=True)[0],
-            boundary_margin=self.config.get('boundary_margin', 0.04)
+            worst_emb, boundary_margin
         )
 
         needs_review = sitting_between is not None
@@ -519,8 +345,8 @@ class SemanticComplianceChecker:
         return ComplianceResult(
             conversation_id=conv_id,
             compliant=False,
-            detected_severity=worst_violation.severity,
-            severity_confidence=round(float(confidence_gap), 3),
+            detected_severity=worst.severity,
+            severity_confidence=float(worst.similarity_score),
             needs_llm_review=needs_review,
             sitting_between=sitting_between,
             violations=violations,
@@ -549,9 +375,9 @@ class OutputGenerator:
 
     def save_all(self, results: List[ComplianceResult]):
         logger.info("\nGenerating outputs...")
-        auto = [r for r in results if not r.needs_llm_review]
+        auto   = [r for r in results if not r.needs_llm_review]
         review = [r for r in results if r.needs_llm_review]
-        self._save_json(auto, "auto_decided.json")
+        self._save_json(auto,   "auto_decided.json")
         self._save_json(review, "llm_review_queue.json")
         self._save_excel(results, "compliance_results.xlsx")
         self._save_statistics(results)
@@ -566,17 +392,16 @@ class OutputGenerator:
     def _save_excel(self, results, filename):
         fp = self.output_dir / filename
         rows = [{
-            'Conversation ID': r.conversation_id,
-            'Compliant': 'YES' if r.compliant else 'NO',
-            'Detected Severity': r.detected_severity or '-',
-            'Severity Confidence': f"{r.severity_confidence:.3f}",
-            'Needs LLM Review': 'YES' if r.needs_llm_review else 'NO',
-            'Sitting Between': r.sitting_between or '-',
-            'Violations': ', '.join(
-                f"{v.rule_id}({v.severity})" for v in r.violations
-            ) or '-',
-            'Agent Messages': r.agent_message_count,
-            'Evidence': '; '.join(r.evidence) or '-'
+            'Conversation ID':    r.conversation_id,
+            'Compliant':          'YES' if r.compliant else 'NO',
+            'Detected Severity':  r.detected_severity or '-',
+            'Severity Score':     f"{r.severity_confidence:.3f}",
+            'Needs LLM Review':   'YES' if r.needs_llm_review else 'NO',
+            'Sitting Between':    r.sitting_between or '-',
+            'Violations':         ', '.join(f"{v.rule_id}({v.severity})"
+                                            for v in r.violations) or '-',
+            'Agent Messages':     r.agent_message_count,
+            'Evidence':           '; '.join(r.evidence) or '-'
         } for r in results]
 
         df = pd.DataFrame(rows)
@@ -585,40 +410,32 @@ class OutputGenerator:
             ws = writer.sheets['Compliance Results']
             for col in ws.columns:
                 col = list(col)
-                width = min(max(len(str(c.value or '')) for c in col) + 2, 60)
-                ws.column_dimensions[col[0].column_letter].width = width
+                w = min(max(len(str(c.value or '')) for c in col) + 2, 60)
+                ws.column_dimensions[col[0].column_letter].width = w
         logger.info(f"  ✓ {fp} (Excel)")
 
     def _save_statistics(self, results):
         total = len(results)
         if total == 0:
-            logger.warning("No results to save statistics for")
             return
-
-        auto = sum(1 for r in results if not r.needs_llm_review)
-        review = sum(1 for r in results if r.needs_llm_review)
+        auto      = sum(1 for r in results if not r.needs_llm_review)
+        review    = sum(1 for r in results if r.needs_llm_review)
         compliant = sum(1 for r in results if r.compliant)
         violations = sum(1 for r in results if not r.compliant)
 
-        severity_counts = defaultdict(int)
+        sev_counts = defaultdict(int)
         for r in results:
             if r.detected_severity:
-                severity_counts[r.detected_severity] += 1
+                sev_counts[r.detected_severity] += 1
 
         stats = {
-            'timestamp': datetime.now().isoformat(),
-            'total_conversations': total,
-            'compliant': compliant,
-            'violations': violations,
-            'auto_decided': {
-                'count': auto,
-                'percentage': round(auto / total * 100, 1)
-            },
-            'llm_review_needed': {
-                'count': review,
-                'percentage': round(review / total * 100, 1)
-            },
-            'violations_by_severity': dict(severity_counts)
+            'timestamp':    datetime.now().isoformat(),
+            'total':        total,
+            'compliant':    compliant,
+            'violations':   violations,
+            'auto_decided': {'count': auto,   'pct': round(auto/total*100, 1)},
+            'llm_review':   {'count': review, 'pct': round(review/total*100, 1)},
+            'by_severity':  dict(sev_counts)
         }
 
         fp = self.output_dir / "statistics.json"
@@ -628,9 +445,9 @@ class OutputGenerator:
 
 
 def main():
-    print("="*70)
-    print("LAYER 1: CENTROID BASED COMPLIANCE CHECKER")
-    print("="*70 + "\n")
+    print("=" * 70)
+    print("LAYER 1: CENTROID + LEARNED BOUNDARY COMPLIANCE CHECKER")
+    print("=" * 70 + "\n")
 
     if not Path("data/conversations.json").exists():
         print("❌ data/conversations.json not found")
@@ -646,28 +463,27 @@ def main():
 
     total = len(results)
     if total == 0:
-        print("No results generated.")
+        print("No results.")
         return
 
-    auto = sum(1 for r in results if not r.needs_llm_review)
-    review = sum(1 for r in results if r.needs_llm_review)
+    auto      = sum(1 for r in results if not r.needs_llm_review)
+    review    = sum(1 for r in results if r.needs_llm_review)
     compliant = sum(1 for r in results if r.compliant)
-    violations_count = sum(1 for r in results if not r.compliant)
+    violations = sum(1 for r in results if not r.compliant)
 
-    severity_counts = defaultdict(int)
+    sev_counts = defaultdict(int)
     for r in results:
         if r.detected_severity:
-            severity_counts[r.detected_severity] += 1
+            sev_counts[r.detected_severity] += 1
 
     print(f"\n{'='*70}\nSUMMARY\n{'='*70}")
     print(f"\n📊 Results:")
-    print(f"  Total:         {total}")
-    print(f"  Compliant:     {compliant} ({compliant/total*100:.1f}%)")
-    print(f"  Violations:    {violations_count} ({violations_count/total*100:.1f}%)")
+    print(f"  Total:      {total}")
+    print(f"  Compliant:  {compliant} ({compliant/total*100:.1f}%)")
+    print(f"  Violations: {violations} ({violations/total*100:.1f}%)")
     print(f"\n🎯 Severity Breakdown:")
     for sev in ['critical', 'high', 'medium', 'low']:
-        count = severity_counts.get(sev, 0)
-        print(f"  {sev:10}: {count}")
+        print(f"  {sev:10}: {sev_counts.get(sev, 0)}")
     print(f"\n⚡ Escalation:")
     print(f"  Auto-decided:  {auto} ({auto/total*100:.1f}%)")
     print(f"  Layer 2 queue: {review} ({review/total*100:.1f}%)")

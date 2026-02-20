@@ -2,1001 +2,1201 @@
   {
     "conversation_id": "conv_001",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_002",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_003",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_004",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_005",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_006",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_007",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_008",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_009",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_010",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_011",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_012",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_013",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_014",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_015",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_016",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_017",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_018",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_019",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_020",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_021",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_022",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_023",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_024",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_025",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_026",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_027",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_028",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_029",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_030",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_031",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_032",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_033",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_034",
     "label": "compliant",
-    "generation_type": "compliant"
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_035",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_036",
-    "label": "low",
-    "generation_type": "low"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_037",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_038",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_039",
-    "label": "low",
-    "generation_type": "low"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_040",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_041",
-    "label": "high",
-    "generation_type": "high"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_042",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_043",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_044",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_045",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_046",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_047",
     "label": "compliant",
-    "generation_type": "compliant"
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_048",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_049",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_050",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_051",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_052",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_053",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_054",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_055",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_056",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_057",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_058",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_059",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_060",
     "label": "compliant",
-    "generation_type": "compliant"
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_061",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_062",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_063",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_064",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_065",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_066",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_067",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_068",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_069",
-    "label": "high",
-    "generation_type": "high"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_070",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_071",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_072",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_073",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_074",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_075",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_076",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_077",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_078",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_079",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_080",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_081",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_082",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_083",
-    "label": "high",
-    "generation_type": "high"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_084",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_085",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_086",
-    "label": "low",
-    "generation_type": "low"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_087",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_088",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_089",
-    "label": "low",
-    "generation_type": "low"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_090",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_091",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_092",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_093",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_094",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_095",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_096",
-    "label": "high",
-    "generation_type": "high"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_097",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_098",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_099",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_100",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_101",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_102",
-    "label": "low",
-    "generation_type": "low"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_103",
     "label": "compliant",
-    "generation_type": "compliant"
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_104",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_105",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_106",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_107",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_108",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_109",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_110",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_111",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_112",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_113",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_114",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_115",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_116",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_117",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_118",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_119",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_120",
-    "label": "low",
-    "generation_type": "low"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_121",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_122",
-    "label": "low",
-    "generation_type": "low"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_123",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_124",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_125",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_126",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_127",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_128",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_129",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_130",
-    "label": "high",
-    "generation_type": "high"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_131",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_132",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_133",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_134",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_135",
-    "label": "high",
-    "generation_type": "high"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_136",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_137",
     "label": "compliant",
-    "generation_type": "compliant"
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_138",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_139",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_140",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_141",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_142",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_143",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_144",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_145",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_146",
-    "label": "high",
-    "generation_type": "high"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_147",
-    "label": "low",
-    "generation_type": "low"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_148",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_149",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_150",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_151",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_152",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_153",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_154",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_155",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_156",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_157",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_158",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_159",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_160",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_161",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_162",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_163",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_164",
-    "label": "high",
-    "generation_type": "high"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_165",
-    "label": "high",
-    "generation_type": "high"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_166",
     "label": "high",
-    "generation_type": "high"
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_167",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_168",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_169",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_170",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_171",
     "label": "low",
-    "generation_type": "low"
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_172",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R003",
+    "violated_rule_description": "Agent must not use abusive or demeaning language."
   },
   {
     "conversation_id": "conv_173",
-    "label": "low",
-    "generation_type": "low"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_174",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_175",
-    "label": "high",
-    "generation_type": "high"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_176",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_177",
-    "label": "low",
-    "generation_type": "low"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_178",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_179",
     "label": "critical",
-    "generation_type": "critical"
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_180",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_181",
-    "label": "high",
-    "generation_type": "high"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_182",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_183",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_184",
     "label": "medium",
-    "generation_type": "medium"
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_185",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "low",
+    "violated_rule_id": "R004",
+    "violated_rule_description": "Agent should not demand payment 'immediately' or 'right now' in a threatening way; offer options where possible."
   },
   {
     "conversation_id": "conv_186",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_187",
-    "label": "low",
-    "generation_type": "low"
+    "label": "critical",
+    "violated_rule_id": "R001",
+    "violated_rule_description": "Agent must not use threats of legal action, arrest, or wage garnishment unless explicitly authorized and within policy."
   },
   {
     "conversation_id": "conv_188",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_189",
-    "label": "high",
-    "generation_type": "high"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_190",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_191",
-    "label": "high",
-    "generation_type": "high"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_192",
-    "label": "high",
-    "generation_type": "high"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_193",
-    "label": "low",
-    "generation_type": "low"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_194",
-    "label": "low",
-    "generation_type": "low"
+    "label": "critical",
+    "violated_rule_id": "R002",
+    "violated_rule_description": "Agent must not threaten to contact family, employer, or third parties about the debt (unless permitted by consent and policy)."
   },
   {
     "conversation_id": "conv_195",
-    "label": "high",
-    "generation_type": "high"
+    "label": "low",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   },
   {
     "conversation_id": "conv_196",
-    "label": "medium",
-    "generation_type": "medium"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_197",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_198",
-    "label": "critical",
-    "generation_type": "critical"
+    "label": "compliant",
+    "violated_rule_id": null,
+    "violated_rule_description": null
   },
   {
     "conversation_id": "conv_199",
-    "label": "compliant",
-    "generation_type": "compliant"
+    "label": "high",
+    "violated_rule_id": "R005",
+    "violated_rule_description": "Agent must not misrepresent the consequences of non-payment (e.g. overstate legal or credit impact)."
   },
   {
     "conversation_id": "conv_200",
-    "label": "low",
-    "generation_type": "low"
+    "label": "medium",
+    "violated_rule_id": "R006",
+    "violated_rule_description": "Agent should acknowledge hardship or product/service issues when raised by customer."
   }
 ]
